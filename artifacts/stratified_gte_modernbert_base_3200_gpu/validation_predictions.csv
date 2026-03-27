@@ -1,0 +1,641 @@
+issue_id,issue_description,actual_score,predicted_score,absolute_error,actual_bucket,predicted_bucket
+1517,"Customer requested to combine two beneficiaries into a cleaner list for convenience, with no change to the actual payments made.",2.0,60.0062,58.0062,0-40,61-80
+2499,"Customer’s documentation submission included edited fields on a bank letter, and the bank confirmation could not validate the modified content.",95.0,45.1545,49.8455,81-100,41-60
+427,Customer requested waiver of standard documentation for cross-border transfers to multiple recipients.,88.0,45.7444,42.2556,81-100,41-60
+2962,A refund reversal appeared temporarily due to a return that was submitted outside the merchant’s processing window.,5.0,40.0759,35.0759,0-40,41-60
+1553,"Customer reported duplicate pending authorizations, and support explained they typically collapse after final posting.",12.0,46.2573,34.2573,0-40,41-60
+269,Account activity shifted from low value to frequent high value after a change in device/location.,85.0,53.4222,31.5778,81-100,41-60
+1531,"Funds transfer was reversed due to an incorrect recipient detail entered by the customer, and the account was credited back.",12.0,43.5243,31.5243,0-40,41-60
+1288,"Customer updated their beneficiaries for a transfer account after verifying identity, with no unusual transfer behavior.",10.0,40.7351,30.7351,0-40,41-60
+2244,"Merchant reported a seasonal sales cycle, but observed monthly totals did not match the stated seasonality and were unexplained.",58.0,27.5698,30.4302,41-60,0-40
+2768,"Funds were received from a non-customer entity and immediately reissued to another new beneficiary, suggesting a need to clarify relationships.",95.0,65.9036,29.0964,81-100,61-80
+2120,"Beneficial owner address on submitted documents matched the customer profile, but the phone number on the records did not, with no explanation offered.",40.0,68.0329,28.0329,0-40,61-80
+1047,Customer reported an ATM cash withdrawal charge posted later than expected and was advised it aligns with issuer posting times.,5.0,32.6968,27.6968,0-40,0-40
+1557,"Customer couldn’t verify identity on the first attempt due to glare in the photo, and the new submission passed.",10.0,37.6117,27.6117,0-40,0-40
+1856,"Debit card activity showed account takeover signs: sudden new beneficiaries, changed email/phone, and immediate transfers to external accounts.",97.0,69.428,27.572,81-100,61-80
+614,A sanctions screening hit was cleared based on customer statements without collecting corroborating documents.,95.0,69.4552,25.5448,81-100,61-80
+2113,Repeated purchase and rapid refunds over several weeks produced net activity patterns that deviated from the stated average ticket size.,65.0,89.9376,24.9376,61-80,81-100
+2106,An internal alert escalated after watchlist screening failed on an extracted beneficiary name because the customer intentionally used formatting variations and reordered name components.,94.0,69.4927,24.5073,81-100,61-80
+960,A beneficiary’s bank details were modified to a different institution shortly before processing.,88.0,63.7448,24.2552,81-100,61-80
+2919,"Merchant monitoring detected elevated chargebacks versus peers, and the merchant provided generalized statements without case-level documentation.",61.0,85.2481,24.2481,61-80,81-100
+350,Corporate documents showed signs of formatting changes and lacked verifiable issuing authority marks.,92.0,68.0238,23.9762,81-100,61-80
+3004,A procurement scheme was indicated by repeated supplier substitutions and forged delivery confirmations used to support payments.,96.0,72.1569,23.8431,81-100,61-80
+2681,"Customer provided a single-page bank letter that did not include account numbers or transaction references, limiting traceability of the claimed source of funds.",46.0,69.4894,23.4894,41-60,61-80
+2791,"Merchant noted that their card scheme fees were reflected differently on the dashboard due to display settings, which were adjusted.",5.0,28.2401,23.2401,0-40,0-40
+1520,Customer asked for help understanding a small interest adjustment that matched prior statement calculations.,2.0,25.1752,23.1752,0-40,0-40
+2633,"Customer requested to change the email on the account after confirming email ownership, with no other changes recorded.",3.0,26.0644,23.0644,0-40,0-40
+2542,Customer asked to update beneficiary details for future transfers; changes recorded after authentication.,20.0,43.0239,23.0239,0-40,41-60
+951,A customer uses a newly created company name matching the beneficiary’s prior legal entity.,80.0,57.1361,22.8639,61-80,41-60
+176,A correspondent request was denied due to incomplete compliance fields that were later corrected.,25.0,47.8293,22.8293,0-40,41-60
+1757,"Customer provided a plausible source-of-funds story but lacked third-party confirmations, leaving key claims unverified.",45.0,67.573,22.573,41-60,61-80
+2075,Merchant asked for help matching settlements to invoices and support provided a mapping based on the usual batch IDs.,7.0,29.4505,22.4505,0-40,0-40
+1685,"Customer’s declared employment status did not appear to support the transaction volumes observed, and the source-of-funds update was delayed.",66.0,43.6095,22.3905,61-80,41-60
+1539,Customer reported they were unable to add a new beneficiary and was guided through the normal beneficiary verification steps.,15.0,37.2657,22.2657,0-40,0-40
+1608,"A direct debit appeared under a different merchant descriptor, and support clarified it was the normal processing name.",12.0,34.2594,22.2594,0-40,0-40
+453,Beneficial owner details in the onboarding file were updated after the first funding activity.,86.0,64.2025,21.7975,81-100,61-80
+2339,Customer requested closure of an unused savings sub-account and confirmed no outstanding obligations.,5.0,26.5272,21.5272,0-40,0-40
+388,Trade documents indicated partial shipment but payment terms implied full delivery confirmation.,76.0,54.4756,21.5244,61-80,41-60
+1145,"Merchant asked for help reconciling a payment that settled under a different merchant category name, and the explanation matched the processor mapping.",11.0,32.4543,21.4543,0-40,0-40
+282,Customer’s website and business address could not be verified as matching the onboarding information.,66.0,44.8152,21.1848,61-80,41-60
+1567,"Account review showed a mismatch between billing country and provided address, and correcting the address resolved future billing checks.",35.0,13.9715,21.0285,0-40,0-40
+878,The customer requested reversal of transfers but retained control of the funds through subsequent payouts.,86.0,65.3624,20.6376,81-100,61-80
+1892,A payment inquiry was raised because a refund showed as pending and was already in the normal processing timeline.,6.0,26.6188,20.6188,0-40,0-40
+336,Counterparty refused to share contract terms but requested payment in advance.,52.0,72.4404,20.4404,41-60,61-80
+3160,Onboarding support noted one submitted document was unreadable on first upload and it was re-submitted successfully.,6.0,26.2526,20.2526,0-40,0-40
+704,Beneficial owner verification could not be completed due to document inconsistencies in identity fields.,79.0,59.0427,19.9573,61-80,41-60
+2777,"A recurring transfer failed due to an expired funding authorization, and the customer updated it through the standard flow.",6.0,25.6792,19.6792,0-40,0-40
+696,A politically exposed related party was declared at onboarding as “not applicable” but later corrected.,72.0,52.3338,19.6662,61-80,41-60
+1092,Customer requested clarification on installment merchant split payments and was advised how they would post over multiple dates.,8.0,27.6343,19.6343,0-40,0-40
+975,"Funds were received from multiple accounts with similar amounts and timing, then consolidated into a single outgoing transfer.",91.0,71.4071,19.5929,81-100,61-80
+3037,"Account access was granted to an additional user role, and the operational impact of the new access was not explained in the customer profile.",45.0,25.7606,19.2394,41-60,0-40
+1192,"Beneficiary name on an outgoing transfer needed correction to match the bank records, and the update was applied after standard checks.",8.0,27.2185,19.2185,0-40,0-40
+3135,"A vendor’s invoices described generic “services” without contracts or deliverables, and funds were diverted to accounts held by PEP relatives shortly after invoice approval.",91.0,71.8686,19.1314,81-100,61-80
+435,KYC refresh failed to capture a known change in ownership timing despite declared continuity.,72.0,52.8758,19.1242,61-80,41-60
+1615,Customer requested to change their contact phone number after receiving an SMS verification successfully.,20.0,1.0588,18.9412,0-40,0-40
+2917,"Customer provided an overseas address and then later changed it back, while transaction patterns continued to involve the same foreign beneficiary.",58.0,76.9389,18.9389,41-60,61-80
+1469,"Account takeover indicators appeared alongside unusual login locations, and the resulting transfers were timed to coincide with bill-pay windows for quicker monetization.",92.0,73.1578,18.8422,81-100,61-80
+156,Outgoing transactions showed repetitive invoice numbers that did not align with documented invoices.,78.0,59.3171,18.6829,61-80,41-60
+1010,Customer requested replacement cards because the current ones were peeling and no longer readable for contactless use.,12.0,30.6619,18.6619,0-40,0-40
+1138,Customer reported a failed login attempt after traveling and it was resolved after the normal verification step was completed.,22.0,3.3471,18.6529,0-40,0-40
+2219,"The bank detected forged bank letters attached to a financing request, and the submitted account details differed from underlying transaction history.",98.0,79.4098,18.5902,81-100,61-80
+1089,"Customer reported that a recurring payment was missing, and we confirmed it was paused temporarily in the merchant portal and re-enabled.",20.0,1.6725,18.3275,0-40,0-40
+2303,"Name screening flagged a weak similarity to a prior adverse media entry, but ownership and identity resolution remained incomplete.",50.0,68.0884,18.0884,41-60,61-80
+2660,"A new corporate bank account was added as a funding source after onboarding, but the company registration and signatory records were not fully harmonized.",55.0,73.0361,18.0361,41-60,61-80
+1085,"Customer requested a statement for tax filing with prior period date range, and it was generated without changes to account activity.",8.0,25.9396,17.9396,0-40,0-40
+1506,"Merchant asked about a mismatch between charge date and capture date, explained by standard capture timing.",6.0,23.8667,17.8667,0-40,0-40
+2892,"A payment status inquiry was submitted because a refund showed as pending, and the transaction was already within the standard processing window.",5.0,22.8349,17.8349,0-40,0-40
+1214,Customer reported they could not receive SMS verification codes and resolved it by updating phone number routing settings.,10.0,27.6617,17.6617,0-40,0-40
+991,A merchant attempted to split a single high-value purchase into smaller card payments to reduce scrutiny.,93.0,75.3514,17.6486,81-100,61-80
+2022,"Customer provided a source-of-funds narrative based on asset sale, but the sale documentation was incomplete and dates overlapped with prior transactions.",65.0,82.5936,17.5936,61-80,81-100
+2411,"Incoming funds were described as loan proceeds, but the loan agreement provided lacked dates, term details, or repayment schedules.",62.0,79.5704,17.5704,61-80,61-80
+1211,"Transfer failed due to an incorrect beneficiary reference, and the customer provided the correct details for reattempt.",10.0,27.3234,17.3234,0-40,0-40
+384,A corporate account displayed inconsistent signatory usage not aligned with board resolutions.,72.0,89.199,17.199,61-80,81-100
+2934,"A customer provided conflicting beneficiary details across two submitted forms, leading to reconciliation issues for an outbound remittance.",52.0,69.18,17.18,41-60,61-80
+3073,Card replacement was requested after the chip stopped reading at terminals; a new card was issued and the old one was deactivated.,6.0,23.0837,17.0837,0-40,0-40
+2144,"Beneficiary details were updated after the customer provided the correct reference name, with no other changes to the payment.",15.0,32.0567,17.0567,0-40,0-40
+1156,Customer noticed a refund timeline seemed long and support confirmed the refund was already in progress with the original merchant.,15.0,31.948,16.948,0-40,0-40
+1786,"Login was temporarily locked after several failed attempts, and access was restored once the customer completed the standard device/identity checks.",28.0,11.0591,16.9409,0-40,0-40
+1541,Customer requested an address update for a delivery and provided a recent utility bill as part of routine verification.,2.0,18.9227,16.9227,0-40,0-40
+929,Payments are sent to a counterpart that repeatedly returns funds back with altered narration.,82.0,98.8152,16.8152,81-100,81-100
+720,Incoming payments were split into small amounts then consolidated at another account the same day.,92.0,75.2727,16.7273,81-100,61-80
+326,A politically exposed person reportedly used a nominee account to receive funds for “rent.”,95.0,78.2858,16.7142,81-100,61-80
+920,"Customer claims a new business activity, yet no licensing or tax registration evidence is provided.",50.0,66.6871,16.6871,41-60,61-80
+677,A third-party intermediary requested payments to a new bank account after prior account details were used.,82.0,65.4378,16.5622,81-100,61-80
+1241,"Merchant support noted that invoices were marked paid earlier than expected due to settlement cutoffs, and explained the timing.",12.0,28.534,16.534,0-40,0-40
+1726,Customer requested a second copy of a proof-of-residency letter for a tenancy renewal with no unusual activity.,5.0,21.4514,16.4514,0-40,0-40
+1377,A corporate account paid “legal fees” to offshore shell attorneys and then those funds were quickly withdrawn or redistributed to personal accounts.,98.0,81.6936,16.3064,81-100,81-100
+2624,"A recurring transfer scheduled on a holiday ran later than the customer expected, and the timeline matched the bank calendar.",10.0,26.28,16.28,0-40,0-40
+552,Funds were routed to a charity-like beneficiary with limited public documentation and unclear purpose.,78.0,94.2276,16.2276,61-80,81-100
+2884,"Payments to a newly introduced vendor were repeated at near-identical amounts, but contract terms and invoices were not consistently aligned.",66.0,82.1233,16.1233,61-80,81-100
+2057,Customer requested a change of category for their business profile to match the documented services they provide.,10.0,26.1049,16.1049,0-40,0-40
+2513,Customer requested a new payment schedule for recurring bills; standing order was modified per their instructions.,8.0,23.8444,15.8444,0-40,0-40
+167,The transaction narrative cited “contract settlement” but the contract document was unsigned.,80.0,64.2179,15.7821,61-80,61-80
+642,Transactions reference invoices that do not match amounts charged to the underlying purchase orders.,85.0,69.3208,15.6792,81-100,61-80
+196,The customer provided a foreign address but the source of funds documentation referenced a different country.,55.0,70.6263,15.6263,41-60,61-80
+3148,Customer submitted source-of-funds statements for multiple inbound transfers that referenced inconsistent employers and dates across onboarding and subsequent updates.,66.0,81.5826,15.5826,61-80,81-100
+946,"A senior management change triggers no updated compliance attestation, though transactions increase soon after.",65.0,80.4135,15.4135,61-80,81-100
+2239,A merchant account showed inconsistent refund timing relative to shipment dates and could not provide logistics evidence when asked.,68.0,52.7012,15.2988,61-80,41-60
+2943,"A merchant account processed payments from customers that were then refunded back to the original cards, but the merchant did not provide an adequate refund policy.",50.0,65.222,15.222,41-60,61-80
+3018,"Several outgoing transfers used the same beneficiary bank reference sequence but different narrative text, raising reconciliation concerns.",58.0,73.2044,15.2044,41-60,61-80
+786,Payments were structured to remain just under internal reporting limits across multiple accounts.,95.0,79.8213,15.1787,81-100,61-80
+2696,"A forged board resolution was submitted to authorize account changes, after which outgoing payments were initiated to beneficiaries created days earlier.",99.0,83.8757,15.1243,81-100,81-100
+442,Customer’s responses to source-of-funds questions became shorter and less specific over successive reviews.,76.0,60.8923,15.1077,61-80,61-80
+2831,"Merchant settlement report format was adjusted per the customer’s request, and prior data matched the original system export.",5.0,20.0044,15.0044,0-40,0-40
+173,Inbound funds were deposited from accounts held by individuals with no disclosed relationship to the customer.,80.0,94.9288,14.9288,61-80,81-100
+26,An entity used a PO box address for onboarding while stating operations at a physical location.,72.0,57.2676,14.7324,61-80,41-60
+1871,"The account recorded multiple ATM cash withdrawals soon after inbound wires, with no corresponding declared cash-handling business activity.",92.0,77.3139,14.6861,81-100,61-80
+1781,"Customer requested reversal of transactions and then reissued similar payments with altered beneficiary names, creating ambiguity about intent.",92.0,77.3532,14.6468,81-100,61-80
+2994,A business relationship was established with a shell entity shortly before large payments were received and nearly immediately dispersed to cash-out accounts.,94.0,79.3641,14.6359,81-100,61-80
+190,Multiple cash deposits were made on consecutive days just under the internal review limit.,95.0,80.4414,14.5586,81-100,81-100
+865,A series of incoming payments from the same source ended after the customer’s expected revenue cycle should have continued.,55.0,40.5295,14.4705,41-60,41-60
+276,A merchant category mix suggested personal spending despite stated business use.,55.0,69.4446,14.4446,41-60,61-80
+2953,Statement copy was provided to support a mortgage application with no changes to account activity.,5.0,19.3752,14.3752,0-40,0-40
+1502,Customer asked for clarification on a fee line item for an international transfer that matched the published schedule.,5.0,19.344,14.344,0-40,0-40
+1680,A merchant’s refund rate rose sharply after onboarding and did not match the business model described in the underwriting materials.,60.0,74.3422,14.3422,41-60,61-80
+2996,"A pattern of over- and under-invoicing was identified, with funds moved via intercompany payments to conceal acquisition of illicit assets.",95.0,80.6708,14.3292,81-100,81-100
+2029,"Elevated operational anomalies were observed as customer’s limit increases coincided with unusual payment instructions, but no corroborating business expansion evidence was provided.",65.0,50.6787,14.3213,61-80,41-60
+1817,Account servicing adjusted the account’s transaction notification preferences after the customer confirmed updated contact settings.,3.0,17.2953,14.2953,0-40,0-40
+2050,Merchant settlement timing changed because of a bank holiday delay already communicated during support.,2.0,16.293,14.293,0-40,0-40
+2275,Customer contacted support about a card refund not yet received and was advised it was still within the normal 5–7 business day window.,10.0,24.2882,14.2882,0-40,0-40
+2483,"Incoming transfers from a newly added counterparty occurred soon after onboarding, with no prior relationship history and limited narrative detail provided.",68.0,82.2375,14.2375,61-80,81-100
+910,An otherwise inactive account receives frequent incoming transfers from unrelated counterparties.,68.0,82.2323,14.2323,61-80,81-100
+2603,Address was updated after the customer submitted a recent utility bill showing a name-and-address match.,5.0,19.1634,14.1634,0-40,0-40
+423,Customer’s stated income source did not support the level of recurring transfers to personal accounts.,72.0,57.8541,14.1459,61-80,41-60
+1181,Customer asked how to download tax documents and support provided the latest year-end forms with no changes needed on the account.,5.0,19.0864,14.0864,0-40,0-40
+1537,"Customer asked for a receipt for a chargeback that was still in progress, and the case status was provided.",12.0,26.0544,14.0544,0-40,0-40
+2743,Customer requested a statement with a specific date range for visa processing and confirmed the request matched their account history.,5.0,19.0294,14.0294,0-40,0-40
+3113,"A scheduled bill payment failed due to insufficient funds, and the customer adjusted the amount and rescheduled the payment.",8.0,22.001,14.001,0-40,0-40
+3195,Account holder updated their mailing address following a routine move and the change was verified with the provided documents.,8.0,21.8827,13.8827,0-40,0-40
+1141,Customer requested to change their funding source for top-ups and was guided through the standard supported card setup.,12.0,25.8651,13.8651,0-40,0-40
+2024,"Merchant chargebacks increased after a minor product category shift, yet the merchant could not clearly describe the inventory or fulfillment changes.",68.0,54.1656,13.8344,61-80,41-60
+1461,"A forged board resolution was used to authorize transfers from a dormant corporate account, and proceeds were quickly distributed to related personal accounts.",98.0,84.1707,13.8293,81-100,81-100
+1998,"Merchant payout did not reflect today’s sales due to a cutoff time, and the payout schedule was confirmed as per agreement.",10.0,23.7754,13.7754,0-40,0-40
+1948,Source-of-funds review identified transfers from accounts held by persons not disclosed in the beneficial ownership roster.,95.0,81.2285,13.7715,81-100,81-100
+2407,Customer provided a bank statement that did not cover the full period for the deposits referenced in the source-of-funds request.,60.0,46.3171,13.6829,41-60,41-60
+409,Payments were made to overseas recipients shortly after the customer’s address was updated.,72.0,58.3439,13.6561,61-80,41-60
+1451,Shell company payroll and vendor payments were used as cover while large sums were extracted through related parties and reintroduced as “operating expenses.”,97.0,83.4531,13.5469,81-100,81-100
+2618,Customer asked how to locate a tax document in their account and the help article was provided without any account flags.,3.0,16.4638,13.4638,0-40,0-40
+1028,Customer contacted support about a chargeback status and was advised the dispute was still within the merchant’s response timeframe.,10.0,23.4433,13.4433,0-40,0-40
+880,A person-to-person transfer volume increased after the customer changed contact details and phone numbers.,68.0,54.6166,13.3834,61-80,41-60
+685,The customer requested payment to a personal account despite providing a corporate beneficiary agreement.,81.0,67.6885,13.3115,81-100,61-80
+2115,Customer requested expedited payment processing after account approval but could not clarify the reason for urgency or related contracts.,50.0,63.2797,13.2797,41-60,61-80
+875,A recurring pattern of payments to the same consultant occurred without contract renewal or updated rates.,58.0,71.2406,13.2406,41-60,61-80
+2623,Customer reported a card replacement took longer due to standard shipping carrier delays and confirmed tracking details were shared.,5.0,18.2035,13.2035,0-40,0-40
+666,A beneficial owner’s identity documents were replaced shortly after a compliance review triggered.,88.0,74.7975,13.2025,81-100,61-80
+1824,"Customer reported a direct debit mandate was not recognized, and once the mandate ID was matched, the debit resumed as expected.",12.0,25.0888,13.0888,0-40,0-40
+2869,"Customer employed layered payments to nominees and instructed immediate transfer after receipt, matching a common organized corruption extraction pattern.",96.0,82.9217,13.0783,81-100,81-100
+3167,"Customer submitted a revised employment letter after delays, and the start date conflicted with payroll records obtained during the last review cycle.",68.0,54.9257,13.0743,61-80,41-60
+1732,Merchant’s QR code payments were temporarily failing due to an expired terminal token and were corrected after refresh.,8.0,20.966,12.966,0-40,0-40
+1997,"Customer requested a small limit increase on their card for an upcoming trip, and the request was approved based on account history.",20.0,7.1259,12.8741,0-40,0-40
+1947,"A beneficiary was added, then payments were made using slightly altered beneficiary names on different wires; the customer could not clarify the differences.",90.0,77.1833,12.8167,81-100,61-80
+2891,Client updated their mailing address after a recent move and confirmed the new address via their profile details.,5.0,17.6847,12.6847,0-40,0-40
+486,The compliance review was bypassed due to missing fields in the payment instruction.,55.0,67.6596,12.6596,41-60,61-80
+2979,A burst of fragmented incoming transfers from unrelated sources was followed by same-day onward forwarding to newly created accounts.,92.0,79.3786,12.6214,81-100,61-80
+1648,"A cash withdrawal dispute was opened because of a late receipt, and the investigation found the withdrawal completed normally.",10.0,22.6126,12.6126,0-40,0-40
+1753,"Customer added new settlement accounts and requested immediate payment capability, but verification steps were only partially completed at the time.",65.0,52.3927,12.6073,61-80,41-60
+2649,"Customer asked why a transfer reference looked different from what was entered, and the investigation confirmed standard bank reference formatting.",8.0,20.5668,12.5668,0-40,0-40
+238,Funds arrived from accounts that were recently opened and then were quickly transferred outward.,88.0,75.4799,12.5201,81-100,61-80
+1951,"Account access was granted to an additional user after a change in business address, but the new user’s role and authority were not documented.",52.0,39.5743,12.4257,41-60,0-40
+2712,"Multiple related parties attempted to settle the same invoices using different account numbers, indicating invoice fraud intended to multiply payment streams.",95.0,82.5897,12.4103,81-100,81-100
+3105,Merchant’s chargebacks increased while the merchant’s provided customer support evidence remained generic and did not address specific dispute categories.,66.0,53.6564,12.3436,61-80,41-60
+596,A manual override was applied to customer identification verification without adequate rationale documented.,82.0,69.7598,12.2402,81-100,61-80
+224,The customer requested that outgoing payments be made in the name of a different company on several occasions.,78.0,65.7738,12.2262,61-80,61-80
+2902,Customer requested a new debit PIN after repeated input errors and verified identity through routine checks.,6.0,18.1911,12.1911,0-40,0-40
+2196,"Merchant account showed settlement delays and partial payouts compared to usual processing, and the incident reports provided were incomplete.",57.0,44.994,12.006,41-60,41-60
+2112,"Incoming transfers from multiple unrelated domestic senders occurred within a short window, followed by immediate outward transfers to a single new payee.",95.0,83.023,11.977,81-100,81-100
+3080,Customer cited cryptocurrency sales as the source of funds but could not provide exchange records or transaction identifiers.,66.0,77.9242,11.9242,61-80,61-80
+48,"Payments were sent for ""brokerage"" services with no licensed broker documentation provided.",70.0,81.9224,11.9224,61-80,81-100
+966,A return transfer is processed to an account that is not the original sending account.,55.0,43.1526,11.8474,41-60,41-60
+1687,Customer’s explanation for international transfers referenced “family business” but failed to provide a linkage between the parties and the transfers.,68.0,56.1791,11.8209,61-80,41-60
+169,Multiple chargebacks were followed by replacement payments to the same merchant using a new method.,78.0,66.2143,11.7857,61-80,61-80
+1790,"Card payment declined due to insufficient funds, and the customer confirmed they wanted to try again after topping up.",5.0,16.7796,11.7796,0-40,0-40
+860,A supplier payment was routed through an intermediary account despite contract terms indicating direct settlement.,73.0,84.7111,11.7111,61-80,81-100
+416,"Customer’s KYC profile indicated low-risk activity, but transactions resembled high-risk trade flows.",72.0,83.6452,11.6452,61-80,81-100
+1483,"Onboarding review flagged one uploaded document as having a missing corner page, and the customer resubmitted correctly.",18.0,6.4109,11.5891,0-40,0-40
+472,Beneficial owner is closely linked to a politically exposed relationship in screening results.,82.0,93.5738,11.5738,81-100,81-100
+1433,Account servicing updated beneficiary details for a standing transfer after the customer passed normal validation.,10.0,21.4596,11.4596,0-40,0-40
+819,Customer’s answers to source-of-funds questions were inconsistent across the onboarding call and form.,75.0,63.5621,11.4379,61-80,61-80
+1332,Customer noticed an installment plan was split across two authorisations and was advised this is expected for that product type.,10.0,21.4006,11.4006,0-40,0-40
+540,A third party requested adding a beneficiary and provided instructions to avoid compliance checks.,92.0,80.649,11.351,81-100,81-100
+1197,Customer asked for a copy of an older statement for warranty purposes and it was delivered after locating the historical record.,5.0,16.334,11.334,0-40,0-40
+244,Sanctions screening cleared initially but later refreshed screening flagged the same counterparty for name matching.,92.0,80.7007,11.2993,81-100,81-100
+2716,"A merchant processed transactions that were immediately followed by partial cancellations and reattempts, suggesting a fraud laundering tactic to test stolen credentials.",90.0,78.721,11.279,81-100,61-80
+1412,Customer requested to close an unused account and balance was transferred to the primary linked account.,10.0,21.247,11.247,0-40,0-40
+3075,"Screening review identified a weak name similarity to prior adverse media, but ownership links were not resolved with adequate documentation.",68.0,56.7908,11.2092,61-80,41-60
+2514,Cash withdrawal declined at ATM; we confirmed no issue on our side and advised trying another machine.,5.0,16.1271,11.1271,0-40,0-40
+1290,Customer reported that a recurring payment showed under an older merchant label; support confirmed descriptor mapping and advised monitoring.,15.0,26.1123,11.1123,0-40,0-40
+171,A series of payments were executed through an intermediary with no declared ownership or contracting role.,78.0,89.1015,11.1015,61-80,81-100
+281,Incoming funds were quickly converted and redistributed without a documented business purpose.,84.0,95.0289,11.0289,81-100,81-100
+2060,Merchant support reviewed an incomplete settlement export and reissued the file after confirming the correct reporting settings.,11.0,0.0,11.0,0-40,0-40
+853,"Cash withdrawals increased shortly after incoming transfers, with no supporting explanation in transaction notes.",78.0,88.8798,10.8798,61-80,81-100
+1931,"Customer contacted support about a card transaction posted with a different date, and the timeline matched the merchant presentment schedule.",12.0,22.5557,10.5557,0-40,0-40
+2604,"Login access was temporarily blocked due to a device change, and was restored after normal verification steps were completed.",10.0,20.4962,10.4962,0-40,0-40
+477,Customer provided a recent incorporation date inconsistent with claimed years of operations.,60.0,70.4954,10.4954,41-60,61-80
+1949,"Merchant’s refund activity concentrated on transactions that the merchant described as non-refundable, creating a mismatch in operational controls.",60.0,70.4569,10.4569,41-60,61-80
+2272,Customer reported that their bank transfer reference was entered incorrectly and support advised how to locate the matching transfer.,5.0,15.4192,10.4192,0-40,0-40
+154,A beneficiary requested payments to be split across multiple accounts held at different branches.,82.0,71.5844,10.4156,81-100,61-80
+650,Payments were directed to a beneficiary whose address in records differs from the bank-provided address.,58.0,68.2333,10.2333,41-60,61-80
+221,An individual customer used business-purpose payment channels while personal KYC data remained unchanged.,50.0,60.0519,10.0519,41-60,61-80
+1424,Account servicing reviewed a complaint about missing interest calculation and confirmed the statement reflected the correct rate.,10.0,0.0,10.0,0-40,0-40
+1524,Customer asked why a recent card authorization appeared as pending longer than usual and was advised it will release automatically.,10.0,0.0,10.0,0-40,0-40
+1826,"Customer asked for help understanding a reversed card payment, and support confirmed it was an authorization reversal that occurs during standard card processing.",10.0,0.0,10.0,0-40,0-40
+1820,"Customer asked why a deposit was marked as pending, and the status was updated once the standard clearing period completed.",10.0,0.0,10.0,0-40,0-40
+1598,"Trade documents showed mismatched weights and values while payment terms were aligned to suspicious invoice financing behavior, suggesting TBML laundering.",90.0,100.0,10.0,81-100,81-100
+1932,Merchant support reviewed a small partial refund and confirmed the refund amount matched the agreed correction.,10.0,0.0,10.0,0-40,0-40
+412,Customer’s beneficial owner was listed as a holding entity with no transparency on downstream control.,78.0,68.0515,9.9485,61-80,61-80
+1780,Multiple device changes coincided with edits to beneficiary details and payment descriptions; no evidence of account takeover was found but review needed.,68.0,58.0646,9.9354,61-80,41-60
+2085,Card dispute was opened for a merchant billing error and resolved after the merchant provided the correct invoice.,10.0,0.0817,9.9183,0-40,0-40
+1705,"Cash withdrawal was reversed by the ATM due to a partial dispense, and the balance was corrected.",10.0,19.8921,9.8921,0-40,0-40
+120,Customer used an agent to submit documents and the agent could not provide a clear authorization letter.,59.0,68.8767,9.8767,41-60,61-80
+309,Merchant disputes increased while customer continued to fund similar transactions using new instruments.,80.0,70.1237,9.8763,61-80,61-80
+1081,Customer disputed a small card purchase as accidental and the merchant confirmation showed the item was successfully fulfilled.,15.0,5.1644,9.8356,0-40,0-40
+2078,Customer reported their card stopped working after a recent travel booking and it resumed after merchant reprocessing completed.,5.0,14.7449,9.7449,0-40,0-40
+1881,"Multiple inbound transfers were received from newly created counterparties with no prior transaction history, and the customer’s explanation was “repeat partners” without proof.",65.0,74.7022,9.7022,61-80,61-80
+2601,Customer used a new account for settlement of prior invoices and could not produce agreement references showing the account change.,57.0,47.3244,9.6756,41-60,41-60
+2237,"Incoming funds were consolidated through the account and then dispersed to multiple recipients the same day, with explanations not supported by invoices.",90.0,80.3767,9.6233,81-100,81-100
+1991,"Customer asked why their balance changed after a refund reversal, and support explained the standard sequence of holds and releases.",10.0,0.3914,9.6086,0-40,0-40
+3014,"Merchant account refunds increased to a level inconsistent with its stated low refund rate, with no adjustment in underwriting rationale.",65.0,55.4082,9.5918,61-80,41-60
+2824,"Customer reported a balance mismatch after a refund reversal, and the case confirmed the refund had already been reissued normally.",6.0,15.4376,9.4376,0-40,0-40
+1202,Client updated their mailing address after completing a standard profile change request.,5.0,14.3486,9.3486,0-40,0-40
+2269,Customer questioned a chargeback status and support confirmed the dispute was within the expected processing window.,10.0,0.685,9.315,0-40,0-40
+1717,Login was denied due to an expired password and was resolved after the customer reset it through the standard flow.,5.0,14.3138,9.3138,0-40,0-40
+1664,"Correspondent payment narratives mirrored forged trade documentation, including mismatch between port codes on invoices and actual movement records.",93.0,83.7674,9.2326,81-100,81-100
+2961,"Merchant onboarding required a minor correction to store hours, which was updated without impacting existing transactions.",3.0,12.1464,9.1464,0-40,0-40
+741,Customer used a holding company structure while operations were conducted by an unregistered individual.,72.0,81.1212,9.1212,61-80,81-100
+2500,"Merchant initiated a refund policy update after chargeback spikes, but the timing and scope of changes suggested reactive adjustments without evidence.",55.0,45.8792,9.1208,41-60,41-60
+2230,Funds were routed through multiple third-party settlement accounts that did not match the declared source of funds or business model.,96.0,86.903,9.097,81-100,81-100
+2509,Card PIN reset was requested after three failed attempts; access was restored following authentication.,15.0,24.0809,9.0809,0-40,0-40
+826,Customer provided a statement of assets that did not reflect observed account balances and transaction volumes.,70.0,60.9838,9.0162,61-80,61-80
+148,A trade payment included an unusually high “inspection fee” with vague descriptions and no contract addendum.,80.0,89.0124,9.0124,61-80,81-100
+1147,Customer reported that their address verification took longer than expected and was approved once additional supporting details were provided.,25.0,34.0015,9.0015,0-40,0-40
+576,The beneficial ownership attestation did not match the corporate registry records for the submitting entity.,85.0,76.0124,8.9876,81-100,61-80
+1761,"Merchant transaction data showed high-ticket purchases with low matching fulfillment evidence, requiring review of commercial rationale.",65.0,56.0551,8.9449,61-80,41-60
+1031,Customer reported that a scheduled card payment did not complete and requested reattempt once the merchant retried billing.,15.0,6.1553,8.8447,0-40,0-40
+2194,"A series of refunds and reversals continued even after merchant activity tapered off, suggesting settlement practice inconsistencies needing review.",66.0,57.2253,8.7747,61-80,41-60
+816,Beneficial owner was indicated as “same as applicant” but supporting evidence was missing or incomplete.,65.0,73.7704,8.7704,61-80,61-80
+2535,Onboarding checklist noted that proof of address was older than allowed; customer provided a newer document and resubmitted.,30.0,38.7704,8.7704,0-40,0-40
+1888,"Unusual operational changes included adding new staff access roles after submitting a higher volume forecast, without evidence of authorization controls.",58.0,66.7175,8.7175,41-60,61-80
+2895,Client asked for a statement copy for a home loan application and the request was fulfilled with no unusual activity noted.,5.0,13.6937,8.6937,0-40,0-40
+2200,"Payment instructions were changed twice after a suspected account takeover, and outgoing proceeds were dispersed to mule accounts within the same business day.",97.0,88.3732,8.6268,81-100,81-100
+1224,"Chargeback documentation was submitted for a straightforward merchandise return, and the case moved through the normal evidence review.",15.0,23.6085,8.6085,0-40,0-40
+1195,Customer requested to switch from paperless statements to email statements and the notification preference was updated.,5.0,13.5991,8.5991,0-40,0-40
+2365,Merchant requested assistance updating payout bank details; support confirmed the change after standard verification.,15.0,6.5304,8.4696,0-40,0-40
+1819,"Merchant requested to update business hours for customer support messaging, and the change was applied in the merchant profile.",10.0,1.5306,8.4694,0-40,0-40
+2316,"Beneficial owner underwent a name change and the old ownership information was not updated promptly, leaving a short coverage gap.",63.0,54.6702,8.3298,61-80,41-60
+1248,"Customer requested a temporary card freeze/unfreeze while they were waiting for a replacement, and changes were applied immediately.",8.0,16.2805,8.2805,0-40,0-40
+2677,"Merchant refunded a high percentage of card transactions within a short timeframe, and the merchant’s stated return reasons were generic and not tied to individual order records.",56.0,64.2527,8.2527,41-60,61-80
+2424,Customer contacted support to clarify why a pending card payment had not yet settled.,10.0,18.2392,8.2392,0-40,0-40
+1805,"Customer asked to stop a recurring transfer they no longer needed, and the cancellation was confirmed before the next execution date.",10.0,18.2368,8.2368,0-40,0-40
+1271,Customer requested a charge dispute on a subscription they forgot about; the investigation was initiated and the subscription had a valid merchant history.,12.0,20.224,8.224,0-40,0-40
+2739,Merchant settlement team explained that batch settlement posts overnight and the customer would see it by the next business day.,2.0,10.1584,8.1584,0-40,0-40
+2300,"Repeated outbound payments were initiated to new beneficiaries shortly after they were added, without clear business rationale in the notes.",90.0,98.1486,8.1486,81-100,81-100
+2628,"Merchant requested an updated payout schedule aligned to their normal sales cycle, and the change was reflected in the next cycle.",12.0,3.8571,8.1429,0-40,0-40
+386,The remitter narrative cited “family support” while transaction amounts resembled commercial payments.,63.0,54.8766,8.1234,61-80,41-60
+2988,Direct debits were initiated from compromised accounts and quickly pooled into a single beneficiary account before onward movement.,95.0,86.8969,8.1031,81-100,81-100
+70,Beneficial ownership form listed a nominee arrangement with no supporting explanation for control.,72.0,80.0876,8.0876,61-80,81-100
+2193,"Operational logs showed frequent changes to authorized users and permissions, and the customer’s access control rationale was not supported by policies.",68.0,59.9294,8.0706,61-80,41-60
+2795,"Beneficiary documentation for a newly added payee was incomplete, and the customer could not provide a consistent business relationship description.",55.0,63.0642,8.0642,41-60,61-80
+2839,Large cross-border wires were routed through multiple newly created entities using falsified invoices and inconsistent shipment dates.,92.0,100.0,8.0,81-100,81-100
+965,Funds are transferred to a charity-like entity that lacks verifiable registration details.,92.0,100.0,8.0,81-100,81-100
+1379,"A beneficial owner used stolen personal documents across multiple onboarding attempts, with matching photo characteristics and reused reference numbers.",92.0,100.0,8.0,81-100,81-100
+1020,Customer requested to change their marketing preferences and confirmed their identity was verified for the change.,5.0,12.975,7.975,0-40,0-40
+1420,Customer requested to add a secondary card for a family member and the account linkage was verified.,10.0,17.9687,7.9687,0-40,0-40
+2746,Customer asked for clarification on a charge reversal timeline after a hotel authorization voided normally.,5.0,12.9086,7.9086,0-40,0-40
+2548,Customer asked about an extra fee shown on a weekend transfer; we clarified the timing and fee basis per policy.,10.0,2.1111,7.8889,0-40,0-40
+525,Large cash deposits were made in round amounts that coincided with upcoming outgoing transfers.,92.0,84.1187,7.8813,81-100,81-100
+506,Corporate customer paid for “services” where the vendor could not be contacted for confirmation.,55.0,62.8653,7.8653,41-60,61-80
+101,Account activity showed repeated reversals and chargebacks that aligned with the same set of merchants.,65.0,72.8482,7.8482,61-80,61-80
+2517,Customer noticed a small authorization hold and asked about it; we explained it would release automatically.,8.0,0.1771,7.8229,0-40,0-40
+2362,Customer reported duplicate notification emails for the same transaction; system check indicated a normal retry behavior was enabled.,10.0,2.2114,7.7886,0-40,0-40
+428,Several transfers were sent to a beneficiary that had previously been flagged for compliance issues.,90.0,82.2646,7.7354,81-100,81-100
+519,Card purchase activity showed frequent low-value transactions at locations linked to prohibited goods categories.,88.0,80.2886,7.7114,81-100,81-100
+2222,"A series of chargebacks followed by refund withdrawals indicated fraud escalation, with funds moving to accounts bearing names matching known mule databases.",96.0,88.2917,7.7083,81-100,81-100
+952,Transfers include amounts that match typical debt repayment schedules without supporting loan agreements.,78.0,70.3078,7.6922,61-80,61-80
+407,A merchant showed rapid surges in card charge volume followed by reversal activity and dispute clustering.,82.0,74.3239,7.6761,81-100,61-80
+404,Cash withdrawals increased materially following deposits tied to third-party remitters.,85.0,92.5207,7.5207,81-100,81-100
+1638,"Merchant requested an update to terminal settings, and testing confirmed the new configuration was applied correctly.",8.0,0.507,7.493,0-40,0-40
+942,Multiple chargebacks occur with explanations that do not match the original merchant descriptors.,78.0,70.5441,7.4559,61-80,61-80
+231,A customer involved in government procurement requested payments to be routed to non-local entities.,82.0,74.5518,7.4482,81-100,61-80
+810,The declared industry for the customer did not align with the transaction counterparties and payment narratives.,70.0,77.4454,7.4454,61-80,61-80
+1549,"A payment reversal took longer than expected because it was batch-processed, and the expected timeline was communicated.",12.0,19.3959,7.3959,0-40,0-40
+739,Cash withdrawals exceeded cash deposits over several weeks without a clear funding source.,89.0,96.3692,7.3692,81-100,81-100
+341,Beneficiary contact numbers could not be verified and emails bounced during due diligence.,55.0,62.3635,7.3635,41-60,61-80
+3180,An internal escalation confirmed suspicious AML flags were ignored when onboarding proceeded despite match results against a restricted party list and missing required verification evidence.,92.0,84.6638,7.3362,81-100,81-100
+242,"Customer requested to bypass standard invoice verification citing “routine processing,” and refused to provide invoices.",75.0,67.6766,7.3234,61-80,61-80
+541,"Incoming transfers referenced “family support,” but amounts and cadence resembled commercial settlement.",60.0,67.2249,7.2249,41-60,61-80
+307,Account activity resumed after a dormancy period with transfers inconsistent with prior behavior.,60.0,67.2169,7.2169,41-60,61-80
+1842,Newly onboarded accounts shared identifiers and withdrawal behavior consistent with organized mule recruitment and coached disclosure patterns.,97.0,89.7974,7.2026,81-100,81-100
+508,Customer provided inconsistent information about the signatory authority across submissions.,68.0,75.1868,7.1868,61-80,61-80
+651,There were repeated attempts to update payment beneficiaries to newly created entities within days.,88.0,95.1564,7.1564,81-100,81-100
+1115,Merchant support received a request to update payout account details and verified the changes with existing records.,20.0,12.9533,7.0467,0-40,0-40
+2868,"Fraudulent onboarding was suspected after the same representative used multiple identities across applications, while accounts received structured deposits under distinct names.",95.0,87.9958,7.0042,81-100,81-100
+3009,A high-risk offshore beneficiary was repeatedly referenced under different company names while payments were routed to avoid direct exposure.,93.0,100.0,7.0,81-100,81-100
+2582,The account showed rapid accumulation from cash equivalents followed by immediate international wires to a narrow set of recipients consistent with money mule operations.,93.0,100.0,7.0,81-100,81-100
+2518,Transfer inquiry about a pending status; we confirmed it was within normal processing time.,7.0,0.0,7.0,0-40,0-40
+2963,Customer asked why a payment was marked “pending” and we confirmed it typically clears within the standard timeframe.,7.0,0.0,7.0,0-40,0-40
+2614,Customer requested to reissue a bank transfer receipt that was generated after a correction to beneficiary information.,22.0,15.0498,6.9502,0-40,0-40
+616,Customer instructed transfers to jurisdictions commonly linked to trade-based evasion with no supporting trade rationale.,88.0,94.9481,6.9481,81-100,81-100
+206,The customer’s stated beneficial owner was reportedly a nominee with no ownership stake disclosed elsewhere.,75.0,68.0899,6.9101,61-80,61-80
+765,Customer’s ownership documentation was issued by an entity that could not be validated independently.,70.0,63.0927,6.9073,61-80,61-80
+2091,The customer attempted to finance controlled-goods shipments by modifying HS codes and declared quantities on shipping documents to support third-country transshipment.,95.0,88.0987,6.9013,81-100,81-100
+23,Customer claimed payments were for software licenses but could not provide license keys or renewal terms.,62.0,68.8821,6.8821,61-80,61-80
+751,Wire transfers included inconsistent currency conversions compared with market rates.,68.0,61.1249,6.8751,61-80,61-80
+1760,"Customer changed the nature of business in the profile after initial activity commenced, with no supporting board resolution or amendment documents.",60.0,66.8619,6.8619,41-60,61-80
+2372,"Corporate funds were paid to politically exposed intermediaries through sham consulting contracts, with no verifiable services and anomalous pricing.",96.0,89.1538,6.8462,81-100,81-100
+353,A customer’s industry classification did not correspond to the merchant descriptors on transactions.,58.0,64.8393,6.8393,41-60,61-80
+1850,"Incoming funds originated from accounts reported in fraud cases, then were converted through informal intermediaries and remitted abroad to conceal trail.",95.0,88.1855,6.8145,81-100,81-100
+2000,"Account verification failed due to a mismatch in name format, and the customer corrected it using the official profile update flow.",25.0,18.2016,6.7984,0-40,0-40
+1434,Customer asked for help understanding a small authorization hold and support confirmed it would release automatically.,8.0,1.207,6.793,0-40,0-40
+316,Beneficial ownership documentation was missing for a company that requested immediate transaction access.,78.0,71.2142,6.7858,61-80,61-80
+2541,Customer reported a direct debit missed; we checked mandate status and confirmed funds and schedule were correct.,10.0,3.2929,6.7071,0-40,0-40
+2163,Customer asked how to resolve a failed bank transfer because of insufficient funds and the payment was resubmitted after the balance was topped up.,12.0,5.3129,6.6871,0-40,0-40
+959,A compliance review notes duplicate documentation reuse across separate onboarding attempts.,72.0,65.3205,6.6795,61-80,61-80
+1896,Merchant support noted a settlement timing change due to a weekend processing delay already communicated to the customer.,10.0,3.3387,6.6613,0-40,0-40
+678,"The customer’s profile indicated retail activity, yet transfer sizes were consistent with wholesale trade.",66.0,59.34,6.66,61-80,41-60
+1696,Address was updated after the customer confirmed a recent relocation using the standard verification flow.,5.0,11.6438,6.6438,0-40,0-40
+539,Payments were split across multiple beneficiaries who share common mailing addresses.,77.0,83.6394,6.6394,61-80,81-100
+1015,Customer submitted an additional document because one page was missing from the onboarding upload and the file was resubmitted correctly.,10.0,16.5804,6.5804,0-40,0-40
+2832,"Customer requested a replacement card due to a broken magnetic stripe, and the new card was issued with no other restrictions.",5.0,11.5235,6.5235,0-40,0-40
+1411,Customer reported receiving an email about a charge they did not recognize and support confirmed it matched an existing authorization.,20.0,13.4835,6.5165,0-40,0-40
+1810,"Refund inquiry noted the refund had already been issued back to the original card, and the customer was advised on expected posting time.",10.0,16.4725,6.4725,0-40,0-40
+1684,"Funds were transferred from a personal account to a business account and back within short intervals, obscuring the original source and purpose.",92.0,85.5723,6.4277,81-100,81-100
+532,Customer refused to provide corporate documents beyond a minimal checklist during onboarding.,75.0,68.5828,6.4172,61-80,61-80
+2081,Account maintenance flagged one uploaded document missing a page during review and the customer resubmitted it successfully.,15.0,21.3876,6.3876,0-40,0-40
+83,Outward payments referenced “commission” but the customer could not provide any agency or brokerage agreement.,70.0,76.3773,6.3773,61-80,61-80
+22,The account received funds from a platform associated with high-risk crypto-to-fiat conversion activity.,87.0,93.3646,6.3646,81-100,81-100
+3122,"Customer asked why a small verification charge appeared, and support confirmed it was a standard authorization test that later reversed.",7.0,0.6947,6.3053,0-40,0-40
+857,Trade documentation contained shipping routes that did not match the declared origin country.,86.0,79.7153,6.2847,81-100,61-80
+1453,"Beneficial ownership disclosures were contradicted by internal records, with signatories and directors rotating every few weeks to reset risk controls.",96.0,89.7168,6.2832,81-100,81-100
+3011,"Fraud-linked card data appeared across multiple transactions, and settlement proceeds were transferred to accounts with no legitimate business activity.",90.0,83.722,6.278,81-100,81-100
+236,Multiple chargeback-like payment disputes were raised for transactions involving non-standard payment terms.,65.0,71.2403,6.2403,61-80,61-80
+2809,"Beneficial owner screening produced a weak match to prior watchlist indicators, and the ownership confirmation documents were not fully responsive.",92.0,85.7734,6.2266,81-100,81-100
+2516,Chargeback inquiry opened for a duplicated charge; merchant response confirmed the second authorization voided.,15.0,21.2167,6.2167,0-40,0-40
+2651,"Customer reported a second authentication prompt after switching phones, and it resolved after completing the same device verification steps.",25.0,18.8162,6.1838,0-40,0-40
+2629,"Customer asked why a small test charge appeared before a larger purchase at a new merchant, and it matched standard authorization behavior.",10.0,16.1366,6.1366,0-40,0-40
+2686,"Transfers matched the transaction pattern and reference strings of a known sanctioned network, including alias names and intermediary routing intended to obscure origin.",100.0,93.8858,6.1142,81-100,81-100
+3032,"Customer attempted to change bank details twice within a week, and the rationale provided was vague and not supported by updated documentation.",60.0,53.8979,6.1021,41-60,41-60
+1354,"Forged identity documentation was provided during onboarding, followed by rapid cash-out activity inconsistent with the stated profile.",96.0,89.8982,6.1018,81-100,81-100
+1974,"Customer requested an additional card for a co-traveler, and eligibility was confirmed with no unusual activity noted.",7.0,13.056,6.056,0-40,0-40
+66,Customer provided an expired identification document during onboarding and requested it be re-dated without resubmission.,45.0,38.9488,6.0512,41-60,0-40
+2685,"Customer onboarding submitted forged identity and address records, followed by rapid cash-out transactions inconsistent with the declared business model.",94.0,100.0,6.0,81-100,81-100
+600,Transaction monitoring flagged repeated round-dollar transfers that did not align with typical customer behavior.,68.0,73.9977,5.9977,61-80,61-80
+531,A series of payments went out late at night with transaction patterns inconsistent with typical customer behavior.,70.0,75.9722,5.9722,61-80,61-80
+1996,"Direct debit authorization was re-confirmed when the customer changed their mandate details, and transactions resumed normally.",15.0,9.0365,5.9635,0-40,0-40
+229,Outbound payments used slightly altered beneficiary names that were not consistent with prior records.,85.0,90.941,5.941,81-100,81-100
+543,Account activity became concentrated in a single counterparty shortly after the relationship began.,75.0,80.9339,5.9339,61-80,81-100
+611,Multiple accounts under the same contact phone number showed inconsistent onboarding information.,55.0,60.8971,5.8971,41-60,61-80
+2759,"Merchant refunds were issued to cardholders after the customer’s stated settlement method was bank transfer, creating documentation gaps.",52.0,46.1258,5.8742,41-60,41-60
+131,Beneficial owner information did not match the address and phone details used during onboarding.,68.0,73.8592,5.8592,61-80,61-80
+1008,"Customer asked to change the phone number on the account after receiving a new SIM, following standard verification.",10.0,4.1707,5.8293,0-40,0-40
+2288,"Customer asked for help locating a pending card payment that later reversed normally, with no account anomalies observed.",8.0,2.1834,5.8166,0-40,0-40
+1376,"Funds were transferred to an intermediary in a sanctioned jurisdiction, then re-routed to final recipients using alias names and intermediary buffers.",99.0,93.1845,5.8155,81-100,81-100
+77,Company accounts received payments from entities sharing the same address as the customer’s former business entity.,72.0,66.1905,5.8095,61-80,61-80
+995,A counterparty requested payments to a third-party wallet rather than the invoiced beneficiary.,84.0,78.2055,5.7945,81-100,61-80
+2014,Onboarding review noted beneficial owner information was missing key fields and follow-up documents did not fully reconcile with the application.,65.0,59.2272,5.7728,61-80,41-60
+1823,"Merchant settlement review found the invoice reference formatting was inconsistent, and the merchant submitted a corrected format for future payouts.",20.0,14.2303,5.7697,0-40,0-40
+593,Customer requested a change of beneficiary immediately after funds were received with no supporting contract updates.,78.0,72.2607,5.7393,61-80,61-80
+1161,Card was declined at a specific merchant and support advised enabling merchant category/online usage after the decline reason was explained.,15.0,20.7109,5.7109,0-40,0-40
+2755,Merchant processed unusually high chargebacks relative to disputes while product complaints were not consistent with the merchant’s claimed category.,66.0,71.673,5.673,61-80,61-80
+1958,Customer asked for clarification on a pending card payment that later posted normally within the expected timeframe.,8.0,2.3562,5.6438,0-40,0-40
+1283,Customer received an SMS alert for a declined transaction and asked for troubleshooting; the balance and merchant category were confirmed.,15.0,9.3867,5.6133,0-40,0-40
+778,Beneficial ownership details were revised after onboarding without a documented explanation.,75.0,69.3922,5.6078,61-80,61-80
+891,A corporate client requested payment by “agent” despite contract clauses requiring direct payment to suppliers.,72.0,77.5993,5.5993,61-80,61-80
+2658,"Invoice copies provided were missing key fields such as purchase order numbers and delivery dates, reducing the reliability of the source-of-funds review.",65.0,59.4272,5.5728,61-80,41-60
+278,Cash withdrawals increased while declared income did not support the activity level.,82.0,87.5185,5.5185,81-100,81-100
+112,The customer attempted to route payments through a different legal entity after initially failing customer due diligence.,88.0,82.5084,5.4916,81-100,81-100
+2076,Customer requested a small change to their saved payee details due to a typo and confirmed it matched their usual recipient.,6.0,11.454,5.454,0-40,0-40
+395,Beneficial ownership documentation was updated twice within a short period with no supporting narrative.,66.0,71.3364,5.3364,61-80,61-80
+356,An account showed frequent beneficiary changes concurrent with blocked sanctions inquiries.,90.0,95.2267,5.2267,81-100,81-100
+322,Correspondent banking notes indicated the counterparty operated in a higher-risk region.,75.0,69.7737,5.2263,61-80,61-80
+60,Customer provided source-of-funds documentation that did not cover the full time period of recent deposits.,66.0,60.7808,5.2192,61-80,61-80
+1471,Customer reported their debit card was physically damaged while on vacation and requested a replacement.,12.0,6.8168,5.1832,0-40,0-40
+2095,"A customer used a forged lease and utility statements to secure additional credit lines, then immediately drew funds and transferred them offshore to unknown recipients.",93.0,98.1593,5.1593,81-100,81-100
+2559,The entity attempted to disguise controlled-goods end-use by submitting altered shipping documents and requesting third-country rerouting at the last minute.,96.0,90.8657,5.1343,81-100,81-100
+626,Payments were made to multiple offshore consultants with overlapping email domains but inconsistent contract terms.,80.0,85.1163,5.1163,61-80,81-100
+3001,"A merchant account processed wire-to-card settlement flows that matched fraud laundering patterns, with rapid downstream withdrawals.",98.0,92.906,5.094,81-100,81-100
+2486,"Customer’s account usage differed from the declared purpose (cash management vs. payments), with no updated profile submitted to explain the shift.",68.0,62.9369,5.0631,61-80,61-80
+3060,A card replacement shipment status was checked after the original delivery attempt failed due to an incorrect postcode.,8.0,2.9399,5.0601,0-40,0-40
+2724,Client noticed a small charge reflected under a different merchant descriptor and asked for clarification on the posting name.,25.0,19.9408,5.0592,0-40,0-40
+835,Beneficiary name variations were used across payments to avoid matching to an existing risk flag.,90.0,84.9901,5.0099,81-100,81-100
+2255,Customer requested a copy of their last statement for a rental renewal and no unusual account activity was noted.,5.0,0.0,5.0,0-40,0-40
+2886,"A corporate account showed signatory authority changes followed by rapid outbound payments to accounts with shared ownership signals, without clear explanation.",95.0,100.0,5.0,81-100,81-100
+1155,Payment inquiry was raised for a card purchase that showed pending but later resolved as completed through normal processing.,5.0,0.0,5.0,0-40,0-40
+1014,Customer asked why their account balance showed differently after a pending card transaction and was advised it would update post-settlement.,5.0,0.0,5.0,0-40,0-40
+1325,Customer reported a pending card charge that cleared once the merchant finalised the transaction within normal processing.,5.0,0.0,5.0,0-40,0-40
+1659,Corporate funds were routed to a concealed beneficial owner via sham consulting invoices issued by a politically exposed intermediary with unverifiable credentials.,95.0,100.0,5.0,81-100,81-100
+2968,"Customer asked why a reversed card refund still showed as pending, and we confirmed it would reflect as completed after settlement.",5.0,0.0,5.0,0-40,0-40
+1914,"Customer asked about changing the default payment method for card and bank transfer options, and the preference was updated.",5.0,0.0,5.0,0-40,0-40
+1264,Customer reported their contact number was wrong and updated it after confirming via the usual SMS OTP.,5.0,0.0,5.0,0-40,0-40
+2965,Customer asked about a small credit that appeared from a subscription trial and we confirmed it was the standard reversal of the trial charge.,5.0,0.0,5.0,0-40,0-40
+2757,A newly onboarded account received payments from a cluster of connected entities and quickly pushed funds to unrelated third parties.,95.0,100.0,5.0,81-100,81-100
+2732,Customer asked why a charge showed in a different currency than the purchase and was explained by the standard FX conversion.,5.0,0.0,5.0,0-40,0-40
+1310,"Customer needed a PIN reset after forgetting the PIN, and the reset was completed successfully.",5.0,0.0,5.0,0-40,0-40
+1034,Customer updated their employment status through the self-service form after receiving a new contract.,5.0,0.0,5.0,0-40,0-40
+1182,Login support was requested after the customer forgot the password and a standard reset completed successfully.,5.0,0.0,5.0,0-40,0-40
+3108,"Direct debit notification showed an amount change, and support confirmed it was due to the agreed billing cycle update.",5.0,0.0,5.0,0-40,0-40
+1439,Funds from multiple newly created shell entities were layered through cross-border transfers using falsified commercial invoices to disguise a single undisclosed beneficial owner.,95.0,100.0,5.0,81-100,81-100
+1740,Login was restored after the customer verified ownership of their email and completed the standard security steps.,5.0,0.0,5.0,0-40,0-40
+1201,Customer reported the debit card was physically damaged while traveling and requested a replacement.,10.0,14.997,4.997,0-40,0-40
+2177,"Customer asked for confirmation that a scheduled transfer was set up correctly, and the standing instruction details were verified.",6.0,10.9858,4.9858,0-40,0-40
+2989,A pattern of round-dollar amounts and rapid reversals aligned with structuring behavior aimed at avoiding reporting thresholds.,97.0,92.0147,4.9853,81-100,81-100
+1200,"Merchant reported that refunds were timing out temporarily, and support confirmed the issue matched the processor’s normal refund window.",10.0,14.958,4.958,0-40,0-40
+2158,Customer requested to download a prior year statement for tax filings and the correct archive link was provided.,10.0,5.1005,4.8995,0-40,0-40
+1417,Customer asked how to switch from SMS alerts to app notifications and the preference update was applied.,5.0,0.1157,4.8843,0-40,0-40
+2461,Merchant servicing adjusted settlement bank account details after receiving standard documentation for a routine update.,10.0,5.1351,4.8649,0-40,0-40
+2848,Requests to change payment instructions were made immediately after login anomalies and resulted in transfer proceeds being dispersed across mule accounts within hours.,92.0,87.2133,4.7867,81-100,81-100
+303,Customer provided a signed declaration but could not answer basic questions about submitted financials.,68.0,72.7562,4.7562,61-80,61-80
+496,Customer’s spending pattern shifted from routine payments to irregular high-value transfers.,82.0,86.7525,4.7525,81-100,81-100
+1435,Merchant noted that chargebacks were being filed too late due to a deadline setting and the system was corrected.,20.0,15.2581,4.7419,0-40,0-40
+2383,"Layered payments were made to relatives and nominee accounts with matching IP addresses, device IDs, and synchronized transaction timing suggesting coordinated fraud.",96.0,91.2687,4.7313,81-100,81-100
+2235,"Customer provided a source-of-funds statement referencing sale proceeds, but no transaction receipts or closing documents were attached.",55.0,59.7205,4.7205,41-60,41-60
+2425,Customer requested a refund status update for a purchase that had already been submitted through normal merchant processing.,10.0,5.2922,4.7078,0-40,0-40
+2072,Customer requested to add a beneficiary for a domestic transfer and the addition was completed after standard validation.,8.0,12.6021,4.6021,0-40,0-40
+340,Transactions involved multiple shell-like entities with similar directors and overlapping addresses.,92.0,96.5953,4.5953,81-100,81-100
+182,A series of small inbound transfers were used to fund one large outgoing wire within a day.,88.0,92.52,4.52,81-100,81-100
+39,A customer requested return of funds to a different account than the originator without documented authorization.,72.0,76.4813,4.4813,61-80,61-80
+142,A payment was made to a counterparty newly incorporated with no supporting relationship documentation.,70.0,65.5396,4.4604,61-80,61-80
+2899,Customer requested to reset a forgotten password and completed the standard email verification steps.,5.0,0.5626,4.4374,0-40,0-40
+2725,Payment support was contacted because a scheduled card payment appeared pending longer than usual due to normal weekend processing.,10.0,5.5804,4.4196,0-40,0-40
+3030,"Merchant reported new ownership but continued to process refunds using prior branding identifiers, leaving an inconsistent operational history.",60.0,64.4051,4.4051,41-60,61-80
+1312,"Customer asked to cancel a recurring payment, and the cancellation took effect as expected.",5.0,0.6062,4.3938,0-40,0-40
+912,Card cash advances are used in short cycles followed by transfers to offshore beneficiaries.,88.0,83.6373,4.3627,81-100,81-100
+1765,Merchant account experienced unusually high refund-to-sale ratios over consecutive settlement cycles inconsistent with the stated product mix.,66.0,70.3141,4.3141,61-80,61-80
+607,Outgoing payments were directed to an entity with no discernible web presence or verifiable operational footprint.,68.0,72.2811,4.2811,61-80,61-80
+1097,"Merchant onboarding required an additional supporting document for proof of address, and the resubmission completed the review.",25.0,29.2487,4.2487,0-40,0-40
+2189,"Merchant disputes increased alongside inbound load activity, but the merchant’s policy documentation remained unchanged and did not match observed patterns.",65.0,60.763,4.237,61-80,61-80
+1236,Customer reported that a refund had not appeared yet and was told the merchant was still within the standard reversal window.,12.0,16.2324,4.2324,0-40,0-40
+2933,"Screening flagged moderate name similarity to prior alerts, and the customer’s ownership and address history did not provide a satisfactory resolution.",66.0,61.8464,4.1536,61-80,61-80
+1007,Customer reported an incoming card payment reversed unexpectedly and asked for clarification while the reversal was still processing.,15.0,10.8525,4.1475,0-40,0-40
+1116,Customer reported that their ATM cash withdrawal declined and was advised to check available balance and try again.,12.0,7.8542,4.1458,0-40,0-40
+2606,"A refund reversal notification appeared after the return was processed, and the investigation confirmed the standard timeline update.",10.0,5.869,4.131,0-40,0-40
+1978,"Customer requested an address change and provided a recent utility bill, after which the update was completed.",10.0,5.8725,4.1275,0-40,0-40
+3013,"Beneficial ownership fields were updated after initial review, but supporting corporate records did not clearly match the revised ownership percentages.",66.0,61.8804,4.1196,61-80,61-80
+2705,"A customer’s import/export documentation was altered to misstate HS codes and destinations, and the corresponding payments were routed through third countries to conceal end-use.",93.0,97.0991,4.0991,81-100,81-100
+1607,Customer requested a new bank transfer beneficiary name correction after a typo was made during setup.,11.0,15.0747,4.0747,0-40,0-40
+1278,Refund was marked as completed on the merchant side but not received; customer was advised it would post through standard card settlement cycles.,15.0,10.9403,4.0597,0-40,0-40
+1528,Customer requested a replacement card after the magnetic stripe stopped reading reliably.,10.0,14.0566,4.0566,0-40,0-40
+463,Payments described as consulting were sent to entities with no online business footprint.,77.0,72.9637,4.0363,61-80,61-80
+1534,"Merchant settlement was delayed by one business day due to a bank holiday, and the merchant was notified.",2.0,6.0352,4.0352,0-40,0-40
+1575,Corporate funds were directed to a concealed beneficial owner through sham consulting agreements with politically exposed intermediaries.,96.0,100.0,4.0,81-100,81-100
+3139,"Large inbound transfers from a conflict-linked region were followed by layered domestic transfers to cash-focused branches, suggesting rapid conversion and concealment of illicit origin.",96.0,100.0,4.0,81-100,81-100
+1587,A customer used forged board resolutions and nominee agreements to justify transfers that were then split and sent to high-risk offshore accounts.,96.0,100.0,4.0,81-100,81-100
+2720,"Multiple accounts under the same device and contact details exhibited synchronized wire timing and beneficiary changes, consistent with coordinated mule operations for laundering proceeds.",96.0,100.0,4.0,81-100,81-100
+1459,"Incoming payments came from numerous “friends/family” senders, then consolidated to a single account and immediately transferred to a high-risk offshore beneficiary.",96.0,100.0,4.0,81-100,81-100
+1597,"A structured cash deposit pattern was paired with wire withdrawals to offshore locations, matching typologies for high-intensity mule activity.",96.0,100.0,4.0,81-100,81-100
+1839,"Transaction references matched a known illicit fundraising typology tied to conflict-linked corridors, with repeated patterns of U.S.-dollar settlement.",96.0,100.0,4.0,81-100,81-100
+633,A chargeback pattern emerged where claims were inconsistent with merchant activity and refund routing.,78.0,74.0257,3.9743,61-80,61-80
+1644,"Customer asked why a payment was reversed after a merchant timed out, and support confirmed it matched standard network behavior.",8.0,4.0398,3.9602,0-40,0-40
+2789,Customer requested to update their tax residence details during a routine profile maintenance review and submitted the required form.,5.0,1.0488,3.9512,0-40,0-40
+1338,"Customer reported the card mail was not received, and a replacement card was issued after standard checks.",15.0,11.0542,3.9458,0-40,0-40
+2703,"Device fingerprinting and login patterns showed coordinated account access by multiple individuals operating under different names, consistent with mule coordination for cash-out.",93.0,89.0664,3.9336,81-100,81-100
+2816,"Customer’s declared industry and provided invoices referenced different business lines, requiring clarification on the true nature of transactions.",65.0,61.0787,3.9213,61-80,61-80
+2252,"Login was temporarily blocked after multiple failed attempts, then restored once the customer verified their device.",15.0,18.9202,3.9202,0-40,0-40
+1919,Account servicing processed a legal name change after receiving the appropriate documentation and verified the details.,5.0,8.9164,3.9164,0-40,0-40
+1702,A refund inquiry was submitted and we confirmed the refund was already in progress through standard timelines.,10.0,13.9043,3.9043,0-40,0-40
+1618,"Card was temporarily blocked after the customer reported it lost, and replacement steps were completed without issues.",12.0,8.1633,3.8367,0-40,0-40
+647,Person-to-person transfers increased after a change in occupation listed on the account.,55.0,58.8291,3.8291,41-60,41-60
+3052,"Customer clarified that a scheduled transfer failed because the recipient account was closed, and guidance was given to update details.",7.0,3.2434,3.7566,0-40,0-40
+2763,"In reviewing onboarding, the company’s business address could not be verified, and the submitted lease agreement contained inconsistencies.",55.0,51.2733,3.7267,41-60,41-60
+2942,"Merchant transactions referenced memberships and events, but the customer’s website and business registry filings did not show the described offerings.",66.0,62.3002,3.6998,61-80,61-80
+724,Customer presented documents with overlapping dates but differing company registration numbers.,80.0,76.3425,3.6575,61-80,61-80
+2689,"Counterparty KYC revealed connections to an illicit procurement scheme for controlled goods, yet the customer provided altered shipping documents and third-country routing.",98.0,94.3463,3.6537,81-100,81-100
+1418,Merchant settlement timing changed due to a public holiday and this was communicated to the client.,5.0,8.6475,3.6475,0-40,0-40
+1848,An intermediary requested urgent changes to payment instructions and routed funds to a new bank account outside the established relationship shortly after onboarding.,95.0,91.3623,3.6377,81-100,81-100
+198,Customer used multiple cards to fund a single account wallet within a short time window.,70.0,73.6346,3.6346,61-80,61-80
+3149,"Device fingerprint and browser/session changes occurred alongside unusual payment instructions, but no conclusive fraud indicators were identified.",62.0,65.624,3.624,61-80,61-80
+980,Payments were structured to remain just under internal screening limits across several days.,95.0,91.3781,3.6219,81-100,81-100
+188,Funds were received for “marketing services” but the customer could not produce campaign metrics or contracts.,65.0,68.5968,3.5968,61-80,61-80
+71,Card transactions showed repeated declines followed by a switch to a different merchant category without a clear business rationale.,60.0,56.4079,3.5921,41-60,41-60
+1425,Customer asked to re-enable online transfers after an accidental risk hold and it was lifted after review.,15.0,11.4493,3.5507,0-40,0-40
+2511,Customer asked to update phone number for 2FA; change was completed after verification.,12.0,15.5489,3.5489,0-40,0-40
+252,Cash deposits increased materially after account ownership changes with no supporting documentation.,86.0,89.5322,3.5322,81-100,81-100
+3137,"Beneficial ownership documentation was altered midstream, with ownership percentages changing without corporate actions, and outgoing transfers increased to high-risk correspondent accounts.",92.0,95.5204,3.5204,81-100,81-100
+591,Overlapping ownership indicators suggested the customers were effectively controlling multiple accounts under different profiles.,80.0,83.4947,3.4947,61-80,81-100
+1916,"Customer reported that their card was not working online, and the online transaction setting was enabled after routine verification.",10.0,13.4464,3.4464,0-40,0-40
+227,Beneficial owner identity documents were replaced with newer scans after a compliance inquiry.,80.0,83.4379,3.4379,61-80,81-100
+2340,Merchant settlement timing shifted due to holiday processing; customer was notified that payouts follow the established schedule.,10.0,13.4215,3.4215,0-40,0-40
+1124,Onboarding maintenance required a second proof-of-address submission because the first one was not legible.,25.0,28.4123,3.4123,0-40,0-40
+1891,Login access was restored after the customer completed the standard device and identity verification steps.,8.0,11.3993,3.3993,0-40,0-40
+1002,Customer asked why a scheduled bank transfer is pending and noted the transfer date fell on a weekend/holiday.,8.0,4.6539,3.3461,0-40,0-40
+743,Payments were sent to vendors in a sanctioned-adjacent jurisdiction without additional diligence evidence.,88.0,84.6868,3.3132,81-100,81-100
+2127,"Beneficial owner information remained incomplete after follow-up, and the additional documents did not cover all required fields or time periods.",60.0,63.2972,3.2972,41-60,61-80
+2522,Merchant update submitted to reflect a revised business address; changes were accepted with no impact on payments.,5.0,8.2895,3.2895,0-40,0-40
+1801,"Customer asked about a small verification charge on the card, and the transaction was confirmed as a routine authorization.",8.0,4.7116,3.2884,0-40,0-40
+2525,Onboarding support note: customer’s selfie verification failed once due to lighting; reattempt approved after retry.,15.0,18.2869,3.2869,0-40,0-40
+684,Payment purpose changed from “marketing” to “consulting” multiple times without documented rationale.,72.0,68.7495,3.2505,61-80,61-80
+1220,"A login attempt from a new location was flagged, and access was restored after the customer confirmed it was them.",22.0,25.1973,3.1973,0-40,0-40
+2283,Merchant asked to correct a payout schedule and confirmed they understood the new settlement cadence.,12.0,8.8631,3.1369,0-40,0-40
+1196,"Card payment dispute was raised for an item not received, and support clarified the next steps based on the normal timeline.",25.0,21.8845,3.1155,0-40,0-40
+2289,Customer requested an additional verification step exemption for a routine change and support confirmed policy did not allow it.,25.0,21.92,3.08,0-40,0-40
+2366,Customer reported they were unable to add a new payment method in-app; support guided them to complete normal verification steps.,10.0,13.0675,3.0675,0-40,0-40
+174,Outbound transfers targeted accounts with differing surnames but shared identical dates of birth in records.,86.0,82.9357,3.0643,81-100,81-100
+1129,Customer reported their online balance display was temporarily out of date and it was refreshed after a routine sync.,3.0,0.0,3.0,0-40,0-40
+1374,"Shell entities submitted “pro-forma” documents that did not match actual shipment data, and proceeds were transferred immediately after facility drawdown.",97.0,100.0,3.0,81-100,81-100
+2422,Customer updated their mailing address after moving and confirmed the new address via standard verification.,5.0,2.0084,2.9916,0-40,0-40
+2088,"Payment routing instructions were altered minutes after login by a party referencing a prior account takeover alert, and proceeds were dispersed across mule-linked accounts.",98.0,95.0715,2.9285,81-100,81-100
+3132,A customer attempted to obscure controlled goods destination by using altered shipping documents and routing through a third country with inconsistent logistics trails.,95.0,97.9269,2.9269,81-100,81-100
+2138,Merchant settlement was delayed by one business day due to a banking holiday and the merchant was notified of the updated ETA.,5.0,7.9085,2.9085,0-40,0-40
+1152,Customer reported they couldn’t log in after changing phones and completed the usual device verification to restore access.,15.0,12.0959,2.9041,0-40,0-40
+437,Transactions to a high-risk category merchant were supported by invoices that lacked quantity and unit price details.,75.0,72.0995,2.9005,61-80,61-80
+1920,"Customer asked why a transfer was marked as completed but the beneficiary had not received it, and the trace confirmed settlement timing.",15.0,17.8838,2.8838,0-40,0-40
+1703,"Card payment declined due to a routine merchant terminal offline period, and the customer tried again later.",8.0,10.8829,2.8829,0-40,0-40
+941,A beneficiary is added and used only for one transaction before removal from profile.,55.0,52.1352,2.8648,41-60,41-60
+125,A payment narrative referenced invoices that could not be verified against supporting documents.,71.0,73.8607,2.8607,61-80,61-80
+2577,"Layered payments were conducted through a web of short-lived entities created minutes apart, indicating deliberate concealment of fund origin and destination.",96.0,98.8371,2.8371,81-100,81-100
+51,A non-profit account received transfers that were largely repaid to private individuals without clear program linkage.,85.0,82.1651,2.8349,81-100,81-100
+2756,"Customer supplied source-of-funds details describing liquidation, but documentation did not clearly link liquidation proceeds to the deposited amounts.",64.0,66.8217,2.8217,61-80,61-80
+2438,Customer asked for guidance on setting up biometric login after receiving a new phone.,10.0,12.8157,2.8157,0-40,0-40
+2611,Onboarding review noted one supporting document upload was missing a page and was resolved with a resubmission.,12.0,14.7936,2.7936,0-40,0-40
+352,Payments were sent to a beneficiary with a history of compliance issues flagged internally.,82.0,79.2388,2.7612,81-100,61-80
+1430,Customer confirmed they received the replacement card and requested the old card be disabled.,10.0,12.7389,2.7389,0-40,0-40
+1359,Customer attempted to obscure controlled-goods end-destination details by altering shipping documents and using third-country transshipment.,93.0,95.599,2.599,81-100,81-100
+2745,Merchant support closed out a routine onboarding checklist issue after the required documents were confirmed complete.,5.0,7.5664,2.5664,0-40,0-40
+1106,Customer noticed a small charge from a known merchant descriptor and requested an explanation of the timing.,15.0,17.5561,2.5561,0-40,0-40
+2688,Layering activity fragmented incoming transfers into near-identical amounts and forwarded them to newly added beneficiaries within hours of receipt.,95.0,97.5545,2.5545,81-100,81-100
+987,A customer requested rapid release of funds before completion of supporting documentation checks.,82.0,79.4672,2.5328,81-100,61-80
+2375,"Beneficial ownership was hidden using nominee directors and layered entities, while invoicing and contract terms indicated a circular, non-economic transaction flow.",94.0,96.4981,2.4981,81-100,81-100
+2270,"Customer asked for clarification on why a charge appeared as a different merchant descriptor, consistent with routine processing.",10.0,7.511,2.489,0-40,0-40
+2402,"Unusual early activity appeared within days of account opening, including rapid inbound wires followed by expedited outbound payments.",92.0,94.4669,2.4669,81-100,81-100
+1704,Customer needed to update their phone number for OTP delivery after getting a new SIM card.,5.0,2.5491,2.4509,0-40,0-40
+1825,"Account servicing corrected an incorrect beneficiary nickname that the customer had entered previously, and transfer functionality remained unaffected.",10.0,12.4477,2.4477,0-40,0-40
+2421,Customer reported a debit card was accidentally left in an ATM and requested a new replacement card.,10.0,7.6182,2.3818,0-40,0-40
+563,Cash handling increased on days corresponding to third-party agent activity statements.,72.0,69.6325,2.3675,61-80,61-80
+2416,"Cash-in and cash-out patterns appeared circular across related accounts, obscuring the origin and destination of funds without clear settlement rationale.",94.0,91.6513,2.3487,81-100,81-100
+258,Customer’s stated occupation does not align with the source of funds narrative.,64.0,66.3306,2.3306,61-80,61-80
+2123,"Customer provided a PO box address for one document type and a street address for another, with explanation indicating “temporary relocation” but no supporting timeline.",45.0,42.6983,2.3017,41-60,41-60
+2047,"Chargeback inquiry was opened for a subscription they said they canceled, and the case proceeded under the normal dispute workflow.",15.0,12.7405,2.2595,0-40,0-40
+2607,Customer requested a new statement copy for a mortgage application and confirmed the account balance matched prior statements.,5.0,7.2459,2.2459,0-40,0-40
+328,Large transfers were made shortly after account activation despite limited transaction history.,78.0,80.2412,2.2412,61-80,81-100
+3095,Transaction activity showed rapid in-and-out movement where incoming funds were quickly consolidated and rerouted to new beneficiaries without clear business rationale.,95.0,97.1936,2.1936,81-100,81-100
+849,A corporate customer’s address differed from the registered place of business and could not be reconciled.,55.0,57.1733,2.1733,41-60,41-60
+2248,Customer reported a typo in the billing address and requested an update after confirming the correct details via profile.,5.0,7.1689,2.1689,0-40,0-40
+2324,Customer submitted an onboarding document but it was missing a page; they resubmitted it and the review completed.,20.0,22.1203,2.1203,0-40,0-40
+3,Customer provided inconsistent information about the nature of services received from a foreign counterparty.,70.0,67.8949,2.1051,61-80,61-80
+1887,Merchant processed payments for “subscription” but issued refunds at irregular intervals not matching typical billing cycles described.,60.0,62.0703,2.0703,41-60,61-80
+78,Funds were routed through a transit account in another country despite no stated trading relationship.,88.0,85.9974,2.0026,81-100,81-100
+2976,Payment instructions were altered within hours of a confirmed account takeover and proceeds were dispersed to multiple mule-linked accounts.,98.0,100.0,2.0,81-100,81-100
+3173,Corporate funds were funneled to a concealed beneficial owner via sham vendor contracts and over-invoiced services tied to a politically exposed intermediary.,98.0,100.0,2.0,81-100,81-100
+1860,"Funds were routed to a collaborator’s account in a high-risk jurisdiction without any contract, then returned as “consulting fees” to launder proceeds.",98.0,100.0,2.0,81-100,81-100
+2105,"Funds were sent to a “charity” front with unclear beneficiary activities, followed by withdrawals to private accounts and transfers to high-risk jurisdictions.",98.0,100.0,2.0,81-100,81-100
+1351,Layered international transfers routed through multiple short-lived shell entities with falsified invoices to obscure the true source of funds.,98.0,100.0,2.0,81-100,81-100
+2825,"Customer asked about a transfer scheduled for the weekend, and support explained it would post on the next processing cycle.",2.0,0.0,2.0,0-40,0-40
+1818,"Customer reported their statement showed an unfamiliar merchant descriptor, and support confirmed it was a legitimate installment provider name change.",18.0,16.0291,1.9709,0-40,0-40
+2905,"Merchant asked about invoice settlement reports, and support provided the standard reconciliation spreadsheet for the period.",5.0,6.9705,1.9705,0-40,0-40
+290,Wire transfers were sent to a beneficiary account that does not match the stated entity name.,82.0,83.9656,1.9656,81-100,81-100
+1762,Customer requested additional users/access roles while providing only partial rationale for the operational need.,48.0,46.0393,1.9607,41-60,41-60
+1601,A client provided forged contract amendments and requested expedited payments to a beneficiary bank known for concealing ultimate beneficial owners.,97.0,98.9436,1.9436,81-100,81-100
+1868,"Funds were transferred to a shell entity registered just days earlier, and withdrawals began immediately, consistent with organized mule staging.",96.0,97.9381,1.9381,81-100,81-100
+2308,"Customer added third-party payees for payroll-like payments but later indicated they were reimbursements, causing unclear payment intent.",68.0,66.0723,1.9277,61-80,61-80
+17,A customer sought to structure payments just under internal review limits across several invoices.,92.0,90.0726,1.9274,81-100,81-100
+3129,"A PEP-linked vendor relationship was used to invoice sham consulting services, with payments immediately moved offshore through correspondent accounts controlled by related parties.",96.0,94.088,1.912,81-100,81-100
+1467,"Large transfers were made from high-risk jurisdictions with no relationship to the customer’s stated business, followed by onward movement to multiple mule accounts.",93.0,94.8207,1.8207,81-100,81-100
+2197,A newly onboarded company routed large inbound wires through two intermediary jurisdictions and paid a purported supplier using invoices later marked as falsified.,99.0,97.188,1.812,81-100,81-100
+621,A customer maintained multiple accounts with similar transaction patterns that suggested coordination across profiles.,82.0,83.7698,1.7698,81-100,81-100
+793,Card transactions showed patterns consistent with possible account takeover due to sudden spend shifts.,74.0,72.2425,1.7575,61-80,61-80
+2708,A PEP-associated entity submitted inconsistent source-of-funds narratives across reviews and then paid substantial sums to intermediaries in jurisdictions commonly used for corruption laundering.,97.0,95.2815,1.7185,81-100,81-100
+1257,Customer requested a refund status update for a purchase whose refund was still within the normal processing window.,8.0,9.6991,1.6991,0-40,0-40
+2922,"Screening review noted potential address overlap with an unrelated entity, and the submitted clarification letter did not address the discrepancy.",50.0,48.3011,1.6989,41-60,41-60
+2056,Account was updated to include a new email address after the customer completed standard verification for the change.,12.0,13.6688,1.6688,0-40,0-40
+1247,"Merchant onboarding required a second review because of a minor mismatch in business registration name, and it was corrected.",14.0,12.3521,1.6479,0-40,0-40
+624,Trade documents showed discrepancies in consignee names that did not align with the contract and invoice.,82.0,80.4006,1.5994,81-100,81-100
+1362,A customer used a series of nominee directors and legal address changes to delay verification while executing rapid cross-border withdrawals.,92.0,90.4125,1.5875,81-100,81-100
+776,Multiple cash deposits were made in uneven amounts with no clear employment or income source.,80.0,78.4249,1.5751,61-80,61-80
+597,Multiple payments referenced “software licensing” while supporting documents lacked license agreements.,70.0,71.473,1.473,61-80,61-80
+886,"Sanctions screening indicated a close match for a party name variant, but the customer’s explanation was generic.",78.0,76.5382,1.4618,61-80,61-80
+1752,"Several payments were structured as near-identical amounts to multiple recipients within a short window, prompting a review for potential activity patterning.",93.0,91.5618,1.4382,81-100,81-100
+63,Transactions referenced educational services but were paid to multiple unrelated recipients without enrollment evidence.,78.0,79.3435,1.3435,61-80,61-80
+2028,"Customer’s documentation listed a different legal name than the bank statement counterparties, and the linkage documentation was not clearly provided.",60.0,61.318,1.318,41-60,61-80
+2447,Customer requested a card PIN reset after failing multiple attempts in a normal purchase scenario.,15.0,13.7016,1.2984,0-40,0-40
+30,Transactions were routed through a nested chain of intermediaries with limited transparency in remittance details.,88.0,89.27,1.27,81-100,81-100
+1146,"Customer requested a transfer cancellation for a pending transaction that had not yet settled, and the cancellation was confirmed.",15.0,13.7315,1.2685,0-40,0-40
+2205,"Multiple shell entities with shared directors and overlapping contact details executed layered transfers to purchase assets, then quickly liquidated them through structured payments.",97.0,98.2548,1.2548,81-100,81-100
+2987,"A customer used multiple intermediary banks to break obvious transaction trails, repeatedly reusing the same correspondent in disguised form.",98.0,96.7494,1.2506,81-100,81-100
+143,Customer requested termination of correspondence instructions after being asked for additional source-of-funds evidence.,80.0,78.7594,1.2406,61-80,61-80
+2374,Newly onboarded accounts used shared device fingerprints and identical withdrawal patterns consistent with organized mule recruitment.,90.0,88.8389,1.1611,81-100,81-100
+854,The customer provided a utility bill that did not match the service period shown on the account opening record.,52.0,53.1517,1.1517,41-60,41-60
+15,Customer onboarding documents contained duplicate signatures across different forms.,78.0,76.8519,1.1481,61-80,61-80
+665,Ownership documents were provided with mismatched issuance dates and inconsistent company seals.,92.0,90.859,1.141,81-100,81-100
+179,A business account showed repeated payments to a consultant whose invoice templates matched other counterparties.,72.0,70.8615,1.1385,61-80,61-80
+2958,Merchant account settings were updated to reflect a new settlement schedule agreed during onboarding.,6.0,4.9214,1.0786,0-40,0-40
+31,A director requested immediate account closure after receiving payments from several unrelated counterparties.,84.0,82.9409,1.0591,81-100,81-100
+40,Repeated payments were made to a correspondent with common payment references that did not match invoices.,81.0,79.9586,1.0414,81-100,61-80
+3165,"Customer onboarding file showed mismatched addresses between ID and utility proof, with no corroborating lease or tenancy document provided.",58.0,56.9647,1.0353,41-60,41-60
+3077,Customer could not consistently describe the nature of their business despite providing invoices and a general service agreement.,50.0,48.9752,1.0248,41-60,41-60
+2845,Transaction references and beneficiary names aligned with known illicit fundraising typologies tied to a conflict-linked corridor.,99.0,100.0,1.0,81-100,81-100
+2554,Customer identifiers and tax profiles matched a sanctioned network using multiple alias spellings and intermediary routing that obscured the true beneficial owner.,99.0,100.0,1.0,81-100,81-100
+1353,Sanctions-screening matched a counterparty to a sanctioned network using alternate spellings and an intermediary routing structure that concealed the beneficial owner.,99.0,100.0,1.0,81-100,81-100
+3005,Terrorist financing indicators were flagged as funds moved through a network of newly formed entities with overlapping contact details and shared addresses.,99.0,100.0,1.0,81-100,81-100
+2977,"Counterparty names and alias spellings mapped to a sanctioned network, with routing through intermediaries designed to obscure the true beneficiary.",99.0,100.0,1.0,81-100,81-100
+2204,"Funds associated with a conflict-linked corridor were transferred using trade finance instruments, and supporting paperwork showed mismatched vessel routes and dates.",92.0,91.0387,0.9613,81-100,81-100
+2441,Customer asked why their balance view showed a temporary hold related to a recent fuel purchase.,8.0,7.0399,0.9601,0-40,0-40
+2369,Counterparty details matched a sanctioned network through alias spellings and intermediary routing that obscured the underlying beneficial owner.,98.0,97.062,0.938,81-100,81-100
+1673,"Cross-border payments repeatedly referenced “settlement” without contracts, and beneficiaries were selected from lists used in prior scams involving payment redirection.",93.0,93.9365,0.9365,81-100,81-100
+2201,Corporate funds were advanced to a politically exposed intermediary via sham consulting invoices and then withdrawn as cash using multiple ATM-linked cards.,99.0,98.0838,0.9162,81-100,81-100
+2822,"Merchant settlement was delayed by one day due to weekend processing, and the account credit timing was corrected in the notice.",5.0,4.0881,0.9119,0-40,0-40
+2262,"Merchant settlement posting date shifted due to a public holiday cutoff, and the customer was informed of the delay.",10.0,9.089,0.911,0-40,0-40
+1184,Merchant asked for clarification on settlement reports and support explained the mapping between gross sales and net payout.,10.0,9.1433,0.8567,0-40,0-40
+643,A customer requested to route transfers through a third party not reflected in the contract.,75.0,75.8459,0.8459,61-80,61-80
+2966,Customer requested to update their mailing address for card delivery and the change was confirmed with the provided reference code.,5.0,4.1554,0.8446,0-40,0-40
+2044,Merchant onboarding support noted that tax documentation had an expiry date approaching and was refreshed after the merchant confirmed updated info.,15.0,14.1865,0.8135,0-40,0-40
+3178,"Multiple newly onboarded accounts shared device fingerprints, contact identifiers, and synchronized withdrawal patterns consistent with organized mule recruitment.",95.0,94.1982,0.8018,81-100,81-100
+1935,"Merchant servicing noted that a payout was lower than expected because of a standard fee adjustment, which was explained to the merchant.",10.0,10.7985,0.7985,0-40,0-40
+3151,"Account profile changes (industry, expected turnover, and transaction purpose) were made in close succession while transaction patterns remained largely unchanged, indicating potential misstatement of expected activity.",62.0,62.7732,0.7732,61-80,61-80
+474,Payments were made for “freight” despite no corresponding shipping references being provided.,74.0,74.7486,0.7486,61-80,61-80
+2566,Cross-border transfers were routed through a series of correspondent banks and dummy invoices to conceal that the ultimate payer was a sanctioned party.,99.0,99.7337,0.7337,81-100,81-100
+1622,"Customer asked whether a small test transaction was normal after linking an account, and it matched standard verification.",7.0,7.6519,0.6519,0-40,0-40
+984,The customer used personal funds to settle invoices billed to a corporate entity with no documented relationship.,65.0,64.3645,0.6355,61-80,61-80
+49,Outgoing wires included beneficiary addresses that did not match registry records for the receiving entities.,78.0,78.634,0.634,61-80,61-80
+3039,"Multiple address changes occurred alongside changes in declared business activity, but supporting filings were delayed or unavailable.",66.0,65.3748,0.6252,61-80,61-80
+2665,"Merchant reported a sudden drop in sales but continued to generate similar processing-related fees, creating an operational inconsistency to investigate.",45.0,45.6237,0.6237,41-60,41-60
+1571,Layered cross-border transfers were routed through newly created shell companies using falsified invoices and inconsistent shipment references.,98.0,97.3889,0.6111,81-100,81-100
+1968,Customer asked to change the email on file after receiving a typo in the onboarding form and confirmed the new address.,12.0,11.4285,0.5715,0-40,0-40
+2973,Customer asked for assistance verifying a new device fingerprint and access was granted after completing the routine security check.,7.0,6.4413,0.5587,0-40,0-40
+2154,"Customer reported that an ATM withdrawal was reversed after a network timeout, and the reversal was confirmed in the account ledger.",12.0,12.5288,0.5288,0-40,0-40
+1436,Customer requested to change the email for statements and the update was applied without affecting other settings.,5.0,5.5122,0.5122,0-40,0-40
+2495,Merchant’s operational logs indicated goods category changes without corresponding updates to the merchant agreement or product listings.,58.0,58.5049,0.5049,41-60,41-60
+3145,"A merchant’s payment acceptance pattern shifted abruptly from one channel to another, but onboarding materials did not document the change or required compliance updates.",55.0,54.5448,0.4552,41-60,41-60
+2863,Large-value inbound checks were deposited and quickly withdrawn via transfers to accounts linked to mule activity and ATM cash-out.,95.0,95.434,0.434,81-100,81-100
+2584,"A legal entity’s bank statements were inconsistent with reported revenues, and the account subsequently funded high-risk purchases through nominee-controlled payment flows.",95.0,95.3919,0.3919,81-100,81-100
+1340,"Customer requested a resend of a monthly merchant statement that had not been received, with the file reissued successfully.",3.0,3.3881,0.3881,0-40,0-40
+3109,Customer asked for a duplicate bank statement copy for a landlord and the statement was reissued promptly.,8.0,8.3732,0.3732,0-40,0-40
+605,An agent collected payments on behalf of third parties without evidence of a contractual agency relationship.,72.0,72.3726,0.3726,61-80,61-80
+1589,Funds were moved through a “charity” entity with matching language to illicit fundraising cases and then withdrawn via cash and prepaid instruments.,95.0,95.3681,0.3681,81-100,81-100
+1370,Multiple accounts under the same customer used different passports and e-mail aliases to conceal identity while conducting similar transfer patterns.,93.0,92.7073,0.2927,81-100,81-100
+791,A trade-related payment lacked consistent vessel or shipment documentation matching the declared goods.,72.0,71.7247,0.2753,61-80,61-80
+2596,"Transfers were made to accounts titled with “payment processor” terms, but the customer stated no use of processors beyond normal operations.",68.0,67.7498,0.2502,61-80,61-80
+2263,Customer requested to re-enable recurring payments after confirmation that the billing agreement was still active.,10.0,9.7548,0.2452,0-40,0-40
+2990,Funds from a liquidation event were routed through nominee accounts to disguise proceeds of organized fraud.,99.0,99.2147,0.2147,81-100,81-100
+2600,"Merchant activity demonstrated elevated refunds to cardholders compared with peers, and the stated policy did not explain the timing and amounts.",62.0,62.1417,0.1417,61-80,61-80
+2978,Forged identity documents were provided during onboarding and were later used to authorize rapid cash withdrawals at multiple branches.,97.0,96.8595,0.1405,81-100,81-100
+2854,Payments tied to “software licensing” were routed to offshore firms with no digital footprint while documentation showed altered dates and signatory details.,91.0,91.1123,0.1123,81-100,81-100
+1274,Account verification required an additional supporting document; customer submitted the requested item and the review passed.,18.0,18.1041,0.1041,0-40,0-40
+2642,"Customer requested to update their mailing address for a replacement card, and the card shipped to the new location.",10.0,10.1005,0.1005,0-40,0-40
+434,Outbound remittances matched invoices submitted with inconsistent formatting and identical language.,76.0,75.912,0.088,61-80,61-80
+1770,A customer’s stated occupation did not correspond to the volume and frequency of payments observed during the review period.,55.0,54.9161,0.0839,41-60,41-60
+1225,Customer requested to change the daily transfer limit for convenience while keeping within the account's standard parameters.,10.0,9.9188,0.0812,0-40,0-40
+1058,"Card payment was declined at a merchant due to merchant terminal offline time, and the customer was advised to retry later.",5.0,4.9594,0.0406,0-40,0-40
+1606,Customer contacted support to confirm why a pending card payment had not yet posted and was advised about normal settlement timing.,9.0,9.0334,0.0334,0-40,0-40
+1440,"Payment instructions were altered immediately after a verified account takeover, and outgoing wires were dispersed to several mule-like accounts within the same hour.",98.0,97.9691,0.0309,81-100,81-100
+194,Transaction narratives described generic goods while invoice details were missing or incomplete.,66.0,65.994,0.006,61-80,61-80
+1671,"A company used forged board resolutions to authorize transfers to offshore accounts, and funds were subsequently withdrawn in cash shortly after receipt.",100.0,100.0,0.0,81-100,81-100
+3119,"Merchant asked to update contact details for their onboarding account, and the update was processed successfully.",0.0,0.0,0.0,0-40,0-40

@@ -1,0 +1,87 @@
+{
+  "dataset_path": "issue_priority_dataset.csv",
+  "row_count": 3200,
+  "embedding_model": "Alibaba-NLP/gte-modernbert-base",
+  "device": "cuda",
+  "random_seed": 42,
+  "validation_fraction": 0.2,
+  "train_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 1029,
+      "share": 0.402
+    },
+    {
+      "bucket": "41-60",
+      "count": 253,
+      "share": 0.0988
+    },
+    {
+      "bucket": "61-80",
+      "count": 549,
+      "share": 0.2145
+    },
+    {
+      "bucket": "81-100",
+      "count": 729,
+      "share": 0.2848
+    }
+  ],
+  "validation_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 257,
+      "share": 0.4016
+    },
+    {
+      "bucket": "41-60",
+      "count": 63,
+      "share": 0.0984
+    },
+    {
+      "bucket": "61-80",
+      "count": 138,
+      "share": 0.2156
+    },
+    {
+      "bucket": "81-100",
+      "count": 182,
+      "share": 0.2844
+    }
+  ],
+  "full_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 1286,
+      "share": 0.4019
+    },
+    {
+      "bucket": "41-60",
+      "count": 316,
+      "share": 0.0988
+    },
+    {
+      "bucket": "61-80",
+      "count": 687,
+      "share": 0.2147
+    },
+    {
+      "bucket": "81-100",
+      "count": 911,
+      "share": 0.2847
+    }
+  ],
+  "validation_metrics": {
+    "mae": 8.4056,
+    "rmse": 11.0749,
+    "spearman": 0.9048
+  },
+  "selected_alpha": 0.1,
+  "elapsed_seconds": 14.22,
+  "paths": {
+    "model_bundle": "artifacts\\stratified_gte_modernbert_base_3200_gpu\\final_model.pkl",
+    "summary_json": "artifacts\\stratified_gte_modernbert_base_3200_gpu\\training_summary.json",
+    "validation_predictions_csv": "artifacts\\stratified_gte_modernbert_base_3200_gpu\\validation_predictions.csv",
+    "full_predictions_csv": "artifacts\\stratified_gte_modernbert_base_3200_gpu\\full_predictions.csv"
+  }
+}

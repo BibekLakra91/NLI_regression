@@ -1,0 +1,5 @@
+streamlit>=1.44
+pandas>=2.2
+numpy>=2.0
+scikit-learn>=1.8
+sentence-transformers>=5.3

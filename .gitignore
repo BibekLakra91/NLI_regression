@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 backups/
+.venv/
+.tmp/
+artifacts/**/final_model.pkl

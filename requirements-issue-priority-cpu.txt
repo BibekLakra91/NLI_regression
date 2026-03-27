@@ -1,0 +1,6 @@
+numpy>=1.26
+scikit-learn>=1.5
+sentence-transformers>=3.0
+
+# Optional: only needed when using --include-xgboost.
+xgboost>=2.1
