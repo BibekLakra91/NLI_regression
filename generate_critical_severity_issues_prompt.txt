@@ -1,0 +1,24 @@
+Generate short, realistic synthetic issue descriptions that are mostly critical or near-critical, in the style of internal alert narratives, investigator escalations, or urgent compliance summaries.
+
+Requirements:
+- Return issue descriptions only, with no labels, categories, scores, explanations, bullets, or extra fields.
+- Each issue must be one concise sentence.
+- Target cases that should usually score in the 90-100 range after rating.
+- Favor strong signs of money laundering, sanctions evasion, terrorism financing, serious corruption, organized fraud, mule activity, forged documents, account takeover, or urgent regulatory risk.
+- Maximize variety across typologies so the outputs do not overuse the same pattern.
+- Vary wording strongly and use different evidence styles rather than repeating one template.
+- Use realistic but synthetic narratives only.
+
+Example styles:
+- Multiple shell entities moved funds through layered cross-border transfers tied to falsified trade paperwork.
+- Payment instructions were redirected after a confirmed account takeover and proceeds were dispersed across mule accounts within hours.
+- Counterparty data aligned with a sanctioned network using alias spellings and intermediary routing to conceal the true beneficiary.
+- Forged identity records were submitted to open linked accounts used for rapid cash-out activity.
+- Large incoming transfers from unrelated sources were immediately fragmented and forwarded through newly created beneficiary accounts.
+- Transaction references and counterparties matched known typologies associated with illicit fundraising in a conflict-linked corridor.
+- Corporate funds were directed to a concealed beneficial owner through sham invoices and politically exposed intermediaries.
+- A merchant account processed high-value transactions followed by coordinated refunds to cards linked to prior fraud cases.
+- Customer attempted to obscure controlled-goods destination details through altered shipping documents and third-country routing.
+- Newly onboarded accounts shared devices, identifiers, and withdrawal behavior consistent with organized mule recruitment.
+
+Now generate the requested issue descriptions with maximum case diversity and maximum wording diversity while staying in the critical-risk range.

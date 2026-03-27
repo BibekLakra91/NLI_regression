@@ -1,21 +1,28 @@
-Generate 100 short, realistic compliance/risk issue descriptions in the style of internal alert or investigator notes.
+Generate short, realistic synthetic compliance and investigations issue descriptions in the style of internal alert notes, investigator summaries, onboarding reviews, payment operations comments, or case-management remarks.
 
 Requirements:
-- Return the output as a JSON array of 100 strings.
-- Each string must contain exactly one issue description.
-- Do not include labels, categories, scores, explanations, or extra fields.
-- Each issue should be one short sentence.
-- Keep the wording concise, concrete, and professional.
-- Make them look like realistic banking / payments / AML / fraud / sanctions / KYC / corruption alert narratives.
-- Include a mix of clearly suspicious, ambiguous, and benign-looking cases.
-- Vary the wording and scenarios so they do not feel repetitive or templated.
-- Do not use real names, real companies, or real account numbers.
-- Do not mention urgency, severity, or priority explicitly.
+- Return issue descriptions only, with no labels, categories, scores, explanations, bullets, or extra fields.
+- Each issue must be one concise sentence.
+- Maximize coverage across different case types, severity levels, business contexts, and wording styles.
+- Include a broad mix of benign, minimal-risk, low-risk, medium-risk, high-risk, and critical-risk narratives.
+- Cover a wide range of scenarios such as AML, fraud, sanctions, KYC, corruption, onboarding friction, documentation gaps, payment operations, merchant behavior, card disputes, access issues, and ambiguous review cases.
+- Vary the wording strongly: do not keep repeating the same sentence skeleton, trigger pattern, evidence style, or lead-in phrase.
+- Use realistic but synthetic narratives. Do not use real names, real companies, real account numbers, or real case identifiers.
+- Do not mention urgency, severity, score, or priority explicitly.
+- Use the examples only as style anchors. Do not copy them or stay close to a small template family.
 
-Example output format:
-[
-  "Multiple wire transfers were sent just below the reporting threshold over three consecutive days.",
-  "Customer refused to explain the purpose of payments to a counterparty in a high-risk jurisdiction."
-]
+Example styles:
+- Customer reported a duplicate card charge that was later reversed after merchant confirmation.
+- Periodic account reviews found expired proof-of-address documentation with no other adverse findings.
+- A payroll account began receiving transfers from unrelated third parties with no explanation on file.
+- Merchant refund activity increased after a spike in disputed transactions from newly issued cards.
+- Trade payments referenced generic consulting services without invoices or supporting contracts.
+- Source-of-funds information was incomplete for recent cash activity despite repeated follow-up requests.
+- Multiple outbound wires were routed through newly added beneficiaries shortly after credential changes.
+- Screening matched a vessel alias linked to a restricted shipping network in prior alerts.
+- Corporate onboarding documents showed conflicting ownership details across separate submissions.
+- Customer requested a password reset after changing devices and later confirmed successful access from the usual location.
+- Several small donations were sent to an overseas entity with unclear charitable operations.
+- Incoming transfers were rapidly dispersed to unrelated accounts with little retained balance.
 
-Now generate the 100 issue descriptions.
+Now generate the requested issue descriptions with maximum scenario diversity and maximum wording diversity.

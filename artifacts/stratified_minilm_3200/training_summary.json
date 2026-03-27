@@ -1,0 +1,85 @@
+{
+  "dataset_path": "issue_priority_dataset.csv",
+  "row_count": 3200,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "random_seed": 42,
+  "validation_fraction": 0.2,
+  "train_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 1029,
+      "share": 0.402
+    },
+    {
+      "bucket": "41-60",
+      "count": 253,
+      "share": 0.0988
+    },
+    {
+      "bucket": "61-80",
+      "count": 549,
+      "share": 0.2145
+    },
+    {
+      "bucket": "81-100",
+      "count": 729,
+      "share": 0.2848
+    }
+  ],
+  "validation_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 257,
+      "share": 0.4016
+    },
+    {
+      "bucket": "41-60",
+      "count": 63,
+      "share": 0.0984
+    },
+    {
+      "bucket": "61-80",
+      "count": 138,
+      "share": 0.2156
+    },
+    {
+      "bucket": "81-100",
+      "count": 182,
+      "share": 0.2844
+    }
+  ],
+  "full_distribution": [
+    {
+      "bucket": "0-40",
+      "count": 1286,
+      "share": 0.4019
+    },
+    {
+      "bucket": "41-60",
+      "count": 316,
+      "share": 0.0988
+    },
+    {
+      "bucket": "61-80",
+      "count": 687,
+      "share": 0.2147
+    },
+    {
+      "bucket": "81-100",
+      "count": 911,
+      "share": 0.2847
+    }
+  ],
+  "validation_metrics": {
+    "mae": 10.0,
+    "rmse": 12.9545,
+    "spearman": 0.8859
+  },
+  "selected_alpha": 0.1,
+  "paths": {
+    "model_bundle": "artifacts\\stratified_minilm_3200\\final_model.pkl",
+    "summary_json": "artifacts\\stratified_minilm_3200\\training_summary.json",
+    "validation_predictions_csv": "artifacts\\stratified_minilm_3200\\validation_predictions.csv",
+    "full_predictions_csv": "artifacts\\stratified_minilm_3200\\full_predictions.csv"
+  }
+}

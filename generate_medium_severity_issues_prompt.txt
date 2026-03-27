@@ -1,0 +1,25 @@
+Generate short, realistic synthetic issue descriptions that are mostly medium-severity, in the style of investigator notes, internal alert summaries, or compliance review comments.
+
+Requirements:
+- Return issue descriptions only, with no labels, categories, scores, explanations, bullets, or extra fields.
+- Each issue must be one concise sentence.
+- Target cases that should usually score in the 40-69 range after rating.
+- Favor moderate KYC concerns, repeated unusual activity, incomplete source-of-funds explanations, elevated operational anomalies, or ambiguous patterns that need review but do not clearly establish major criminal conduct.
+- Maximize variety across payments, onboarding, merchant activity, account behavior, documentation, access changes, and customer explanations.
+- Avoid collapsing into only one motif such as structuring or sanctions; cover many different moderate-risk scenarios.
+- Strongly vary wording and narrative shape.
+- Use realistic but synthetic narratives only.
+
+Example styles:
+- Customer provided conflicting explanations for repeated transfers to a newly introduced overseas counterparty.
+- Beneficial ownership details remained incomplete after follow-up and supporting records did not reconcile cleanly.
+- A merchant account showed refund patterns inconsistent with its stated business model over several weeks.
+- Cash deposits increased materially beyond the customer's stated income profile without a documented explanation.
+- Multiple device and contact-detail changes preceded unusual payment instructions, but no confirmed takeover evidence was found.
+- Funds moved through related personal and business accounts in a way that obscured the original source of money.
+- Trade payments referenced generic services and the supporting contracts did not align with invoice timing.
+- Customer used several third parties for settlements that did not match the declared account purpose.
+- Incoming transfers from unrelated senders were quickly combined before a larger outbound wire.
+- Screening review found weak name similarities to prior adverse media with unresolved ownership questions.
+
+Now generate the requested issue descriptions with maximum case diversity and maximum wording diversity while staying in the medium-severity range.

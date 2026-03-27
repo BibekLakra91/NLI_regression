@@ -1,0 +1,25 @@
+Generate short, realistic synthetic issue descriptions that are mostly low-severity or mildly concerning, in the style of internal review notes, support escalations, or routine investigations comments.
+
+Requirements:
+- Return issue descriptions only, with no labels, categories, scores, explanations, bullets, or extra fields.
+- Each issue must be one concise sentence.
+- Target cases that should usually score in the 10-39 range after rating.
+- Favor minor operational concerns, isolated documentation gaps, mild KYC friction, single-payment anomalies, customer behavior needing clarification, or routine service issues without strong criminal indicators.
+- Include ambiguity and light concern, but avoid stacking multiple serious red flags together.
+- Maximize coverage across card issues, transfer issues, onboarding follow-up, merchant servicing, account maintenance, customer support, and modest compliance questions.
+- Strongly vary wording and sentence patterns.
+- Use realistic but synthetic narratives only.
+
+Example styles:
+- Customer delayed submitting refreshed KYC documentation after several routine reminders.
+- A one-off international transfer was sent to a new beneficiary without a clear payment reference.
+- Merchant refunds were slightly elevated after a billing system change but remained within historical ranges.
+- Customer disputed a cash withdrawal while card-present usage continued in the usual home city.
+- Several inbound transfers from family members were noted without updated relationship details on file.
+- Business activity increased faster than expected following a new product launch, but supporting invoices were incomplete.
+- An onboarding review found that the stated source of funds was plausible but not documented clearly enough.
+- A customer changed registered contact details shortly before requesting a modest outgoing payment amendment.
+- Card-not-present purchases rose briefly after a device replacement and then normalized.
+- Payroll inflows were followed by small outgoing transfers to a personal savings account not previously used.
+
+Now generate the requested issue descriptions with maximum case diversity and maximum wording diversity while staying in the low-severity range.

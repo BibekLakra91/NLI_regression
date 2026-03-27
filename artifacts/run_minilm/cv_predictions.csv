@@ -1,0 +1,1001 @@
+issue_id,row_number,issue_description,actual_score,embedding_ridge_prediction,tfidf_ridge_prediction,embedding_hist_gradient_boosting_prediction,mean_baseline_prediction
+1,1,Cash deposits increased sharply after a previously inactive period with no updated source-of-funds documentation.,78.0,78.3773,76.9673,81.8964,76.4688
+2,2,Outgoing transfers were funded by multiple small cash transactions routed through separate branches on the same day.,92.0,81.3429,84.5595,86.7792,76.3875
+3,3,Customer provided inconsistent information about the nature of services received from a foreign counterparty.,70.0,63.2106,67.299,66.6494,76.4688
+4,4,Beneficial ownership details could not be corroborated after internal document verification inconsistencies were noted.,81.0,77.4672,79.2736,75.4839,76.3875
+5,5,"Cross-border payments referenced vague purposes such as ""consulting"" without supporting contracts.",67.0,72.1276,70.6074,72.0302,76.4587
+6,6,A customer requested to change beneficiary details immediately before a scheduled wire transfer.,72.0,71.7988,73.6567,76.7243,76.3875
+7,7,Several transfers were sent to entities in a sanctioned-region list-adjacent jurisdiction without screening exceptions recorded.,88.0,91.4932,94.4459,93.5121,76.4287
+8,8,Transactions showed rapid in-and-out movement with minimal account balance retention over short cycles.,85.0,83.5854,81.9543,84.5465,76.4688
+9,9,The customer’s stated occupation did not align with the level of monthly transaction activity observed.,58.0,60.563,65.9559,68.0152,76.4587
+10,10,Funds were transferred to a family member’s account with no clear relationship to the business activity described.,66.0,77.11,77.0948,77.8722,76.4287
+11,11,"Card payments were reversed repeatedly after authentication attempts, suggesting possible misuse or disputes.",82.0,75.8184,74.0642,73.6092,76.4262
+12,12,KYC renewal identified outdated address data while the account continued to receive high-value transfers.,72.0,67.9308,73.1861,73.4836,76.4287
+13,13,A company representative avoided answering questions on contract terms and instead requested payment to an alternative bank.,86.0,68.4354,73.2668,71.22,76.4688
+14,14,"Incoming payments were split to multiple recipients shortly after receipt, limiting traceability.",96.0,82.8621,84.1896,76.0155,76.4262
+15,15,Customer onboarding documents contained duplicate signatures across different forms.,78.0,82.4242,78.2308,78.1462,76.4587
+16,16,Transactions referenced shipping invoices that lacked matching shipment records in internal systems.,60.0,78.0171,80.9345,82.1395,76.4688
+17,17,A customer sought to structure payments just under internal review limits across several invoices.,92.0,85.9033,79.8718,82.9945,76.4688
+18,18,Wire instructions used non-standard remittance text that did not match the declared business purpose.,82.0,74.296,78.5599,76.3209,76.4688
+19,19,Customer attempted to rely on a third party to provide KYC documents instead of submitting directly.,50.0,69.1372,77.6427,74.099,76.4688
+20,20,Multiple chargebacks were filed for card activity tied to the same merchant and category.,58.0,69.7333,74.1733,71.9786,76.4262
+21,21,Beneficiary bank details were updated via email with no independent verification checklist completed.,67.0,68.9786,75.37,66.7578,76.4262
+22,22,The account received funds from a platform associated with high-risk crypto-to-fiat conversion activity.,87.0,84.0804,79.9755,86.445,76.4262
+23,23,Customer claimed payments were for software licenses but could not provide license keys or renewal terms.,62.0,67.2016,63.2558,60.095,76.4587
+24,24,A retail customer transferred proceeds to offshore accounts while reporting minimal legitimate income.,82.0,81.2251,83.7868,79.2636,76.4287
+25,25,Correspondent documentation for cross-border transfers showed mismatched sender names between fields.,78.0,82.1049,75.1739,76.564,76.4587
+26,26,An entity used a PO box address for onboarding while stating operations at a physical location.,72.0,71.7819,69.1359,72.5861,76.3875
+27,27,Payment counterparties shared the same registered address with the customer but had no declared relationship.,78.0,65.2834,65.4135,68.3253,76.3875
+28,28,"Outgoing payments corresponded to invoices issued after the payment date, raising timing concerns.",80.0,72.9724,68.8543,70.9759,76.3875
+29,29,Customer requested payments to be made in a different currency than the contracted currency without explanation.,60.0,72.4569,62.9498,69.9497,76.3875
+30,30,Transactions were routed through a nested chain of intermediaries with limited transparency in remittance details.,88.0,86.592,86.8126,79.5639,76.3875
+31,31,A director requested immediate account closure after receiving payments from several unrelated counterparties.,84.0,75.9534,80.3149,76.7728,76.3875
+32,32,Account activity increased after a change in beneficial owner with no updated risk assessment performed.,72.0,75.5146,79.3106,72.5216,76.4688
+33,33,Customer provided a business registration that appeared recently issued with no supporting operational history.,68.0,61.6701,69.6081,59.4971,76.4587
+34,34,Multiple international transfers were made to pay for the same service using different beneficiary names.,88.0,80.6201,84.2775,79.214,76.4688
+35,35,The customer refused to provide confirmation of receipt for goods or services tied to transfers.,58.0,71.2847,79.3133,72.5011,76.4262
+36,36,"A transaction pattern suggested possible payroll laundering, with payments labeled as wages but inconsistent with headcount.",88.0,82.4018,81.208,80.154,76.4287
+37,37,Merchant activity included unusually high volume for the declared business line with no supporting sales records.,79.0,70.6235,73.5374,72.3372,76.3875
+38,38,Incoming funds originated from accounts flagged in earlier internal reviews but were not escalated for further checks.,84.0,91.9913,86.1878,90.0585,76.4587
+39,39,A customer requested return of funds to a different account than the originator without documented authorization.,72.0,72.3801,69.3668,75.2244,76.4262
+40,40,Repeated payments were made to a correspondent with common payment references that did not match invoices.,81.0,76.393,83.0148,76.5766,76.4287
+41,41,"KYC screening indicated possible name similarity to a watchlist, but manual checks were not documented.",75.0,75.4375,78.0707,78.6955,76.4262
+42,42,Customer presented financial statements that showed large retained earnings despite minimal transaction volumes.,63.0,74.0343,76.5059,73.8056,76.3875
+43,43,A series of payments were made to shell-like entities with similar bank instructions and remittance wording.,93.0,83.9531,88.5558,87.5555,76.4287
+44,44,The customer’s declared industry did not match the merchant category descriptors seen on card transactions.,58.0,72.9584,64.0936,65.9585,76.4287
+45,45,"Transactions involved cash withdrawals shortly after cash deposits, leaving little net funds in the account.",87.0,83.237,82.7943,90.3276,76.4587
+46,46,Beneficiary correspondence showed reluctance to provide the contract and asked to pay via alternative channels.,72.0,73.5782,80.3414,74.8008,76.4287
+47,47,A customer used multiple aliases across onboarding documents that were not resolved through identity checks.,85.0,78.517,79.8427,77.6339,76.4287
+48,48,"Payments were sent for ""brokerage"" services with no licensed broker documentation provided.",70.0,73.0089,79.1853,72.9692,76.4587
+49,49,Outgoing wires included beneficiary addresses that did not match registry records for the receiving entities.,78.0,75.5797,80.8523,74.7363,76.3875
+50,50,"Customer’s explanation for funds來源 referenced ""business partners"" without names or supporting agreements.",68.0,71.9027,65.7666,69.4927,76.4262
+51,51,A non-profit account received transfers that were largely repaid to private individuals without clear program linkage.,85.0,82.7099,73.7013,83.5896,76.4587
+52,52,Cross-border payments included fees and taxes that were inconsistent across otherwise similar invoices.,50.0,72.9572,73.6708,70.1953,76.4262
+53,53,A customer requested payment to an account held in a different country with no stated operational need.,65.0,70.0917,74.508,69.7527,76.4688
+54,54,"Multiple transfers were executed with the same narrative but different amounts, suggesting templated invoice references.",78.0,77.4906,78.8847,76.4241,76.4287
+55,55,A customer attempted to add new beneficiaries after prior transactions were returned due to compliance holds.,82.0,76.0989,71.0809,80.1955,76.4287
+56,56,"Incoming payments were accompanied by remittance text indicating ""samples"" though amounts were substantial.",78.0,75.9754,87.9323,81.0262,76.4287
+57,57,"Chargeback patterns suggested possible friendly fraud, with disputes concentrating on specific merchants.",58.0,77.4081,76.7605,77.2886,76.4287
+58,58,The account received funds from a payer that had recently changed its own business registration details.,52.0,74.4794,76.6512,75.1227,76.4688
+59,59,A corporate account experienced sudden activity after a dormant shell period without narrative change.,82.0,76.1877,70.1697,79.7956,76.4262
+60,60,Customer provided source-of-funds documentation that did not cover the full time period of recent deposits.,66.0,72.4563,72.6446,70.9886,76.4287
+61,61,Payments were issued to agents with no agency agreement on file and no evidence of services performed.,85.0,70.7566,67.2092,72.2245,76.3875
+62,62,A beneficial owner requested funds be distributed immediately after receipt despite requests for delays due to controls.,80.0,83.4215,77.5499,81.6918,76.4688
+63,63,Transactions referenced educational services but were paid to multiple unrelated recipients without enrollment evidence.,78.0,66.6344,70.8291,72.5088,76.3875
+64,64,A customer’s transaction profile became inconsistent with their prior behavior following account updates and re-verification.,65.0,66.72,72.5204,67.1606,76.3875
+65,65,"Outgoing transfers were made shortly after receiving unrelated inbound funds, indicating possible layering behavior.",88.0,80.2332,80.6581,81.72,76.3875
+66,66,Customer provided an expired identification document during onboarding and requested it be re-dated without resubmission.,45.0,68.5435,67.3907,72.3255,76.4688
+67,67,A series of cash deposits were structured to avoid the bank’s standard reporting limit over several weeks.,95.0,84.8134,87.1253,87.7147,76.4587
+68,68,Incoming payments were sent from multiple unrelated payers who could not be tied to the customer’s stated business activity.,78.0,77.5648,73.505,75.3338,76.4262
+69,69,Customer stated funds came from a sale of goods but invoices lacked dates and tax details.,65.0,69.5575,71.7859,71.3242,76.4587
+70,70,Beneficial ownership form listed a nominee arrangement with no supporting explanation for control.,72.0,82.6098,82.0032,83.792,76.4262
+71,71,Card transactions showed repeated declines followed by a switch to a different merchant category without a clear business rationale.,60.0,73.7999,75.3192,70.8164,76.4688
+72,72,Wire transfers to a foreign country increased after the customer declined to provide source-of-funds documentation.,85.0,79.6014,79.6523,82.5764,76.3875
+73,73,The customer’s declared occupation did not align with the scale of transfers moving through the account.,70.0,67.5917,69.5642,69.2837,76.3875
+74,74,Payments described as consulting services did not match the customer’s provided contract documentation.,78.0,68.9059,66.7088,68.342,76.4262
+75,75,A third party repeatedly requested beneficiary changes shortly before outgoing transfers were executed.,95.0,82.931,79.0265,83.153,76.4262
+76,76,Customer attempted to update the bank details for payouts several times while refusing to confirm the final payee.,67.0,69.5112,75.5984,66.2077,76.4688
+77,77,Company accounts received payments from entities sharing the same address as the customer’s former business entity.,72.0,69.5387,75.8657,68.3401,76.4262
+78,78,Funds were routed through a transit account in another country despite no stated trading relationship.,88.0,78.3787,77.8416,82.7216,76.4262
+79,79,Customer provided a document pack with inconsistent letterheads and varying formatting across pages.,82.0,72.8679,72.1535,69.85,76.4287
+80,80,Large international transfers were paired with rapid withdrawals to cash in the same business day.,93.0,90.3235,80.3441,87.067,76.3875
+81,81,A pattern of remittances was observed with the recipient linked to prior sanctions screening hits in public records.,95.0,90.3745,83.4691,84.5713,76.4262
+82,82,The customer’s website and business registration references did not match the legal entity name on the account.,75.0,67.209,73.1102,69.8136,76.4287
+83,83,Outward payments referenced “commission” but the customer could not provide any agency or brokerage agreement.,70.0,68.5505,62.21,66.609,76.4688
+84,84,Multiple refunds were processed back to the original funding accounts without supporting order records.,78.0,77.1061,70.6065,72.9986,76.4262
+85,85,A low-turnover account received intermittent high-value payments followed by immediate transfers to external beneficiaries.,82.0,85.3765,88.1975,73.3342,76.4262
+86,86,"Customer requested suppression of certain transaction fields, citing privacy concerns related to business partners.",30.0,79.5516,77.2212,79.4408,76.4262
+87,87,"Correspondent banks asked for additional documentation on transfers described as “settlement,” but responses were incomplete.",55.0,65.7047,74.3555,60.1806,76.4688
+88,88,A beneficial owner’s address was shared with other customers in the same building with no explanation of ties.,60.0,75.7937,78.0664,69.7362,76.4262
+89,89,Transactions coincided with a change in ownership where the customer could not provide transaction-related contracts.,75.0,68.6853,67.6213,70.8537,76.4262
+90,90,The customer’s tax residency claim differed from the billing address used for online merchant payments.,50.0,56.2179,59.7057,67.2657,76.4587
+91,91,A supplier onboarding used matching phone numbers across multiple entities with different legal names.,76.0,81.0942,81.459,73.4428,76.4688
+92,92,Customer used a personal account to receive payments for multiple unrelated business invoices.,71.0,69.1816,72.9844,70.0553,76.4262
+93,93,Outgoing transfers listed generic descriptions that obscured the underlying purpose of payment.,68.0,81.3665,78.3424,76.02,76.4287
+94,94,A high frequency of small e-money top-ups was followed by consolidated outbound wires to a single destination.,89.0,84.8741,84.7532,86.6195,76.4287
+95,95,Customer’s declared net worth did not support the funds movement observed over a short period.,83.0,69.1909,72.9087,67.8462,76.4688
+96,96,A close family member requested the account be converted to third-party access without providing legal documentation.,58.0,71.3247,72.8444,73.9191,76.3875
+97,97,Sanctions screening flagged a counterparty name match that the customer later tried to bypass using an alternate spelling.,95.0,90.5126,90.1102,89.2992,76.4688
+98,98,Payments were made to a shell-like intermediary with no website presence and no verifiable operational footprint.,85.0,80.2555,82.7387,76.55,76.4688
+99,99,Customer provided a shipping document that listed a different consignee than the account holder.,68.0,66.458,67.5032,68.884,76.4262
+100,100,A “loan repayment” narrative was used for transfers that were not supported by any loan agreement.,82.0,75.7595,68.48,71.4502,76.3875
+101,101,Account activity showed repeated reversals and chargebacks that aligned with the same set of merchants.,65.0,73.7712,71.883,73.6869,76.3875
+102,102,Two accounts under different individuals exchanged funds in a circular pattern with no apparent economic rationale.,85.0,81.3626,83.8452,81.7392,76.4587
+103,103,The customer requested cash withdrawals immediately after receiving a foreign inbound transfer.,78.0,82.8597,80.4643,84.6024,76.4287
+104,104,"Inconsistent dates appeared on compliance forms, with the customer asserting the discrepancies were clerical.",70.0,69.9373,75.5806,68.4648,76.4262
+105,105,"Customer stated payments were for “software licenses,” yet invoices referenced unrelated services.",72.0,71.8797,72.3713,72.9288,76.3875
+106,106,A senior decision-maker role was claimed without evidence in corporate records while payments continued to expand.,80.0,71.7811,69.2746,69.9358,76.4287
+107,107,Beneficial owner information was updated using documents that could not be authenticated through standard checks.,85.0,78.1344,82.7299,80.0572,76.4287
+108,108,The customer’s relationship manager noted that the customer avoided discussing contract terms and counterparties.,70.0,65.7766,71.3946,61.9255,76.3875
+109,109,A set of transfers were sent to jurisdictions associated with higher risk procurement practices without supporting trade documentation.,88.0,86.2408,83.4087,90.3309,76.4287
+110,110,"Customer used multiple payment channels for the same counterparties, with descriptions varying materially between transfers.",84.0,81.0308,76.2481,76.9428,76.4587
+111,111,A trade finance request was supported by invoices that shared identical line items and text across separate shipments.,80.0,75.1465,76.4458,75.0221,76.4287
+112,112,The customer attempted to route payments through a different legal entity after initially failing customer due diligence.,88.0,75.757,75.8187,74.1155,76.4587
+113,113,Funds from an inbound “investment” were immediately redistributed to related entities with no clear investment returns.,85.0,79.0447,84.996,80.3487,76.4262
+114,114,The account received payments labeled “salary” despite the customer not maintaining payroll arrangements.,70.0,65.1292,74.1966,71.2465,76.4688
+115,115,Customer provided proof of income that did not correspond to bank statements showing different turnover levels.,65.0,64.1124,69.2407,68.4234,76.4688
+116,116,Merchant activity included transactions to vendors that were registered shortly before the payments began.,70.0,80.7582,79.8986,76.866,76.3875
+117,117,A counterparty requested payments to be split across several beneficiaries that ultimately traced back to the same receiving location.,88.0,83.6275,75.8792,81.48,76.3875
+118,118,Customer changed the expected payment purpose from retail sales to cross-border services without updating documentation.,64.0,72.1266,69.9143,77.4246,76.4287
+119,119,"A complaint record indicated prior disputes on outbound transfers, yet similar transaction patterns continued.",73.0,78.9861,74.2163,79.0881,76.4287
+120,120,Customer used an agent to submit documents and the agent could not provide a clear authorization letter.,59.0,67.501,68.9059,67.8432,76.4587
+121,121,The account was credited by a third party shortly after rejecting the same payer in an earlier screening check.,78.0,76.6651,76.3657,76.4241,76.4287
+122,122,Large inbound transfers were followed by purchase of high-value goods through unrelated merchants with cash-like patterns.,83.0,92.6989,89.1814,87.1335,76.4587
+123,123,Customer submitted incomplete KYC documents and requested expedited account activation via a third party.,72.0,67.3373,78.9101,72.5571,76.4688
+124,124,Incoming payments were structured as multiple smaller transfers with identical references from the same origin.,92.0,82.9011,84.4558,85.1869,76.4688
+125,125,A payment narrative referenced invoices that could not be verified against supporting documents.,71.0,75.5429,69.0198,75.56,76.3875
+126,126,Customer changed beneficial ownership details shortly after receiving settlement instructions.,75.0,74.5717,82.7095,77.6614,76.4262
+127,127,Transfers were sent to a cross-border beneficiary in a sanctioned-region country with no clear trade linkage.,95.0,86.2155,89.094,82.4015,76.4587
+128,128,"Customer stated funds were for consulting but provided no contract, scope, or deliverables.",65.0,72.3836,71.8177,67.9679,76.4262
+129,129,Multiple cash deposits were followed by immediate outbound transfers to unrelated intermediaries.,85.0,92.481,95.1036,87.4575,76.3875
+130,130,A business customer used a personal account for salary-like payments and refused to clarify payroll basis.,72.0,62.9925,66.3282,62.8957,76.3875
+131,131,Beneficial owner information did not match the address and phone details used during onboarding.,68.0,69.2926,73.7018,71.0811,76.4287
+132,132,Transaction monitoring flagged repeated round-dollar amounts inconsistent with the customer’s typical activity.,82.0,80.8085,77.0307,80.0985,76.3875
+133,133,Customer requested refunds to a different card than the one used for the original purchase.,58.0,67.3015,69.1466,71.7081,76.4688
+134,134,Payments to a logistics provider were rerouted through another entity without explanation.,80.0,78.1614,75.9135,81.6331,76.3875
+135,135,Customer could not describe the nature of goods and relied on generic terms for each transaction.,76.0,68.813,71.1326,69.8782,76.4587
+136,136,Outbound wires were authorized by a user profile that lacked prior history of approving similar activity.,75.0,79.2565,75.6794,76.7887,76.4688
+137,137,Funds originated from a high-risk remittance channel and were quickly dispersed to new recipients.,88.0,90.496,90.1271,88.0992,76.4587
+138,138,A customer provided statements showing cash withdrawals just before large inbound transfers.,70.0,86.4521,78.0561,84.1777,76.4262
+139,139,The transaction purpose field cited “service fees” while amounts corresponded to scheduled vendor invoices.,68.0,60.7995,76.9369,70.6147,76.4688
+140,140,"Beneficiary bank details were repeatedly corrected, suggesting uncertainty in destination information.",62.0,73.6263,75.7664,75.2564,76.4262
+141,141,Customer account showed frequent use of prepaid cards to fund transfers with no consistent spending pattern.,75.0,67.6077,78.3531,72.3307,76.4587
+142,142,A payment was made to a counterparty newly incorporated with no supporting relationship documentation.,70.0,71.803,77.1802,70.3544,76.4262
+143,143,Customer requested termination of correspondence instructions after being asked for additional source-of-funds evidence.,80.0,70.601,66.4707,75.879,76.4287
+144,144,Parties involved in several payments shared overlapping addresses and contact numbers that were not declared as related.,85.0,77.7109,76.9857,80.3224,76.4262
+145,145,Incoming transfers used slightly altered names for the same counterparty across different days.,92.0,78.9906,78.3859,79.6949,76.4262
+146,146,A web of round-trip transfers returned funds to an account controlled by a related custodian.,92.0,82.6599,76.3682,88.6378,76.4287
+147,147,Customer reported losses due to purchase disputes yet continued to route proceeds to the same intermediary.,78.0,76.6363,76.7835,69.8691,76.4262
+148,148,A trade payment included an unusually high “inspection fee” with vague descriptions and no contract addendum.,80.0,76.6393,71.9488,74.1278,76.4587
+149,149,Beneficial owner’s occupation changed materially after account opening without updated documentation.,50.0,74.5763,73.6108,75.7082,76.4287
+150,150,Payments were made through a shell-like entity with no website presence and minimal recorded staff.,88.0,76.9578,84.7167,79.5329,76.4287
+151,151,The customer attempted to move funds to a new account after compliance requested enhanced checks.,80.0,82.1905,81.0287,83.448,76.4587
+152,152,A series of international transfers used inconsistent currency conversions without documented basis.,78.0,82.7905,72.398,78.8023,76.4587
+153,153,Customer provided source-of-funds as “savings” but could not evidence the accumulation timeline.,65.0,67.8561,58.6278,68.4376,76.3875
+154,154,A beneficiary requested payments to be split across multiple accounts held at different branches.,82.0,84.9754,83.5185,84.8245,76.4587
+155,155,Customer refused to provide end-customer information for a goods transaction involving a restricted industry.,90.0,73.4532,72.0857,70.4177,76.4688
+156,156,Outgoing transactions showed repetitive invoice numbers that did not align with documented invoices.,78.0,71.602,69.2164,73.3254,76.4688
+157,157,A check deposit was followed by rapid transfer activity within the same business day.,85.0,78.9477,75.4229,81.4565,76.4688
+158,158,The account received funds from multiple accounts bearing similar transliterations of the same name.,75.0,79.2875,83.4327,85.0624,76.4688
+159,159,A supplier’s bank account had previously appeared in a dispute but was used again without clarification.,55.0,67.9698,71.246,73.483,76.3875
+160,160,Customer increased payment volume after declining to update KYC contact details.,72.0,64.309,69.3963,65.167,76.4287
+161,161,Transactions involved a residency mismatch where the customer claimed residence abroad but maintained local address proof.,55.0,63.2705,67.7502,55.3726,76.4688
+162,162,A payment referenced a government agency but lacked any invoice or engagement letter for that purpose.,50.0,72.0814,71.8474,72.639,76.4587
+163,163,Customer changed signatory authority and provided documentation inconsistent with prior records.,78.0,72.7795,75.3158,69.8772,76.4262
+164,164,Funds were transferred to a high-risk country shortly after a refusal to disclose beneficial owners.,95.0,92.6888,89.7173,88.8196,76.4262
+165,165,Several payments were marked “urgent delivery” and lacked any supporting shipping documentation.,62.0,73.0241,74.3602,73.1191,76.4287
+166,166,Customer requested that refunds be processed in cash despite using electronic payments originally.,60.0,69.8671,73.9866,67.6705,76.4287
+167,167,The transaction narrative cited “contract settlement” but the contract document was unsigned.,80.0,73.4935,63.9118,74.8626,76.4587
+168,168,A customer’s stated business line did not match the typical industries of counterparties receiving payments.,65.0,65.6332,71.3975,70.3288,76.4262
+169,169,Multiple chargebacks were followed by replacement payments to the same merchant using a new method.,78.0,72.9943,74.7145,73.895,76.4688
+170,170,Beneficiary details included a non-matching postal address relative to the provided incorporation documents.,70.0,66.5565,71.3591,65.0328,76.4287
+171,171,A series of payments were executed through an intermediary with no declared ownership or contracting role.,78.0,81.5177,81.9838,79.9447,76.4287
+172,172,Customer provided a generic web form confirmation instead of actual invoices for reimbursement.,72.0,66.2803,60.2029,65.674,76.4287
+173,173,Inbound funds were deposited from accounts held by individuals with no disclosed relationship to the customer.,80.0,83.5352,81.4085,80.0416,76.4262
+174,174,Outbound transfers targeted accounts with differing surnames but shared identical dates of birth in records.,86.0,86.9061,81.5364,82.5579,76.3875
+175,175,Customer’s online purchase pattern showed sudden spikes aligned with attempted cash-out transfers.,88.0,84.2792,78.3002,82.2832,76.4688
+176,176,A correspondent request was denied due to incomplete compliance fields that were later corrected.,25.0,71.7178,70.2845,68.722,76.3875
+177,177,Funds moved to a charity-stated beneficiary but subsequent documentation showed no charitable purpose agreement.,78.0,80.4175,78.6828,80.3688,76.3875
+178,178,Customer requested payments to be routed through a new bank after being questioned about sanctions screening.,92.0,84.8077,86.7833,87.4441,76.4587
+179,179,A business account showed repeated payments to a consultant whose invoice templates matched other counterparties.,72.0,71.5142,69.2515,69.7044,76.4688
+180,180,Transactions included country codes inconsistent with the declared shipment origin for the same goods batch.,77.0,75.3707,74.9896,71.4264,76.4688
+181,181,Customer insisted on paying a third party instead of the named vendor despite providing the vendor details.,65.0,71.1179,68.3327,73.2679,76.3875
+182,182,A series of small inbound transfers were used to fund one large outgoing wire within a day.,88.0,86.0469,83.3293,84.9573,76.4262
+183,183,Customer’s source-of-wealth statement referenced assets that were not reflected in account activity records.,72.0,76.8862,72.1008,67.8427,76.4587
+184,184,"A transfer was labeled as “loan repayment” but lacked loan terms, schedule, or promissory documentation.",68.0,75.1817,71.6545,74.1394,76.4287
+185,185,Beneficiary bank correspondence records showed frequent instruction changes close to settlement dates.,80.0,72.2488,76.4925,75.7153,76.4287
+186,186,Multiple payments were made using nearly identical amounts across different currencies without hedging rationale.,80.0,83.0336,82.667,85.7301,76.4587
+187,187,Customer requested to remove a previously declared beneficial owner from onboarding records.,85.0,75.3555,75.0951,80.0519,76.4287
+188,188,Funds were received for “marketing services” but the customer could not produce campaign metrics or contracts.,65.0,69.6325,69.3466,63.207,76.4688
+189,189,Customer submitted inconsistent employment details during onboarding and could not provide supporting documentation.,55.0,62.6328,62.3715,64.6259,76.4587
+190,190,Multiple cash deposits were made on consecutive days just under the internal review limit.,95.0,82.6568,85.7612,88.6603,76.4287
+191,191,A customer requested frequent withdrawals of large round amounts despite low stated income.,78.0,77.7576,75.0497,81.4174,76.4587
+192,192,Payments were routed through an intermediary in a jurisdiction that does not align with the customer’s stated business activities.,74.0,77.5547,80.341,78.6692,76.4287
+193,193,Beneficial ownership information provided earlier was later corrected without a clear explanation.,88.0,74.4413,67.1387,79.7934,76.4587
+194,194,Transaction narratives described generic goods while invoice details were missing or incomplete.,66.0,75.2296,72.7839,73.8601,76.4287
+195,195,"Sanctions screening flagged a counterparty name similarity, and the customer declined to provide alternate spelling details.",92.0,82.8202,87.6674,87.2877,76.4587
+196,196,The customer provided a foreign address but the source of funds documentation referenced a different country.,55.0,72.6173,68.4048,68.7866,76.4287
+197,197,A vendor account received payments that were immediately followed by transfers to unrelated parties.,85.0,83.5986,84.6398,76.3711,76.3875
+198,198,Customer used multiple cards to fund a single account wallet within a short time window.,70.0,75.9947,77.1169,71.4616,76.4262
+199,199,"Wire transfers were sent to locations matching prior rejected AML checks, citing “administrative delay.”",95.0,82.1422,79.2859,79.9196,76.3875
+200,200,An entity’s corporate address could not be verified through available public records.,50.0,68.356,69.6562,60.3737,76.4287
+201,201,The customer requested payment reversals after funds were sent to a third party without an original invoice.,75.0,77.2524,76.5938,76.4839,76.4688
+202,202,Incoming transfers from several counterparties were consolidated into one outward payment chain.,78.0,86.7611,84.4787,80.4229,76.3875
+203,203,KYC refresh showed the customer’s industry category changed materially without supporting rationale.,52.0,69.6543,65.5996,72.4137,76.4587
+204,204,Large payments were scheduled to coincide with contract award dates without corresponding contractual documentation.,86.0,77.2399,81.4133,76.1864,76.4287
+205,205,A high-volume pattern of small transfers lacked clear commercial purpose based on available statements.,82.0,80.6475,79.0611,78.6235,76.4262
+206,206,The customer’s stated beneficial owner was reportedly a nominee with no ownership stake disclosed elsewhere.,75.0,71.9426,73.9588,79.0665,76.4587
+207,207,Transfers included unusual “consulting” descriptions while supporting documentation referenced manufacturing components.,78.0,78.084,71.1846,76.1307,76.4587
+208,208,A sudden increase in cross-border payments occurred after a long period of inactivity with no onboarding update.,72.0,72.8099,77.1684,79.151,76.4262
+209,209,Customer declined to identify the end beneficiary despite requests tied to intermediary routing.,85.0,78.6462,79.434,76.1477,76.4688
+210,210,Funds were withdrawn in cash immediately after deposits made through third-party branches.,92.0,85.8669,90.4668,86.6184,76.4287
+211,211,A counterpart’s tax ID format did not match the country of incorporation shown in onboarding documents.,55.0,77.1162,76.0987,70.5645,76.4587
+212,212,The same payment reference was reused across multiple invoices with differing amounts.,68.0,74.1094,78.3191,75.9408,76.4262
+213,213,A customer attempted to pay via an account held under a different individual than the contract signatory.,62.0,73.7507,77.003,71.184,76.4287
+214,214,Sanctions screening results remained unresolved because the customer did not respond to information requests.,85.0,74.6052,80.8388,66.6092,76.3875
+215,215,Payments were directed to a brokerage account shortly after beneficial owner changes were recorded.,95.0,82.6383,81.7358,78.1401,76.3875
+216,216,Company documents showed no history of trading activity despite receiving frequent high-value transfers.,75.0,80.9243,79.2213,77.1365,76.4262
+217,217,Customer’s website claims did not match the goods described in transaction records.,78.0,69.021,75.2896,63.3812,76.4262
+218,218,A third-party payer sent funds and then asked for return transfers to an account in another country.,88.0,80.6149,88.2844,81.3381,76.3875
+219,219,"Customer provided a late explanation for source-of-funds, citing “family support” without documentation.",65.0,65.6256,60.3918,65.2443,76.4688
+220,220,Transaction counterparties were linked to each other through shared addresses and repeated payment references.,80.0,76.0893,83.1681,78.5558,76.4262
+221,221,An individual customer used business-purpose payment channels while personal KYC data remained unchanged.,50.0,68.5427,68.8744,70.8211,76.4688
+222,222,Invoices referenced ports and delivery terms inconsistent with the payment’s stated currency and destination.,68.0,72.1963,64.2167,72.8723,76.3875
+223,223,Multiple payments were made to the same supplier from different payer accounts in a coordinated manner.,85.0,83.0393,79.9411,79.3093,76.3875
+224,224,The customer requested that outgoing payments be made in the name of a different company on several occasions.,78.0,73.3781,75.2403,73.8957,76.3875
+225,225,"A correspondent bank returned funds due to missing beneficiary details, and the customer re-submitted without changes.",58.0,72.5248,68.8287,78.2028,76.3875
+226,226,The business claimed to operate a service line but transactions reflected recurring equipment purchases.,55.0,67.3476,68.3764,66.4923,76.4587
+227,227,Beneficial owner identity documents were replaced with newer scans after a compliance inquiry.,80.0,83.3988,88.6193,81.566,76.4587
+228,228,A customer structured deposits and transfers to limit exposure to monitoring thresholds based on timing patterns.,95.0,85.2383,86.7599,85.9447,76.4287
+229,229,Outbound payments used slightly altered beneficiary names that were not consistent with prior records.,85.0,82.4453,80.8115,77.3539,76.4262
+230,230,A credit line was drawn and repaid rapidly using funds from unrelated counterparties.,78.0,88.5876,80.8715,84.1996,76.4688
+231,231,A customer involved in government procurement requested payments to be routed to non-local entities.,82.0,80.6815,79.2107,79.9312,76.4287
+232,232,Payments were labeled as “legal fees” but lacked engagement letters or timesheets.,86.0,69.7429,70.4482,74.8703,76.4587
+233,233,Customer’s declared annual revenue did not align with the magnitude of monthly incoming transfers.,75.0,67.5815,70.7319,71.311,76.4262
+234,234,The customer’s stated business address matched a mailing-only location with no evidence of operations.,56.0,64.4849,56.1293,61.7916,76.4287
+235,235,A transfer to a “freight” account was followed by immediate onward movement to another jurisdiction.,90.0,82.9869,82.647,85.1784,76.4587
+236,236,Multiple chargeback-like payment disputes were raised for transactions involving non-standard payment terms.,65.0,78.4248,79.7026,73.9429,76.4688
+237,237,The customer’s role in the company was inconsistent across submitted forms and signatory authority records.,72.0,72.1981,74.6137,68.8856,76.4262
+238,238,Funds arrived from accounts that were recently opened and then were quickly transferred outward.,88.0,89.3152,85.1037,91.3273,76.4587
+239,239,A counterparty relationship was newly formed and became the sole destination for sizable funds.,90.0,84.8082,76.0046,78.1867,76.3875
+240,240,The customer provided a beneficial owner relationship explanation that conflicted with corporate filings.,82.0,67.106,73.276,72.7598,76.4262
+241,241,A payment chain included layered intermediaries with no clear commercial rationale based on documentation.,90.0,79.2532,75.8495,72.1398,76.4287
+242,242,"Customer requested to bypass standard invoice verification citing “routine processing,” and refused to provide invoices.",75.0,69.9185,71.4944,67.1171,76.4287
+243,243,A person with no prior transaction history received large inbound transfers from multiple entities.,80.0,82.1735,78.8858,79.2872,76.4688
+244,244,Sanctions screening cleared initially but later refreshed screening flagged the same counterparty for name matching.,92.0,90.7709,89.4362,92.6137,76.4287
+245,245,A company shared bank account details associated with a different corporate registration number.,68.0,73.6736,73.9279,72.0433,76.4587
+246,246,The customer used an unusual payment method for cross-border settlement inconsistent with its business model.,68.0,73.9161,71.5849,74.3445,76.4287
+247,247,Large transfers were made for “marketing” while transaction descriptions and receipts appeared generic.,84.0,81.8719,76.0302,80.5275,76.4287
+248,248,Customer requested transfers to a private residence-associated beneficiary account without contractual basis.,86.0,67.8798,78.8267,73.4824,76.3875
+249,249,A rapid series of inbound and outbound transactions suggested funds being moved rather than earning revenue.,88.0,85.8915,79.7872,83.0434,76.4287
+250,250,Customer provided inconsistent business descriptions across onboarding and subsequent reviews.,72.0,66.4066,71.4058,65.2035,76.4587
+251,251,Transactions routed through multiple third parties without clear economic rationale.,82.0,86.7094,86.4635,82.5035,76.4262
+252,252,Cash deposits increased materially after account ownership changes with no supporting documentation.,86.0,78.7273,80.9706,78.4631,76.4587
+253,253,Beneficial owner declarations were updated shortly before making large outbound transfers.,89.0,89.0904,86.72,82.7451,76.4262
+254,254,Card payments were made repeatedly to similar merchant descriptors with unusual geographic spread.,71.0,83.9197,81.5539,84.6219,76.3875
+255,255,Customer declined to provide invoices supporting payments for imported goods.,76.0,72.1909,75.5741,73.6853,76.4262
+256,256,Two incoming transfers originated from unrelated entities despite stated customer consolidation practice.,71.0,78.7097,77.6802,77.8459,76.4287
+257,257,Payments referenced invoices that appear duplicated across different counterparties.,86.0,75.9823,77.3244,71.3707,76.4287
+258,258,Customer’s stated occupation does not align with the source of funds narrative.,64.0,61.2109,65.3525,60.7118,76.4262
+259,259,Outbound wires were structured to align with internal reporting cutoffs over several weeks.,97.0,87.1393,88.6793,85.9871,76.4587
+260,260,Correspondent banking messages lacked complete beneficiary address details for some transfers.,69.0,71.4044,70.3221,71.7257,76.4587
+261,261,A customer account showed rapid in-and-out movement with minimal retained balance.,82.0,79.4873,81.4768,80.1704,76.4262
+262,262,Trade-related payments were submitted without shipping documents within the review window.,78.0,72.1682,76.3034,71.467,76.4287
+263,263,Counterparty requested payments to an alternate bank outside the contract terms.,70.0,72.6267,71.9499,75.9633,76.4587
+264,264,Multiple refunds were processed back to the same funding cards shortly after initial charges.,67.0,73.2397,75.5446,70.4524,76.4688
+265,265,Customer used a series of newly added payees and then requested immediate transfers.,74.0,80.7443,83.2202,83.2655,76.3875
+266,266,One-time use virtual card funding ceased soon after chargebacks increased.,55.0,70.6365,70.338,75.2959,76.4262
+267,267,Customer stated they would not disclose beneficial ownership until after contract signing.,80.0,72.049,74.4893,70.3459,76.4287
+268,268,Payments to a foreign entity increased immediately following a change in company directors.,75.0,81.9098,82.3953,81.3444,76.4287
+269,269,Account activity shifted from low value to frequent high value after a change in device/location.,85.0,72.2469,76.6866,68.6573,76.3875
+270,270,Customer provided a photo-only proof of address with expired validity.,45.0,59.5914,62.6898,55.0431,76.3875
+271,271,A pattern of round-dollar transfers was observed with no consistent underlying invoices.,78.0,81.2526,78.2689,77.8345,76.4262
+272,272,Sales invoices showed mismatched VAT/consumption tax details compared to payment records.,72.0,67.7186,73.2288,73.8853,76.4587
+273,273,Wire instructions included minimal remitter information and generic payment descriptions.,74.0,77.9224,80.5338,81.9732,76.4287
+274,274,Customer sought to reverse completed transfers citing “routing errors” without evidence.,55.0,77.1461,71.0562,72.7308,76.4262
+275,275,Several transfers were sent to accounts registered in jurisdictions identified for elevated sanctions risk.,97.0,95.201,91.1812,89.8904,76.3875
+276,276,A merchant category mix suggested personal spending despite stated business use.,55.0,72.0117,66.568,73.1334,76.4287
+277,277,"Customer requested beneficiary name changes after funds were released, creating identification gaps.",78.0,80.6022,80.0051,81.9992,76.4287
+278,278,Cash withdrawals increased while declared income did not support the activity level.,82.0,75.3167,73.0923,75.3573,76.4287
+279,279,Customer used intermediaries to move funds between accounts under different ownership profiles.,88.0,86.1893,79.5382,82.8399,76.4262
+280,280,Transactions referenced “consulting” services without contracts or deliverables in file.,74.0,72.2615,71.551,75.8261,76.4688
+281,281,Incoming funds were quickly converted and redistributed without a documented business purpose.,84.0,87.2273,77.5448,88.3473,76.4262
+282,282,Customer’s website and business address could not be verified as matching the onboarding information.,66.0,59.8945,65.5405,61.7266,76.3875
+283,283,"Beneficial ownership screening flagged potential matches, but customer documentation did not resolve discrepancies.",89.0,82.8739,86.8164,77.2284,76.4587
+284,284,Payments were made to a counterparty with a history of compliance findings in public records.,77.0,79.4387,78.4122,81.9011,76.4587
+285,285,A large transfer followed an email instruction that omitted standard contract identifiers.,82.0,80.7896,81.8467,81.9323,76.4262
+286,286,Customer conducted frequent cross-border purchases despite no prior import activity.,68.0,74.1506,71.7831,75.8067,76.4688
+287,287,Multiple small transfers were sent from different persons to the same recipient with linked timing.,80.0,83.0169,84.656,78.4477,76.4262
+288,288,Customer refused to provide explanations for payments to shell-like entities with no web presence.,85.0,72.2809,80.5462,72.2132,76.4287
+289,289,Card acquisition activity showed repeated transactions with similar amounts across different countries.,78.0,77.9431,79.5732,76.3231,76.4688
+290,290,Wire transfers were sent to a beneficiary account that does not match the stated entity name.,82.0,81.0077,83.5665,83.2026,76.3875
+291,291,"Customer’s source of funds statement cited savings, but deposits came from third-party remitters.",72.0,75.4798,78.1443,80.2177,76.4587
+292,292,Account showed unusual settlement of obligations through personal accounts rather than company accounts.,80.0,73.0851,76.9691,71.5502,76.4262
+293,293,"Correspondent bank returned messages due to incomplete information, but resubmissions continued.",58.0,72.1061,72.7636,74.2195,76.3875
+294,294,Customer submitted altered invoices with inconsistent dates compared to underlying orders.,92.0,75.5565,79.0555,78.6184,76.3875
+295,295,A pattern of payments ended immediately after a compliance notice was logged in the system.,88.0,78.264,80.3125,73.7748,76.4262
+296,296,"Beneficiary was designated as an agent, yet customer provided no agency agreement or authority evidence.",60.0,71.7506,67.7192,69.3849,76.4262
+297,297,Customer requested payment in a manner that would obscure the transaction purpose from the beneficiary.,80.0,76.2532,73.4031,74.3697,76.4587
+298,298,Payments were made to businesses with overlapping directors and unclear separation of commercial activity.,70.0,78.7807,81.4507,76.65,76.4287
+299,299,Multiple transfers were made to counterparties using slightly varied spellings suggesting identity obfuscation.,88.0,88.2619,88.0105,86.9375,76.4262
+300,300,"Customer’s stated funds came from a loan, but supporting documents lacked lender verification.",75.0,71.4293,74.1073,68.564,76.4587
+301,301,Cash deposits were followed by rapid bill payments that exceeded declared utility expenses.,82.0,80.5567,86.341,74.8387,76.4287
+302,302,Outbound payments included references to “freight” while trade documentation indicated services were not shipping-related.,85.0,72.3113,75.8692,71.4175,76.4688
+303,303,Customer provided a signed declaration but could not answer basic questions about submitted financials.,68.0,65.2008,61.2001,61.9577,76.4688
+304,304,Transfers to a foreign entity increased after the customer became the sole signatory on the account.,80.0,81.1928,75.6465,81.4997,76.4287
+305,305,"A customer made payments to multiple recipients shortly after receiving salary, despite claims of minimal activity.",74.0,74.2316,81.5473,75.8911,76.4587
+306,306,Customer sought to close the account soon after a series of complex multi-hop transfers.,70.0,81.012,71.1762,78.3434,76.4587
+307,307,Account activity resumed after a dormancy period with transfers inconsistent with prior behavior.,60.0,72.0853,74.7182,70.1857,76.4262
+308,308,Customer attempted to add a high-risk jurisdiction beneficiary using documentation that appeared copied.,92.0,77.26,85.3065,79.862,76.4287
+309,309,Merchant disputes increased while customer continued to fund similar transactions using new instruments.,80.0,73.3892,76.6439,74.8701,76.4262
+310,310,"Customer requested to split payments across separate accounts to “match internal budgeting,” with no invoices.",72.0,81.0647,81.6489,78.7333,76.4587
+311,311,Incoming remittances were from entities with no stated relationship to the customer’s business.,75.0,75.0188,75.0105,79.2156,76.4587
+312,312,A foreign payment request cited vague descriptions and did not include contract numbers or references.,80.0,74.9583,69.0259,76.4605,76.4262
+313,313,Customer’s beneficial owner profile changed twice within a short timeframe without clear rationale.,85.0,73.6189,76.4071,71.7521,76.4688
+314,314,Customer provided inconsistent information about business activity and principal owners during onboarding.,70.0,64.7958,64.7994,70.7948,76.4688
+315,315,Payments were structured to avoid a common reporting threshold across multiple transfers.,95.0,87.8072,89.3723,81.2861,76.4587
+316,316,Beneficial ownership documentation was missing for a company that requested immediate transaction access.,78.0,76.2034,78.9188,74.1982,76.4587
+317,317,A customer declined to provide source of funds details while increasing transfer volumes.,85.0,72.5129,76.7546,80.3894,76.4262
+318,318,Multiple inbound payments originated from unrelated third parties with no clear commercial rationale.,82.0,81.6276,82.8551,79.7791,76.4688
+319,319,Transactions were routed through layered accounts with rapid in-and-out movement of funds.,97.0,93.1772,92.1246,89.9499,76.4287
+320,320,Customer requested conversion to cash shortly after receiving international transfers.,86.0,75.3887,81.9801,74.307,76.3875
+321,321,The stated purpose of payments did not match the goods or services described in invoices.,85.0,73.743,66.693,68.8845,76.4688
+322,322,Correspondent banking notes indicated the counterparty operated in a higher-risk region.,75.0,77.8015,74.1483,75.4501,76.4287
+323,323,A payment referenced vague terms like “consulting” without supporting contracts or deliverables.,80.0,72.0364,68.7719,76.6044,76.3875
+324,324,Customer changed addresses and contact information repeatedly within a short onboarding window.,78.0,70.3733,71.5527,70.8347,76.4262
+325,325,Sanctions screening flagged a match that could not be resolved due to insufficient identifiers.,95.0,94.2002,78.8943,83.3943,76.4688
+326,326,A politically exposed person reportedly used a nominee account to receive funds for “rent.”,95.0,77.9613,80.7795,81.1711,76.4587
+327,327,Customer attempted to add new beneficiaries without providing expected supporting documents.,55.0,73.1426,71.1234,75.3695,76.3875
+328,328,Large transfers were made shortly after account activation despite limited transaction history.,78.0,84.2618,82.2782,87.8067,76.3875
+329,329,Customer requested beneficiary bank details but avoided providing the counterparty’s full legal name.,66.0,67.7535,69.0475,70.125,76.3875
+330,330,Incoming funds were immediately returned to the same sender through a different intermediary.,82.0,76.4749,85.2082,77.6485,76.4262
+331,331,Trade finance documents showed mismatched shipment routes and inconsistent dates.,82.0,79.5403,81.4532,78.7231,76.4587
+332,332,A customer’s activity profile suggested personal spending but accounts were labeled as business.,55.0,70.6619,77.3929,68.2934,76.4287
+333,333,Payment descriptions included penalties and repayments with no related loan documentation.,68.0,74.1138,80.911,77.8255,76.4262
+334,334,Customer provided a bank statement that appeared incomplete and missing key pages.,85.0,70.2378,72.1425,74.1163,76.4262
+335,335,A pattern of transactions used alternating currencies with unusual FX timing versus invoices.,80.0,79.1256,74.7291,79.4876,76.4287
+336,336,Counterparty refused to share contract terms but requested payment in advance.,52.0,76.7323,74.424,72.0221,76.4688
+337,337,Beneficiary所在 jurisdiction differed from declared delivery location on accompanying documents.,58.0,69.8609,71.7646,70.2575,76.4587
+338,338,A cash withdrawal request exceeded typical behavior soon after a sudden salary change claim.,79.0,75.8404,74.8696,79.4702,76.4287
+339,339,Inquiries from investigators were met with generic responses and no itemized transaction breakdown.,73.0,77.3796,76.2164,78.5221,76.4287
+340,340,Transactions involved multiple shell-like entities with similar directors and overlapping addresses.,92.0,84.6699,83.9593,85.7503,76.4287
+341,341,Beneficiary contact numbers could not be verified and emails bounced during due diligence.,55.0,68.3521,71.6104,64.7104,76.4287
+342,342,A customer instructed transfers to a location that differed from the contract’s stated site.,75.0,73.7015,73.0164,77.2411,76.4287
+343,343,Inbound wire identifiers did not align with customer-provided remitter information.,78.0,76.2173,71.4129,75.6816,76.3875
+344,344,The customer asserted funds were from savings but could not provide corroborating evidence.,50.0,68.5138,65.8048,55.3024,76.4262
+345,345,A series of small card-to-wire movements suggested attempts to obscure fund origin.,88.0,85.7097,80.3128,89.2587,76.4587
+346,346,Trade invoice values were repeatedly adjusted upward after initial submission.,78.0,72.1433,76.1642,76.6502,76.4688
+347,347,Sanctions screening returned potential indirect match via shared corporate identifiers.,86.0,94.3547,91.5357,88.8301,76.4287
+348,348,Customer requested payment be split across several banks under the same beneficial owner.,82.0,78.1057,79.5502,76.263,76.4287
+349,349,A charity-related account conducted payments inconsistent with stated charitable mission.,75.0,73.5868,78.7533,72.5731,76.3875
+350,350,Corporate documents showed signs of formatting changes and lacked verifiable issuing authority marks.,92.0,76.4253,80.4349,75.4812,76.4287
+351,351,Customer used third-party funds to settle expenses without providing agreement or authorization.,64.0,78.0904,71.2236,74.6429,76.4688
+352,352,Payments were sent to a beneficiary with a history of compliance issues flagged internally.,82.0,84.1848,84.5262,79.3817,76.4262
+353,353,A customer’s industry classification did not correspond to the merchant descriptors on transactions.,58.0,70.8139,73.9203,68.172,76.4262
+354,354,Multiple transfers were made to the same beneficiary after previously disputing invoices.,66.0,80.3084,80.2761,77.6675,76.4587
+355,355,Beneficiary was listed as a reseller but no inventory or sales records were provided.,71.0,72.0159,74.4374,75.3115,76.4262
+356,356,An account showed frequent beneficiary changes concurrent with blocked sanctions inquiries.,90.0,88.4035,86.327,87.521,76.4587
+357,357,Customer claimed employment income but transfers exceeded typical salary ranges.,75.0,65.9327,70.2165,73.7363,76.4262
+358,358,A refund flow was used to reverse transactions to non-invoice-related recipients.,80.0,73.6674,74.6788,73.6896,76.3875
+359,359,The customer avoided discussing relationships between counterparties and intermediaries.,70.0,70.9054,77.104,66.756,76.4587
+360,360,A merchant account received payments from many unrelated senders with no matching invoices.,85.0,78.9917,76.0632,76.1486,76.4262
+361,361,A customer asked for manual overrides to bypass standard transaction checks.,82.0,75.5089,80.3399,73.944,76.4587
+362,362,Transactions showed round-number amounts and consistent timing suggestive of automation.,76.0,82.5678,76.6668,82.7657,76.4688
+363,363,Counterparty provided documentation in a language not used in prior filings without explanation.,52.0,69.8555,70.9506,70.2073,76.4587
+364,364,A PEP-related entity requested beneficial ownership to be treated as “confidential” with no legal basis.,95.0,80.8401,87.5437,70.8997,76.4688
+365,365,Customer attempted to increase limits through repeated incomplete KYC submissions.,71.0,74.4726,78.5946,75.7831,76.4688
+366,366,Correspondent bank requested additional documentation due to insufficient transaction narrative clarity.,25.0,70.5149,69.5742,67.9264,76.4587
+367,367,Payments referenced “loan repayment” but no promissory note or repayment schedule was provided.,55.0,68.869,69.8489,70.7023,76.4262
+368,368,A business account began receiving proceeds just after a contract award claim with no evidence.,70.0,71.7157,71.1526,71.3196,76.4262
+369,369,Customer used multiple personal accounts to funnel funds into a single corporate account.,85.0,75.6421,80.3619,75.7979,76.4688
+370,370,Trade shipment documents listed a consignee that differed from the invoiced buyer.,85.0,73.2879,73.6275,76.9778,76.4587
+371,371,Incoming funds were followed by immediate withdrawals through different branches.,88.0,85.9526,89.7873,85.5417,76.4688
+372,372,A customer requested payments to a deceased person’s account without updated estate documentation.,72.0,71.2907,70.789,68.9948,76.4262
+373,373,An AML alert was raised due to customer’s inability to explain business purpose for transfers.,80.0,75.2689,67.801,75.188,76.3875
+374,374,Beneficial owner residency changed without supporting immigration or tax documentation updates.,66.0,68.3124,68.8696,71.0844,76.4587
+375,375,A counterparty’s website content appeared recently created and unrelated to declared operations.,67.0,76.4761,80.127,78.343,76.4688
+376,376,Customer requested structured cash deposits across separate branches at irregular intervals.,92.0,83.9088,78.4068,83.643,76.4688
+377,377,A supplier payment was made to a company with no prior transaction history or online presence.,75.0,75.1182,76.5406,71.7507,76.3875
+378,378,Transactions were conducted with entities incorporated shortly before the business relationship began.,70.0,77.0901,80.8998,76.8738,76.4587
+379,379,A customer provided contradictory statements regarding expected transaction frequency and volume.,58.0,63.0376,66.4999,63.9785,76.4587
+380,380,A customer requested to use a nominee signature for authorization with no delegation letter.,82.0,76.4745,73.4458,68.6345,76.4587
+381,381,A payment was sent to a beneficiary in a sanctioned-linked sector despite screening clearance gaps.,96.0,86.4818,88.6571,87.1516,76.4262
+382,382,Chargeback activity increased while the customer refused to provide underlying fulfillment evidence.,78.0,65.104,72.109,67.2484,76.4262
+383,383,Multiple transfers were performed through intermediaries with common directors and shared addresses.,84.0,85.3151,86.6108,85.5061,76.4287
+384,384,A corporate account displayed inconsistent signatory usage not aligned with board resolutions.,72.0,77.9093,77.3576,76.4649,76.3875
+385,385,Customer requested settlement to a bank account not matching the declared beneficiary in contracts.,70.0,70.2301,67.5114,74.4641,76.4287
+386,386,The remitter narrative cited “family support” while transaction amounts resembled commercial payments.,63.0,71.3303,73.9308,79.2103,76.4587
+387,387,A customer’s KYC review found unverifiable documents and mismatched registration numbers.,80.0,71.5409,73.9182,69.9579,76.3875
+388,388,Trade documents indicated partial shipment but payment terms implied full delivery confirmation.,76.0,67.295,67.7763,70.8409,76.4587
+389,389,A customer attempted to conceal counterparties by using generic description fields on wires.,84.0,84.3183,76.304,80.7656,76.3875
+390,390,A new beneficiary was added and funded immediately after onboarding with no supporting due diligence.,86.0,73.9154,73.7734,72.1797,76.4688
+391,391,Customer deposited cash in amounts that cluster around reporting thresholds without a clear business rationale.,85.0,84.3643,83.4515,78.3418,76.4688
+392,392,A series of small outward transfers were sent to the same beneficiary after changes in the customer’s stated occupation.,72.0,78.453,76.7652,79.4084,76.3875
+393,393,Customer provided inconsistent explanations for the source of funds during onboarding and subsequent reviews.,68.0,69.7623,73.3781,73.258,76.4587
+394,394,Payments to a correspondent in a sanctioned-related country were processed despite missing end-use details.,95.0,82.8048,82.5359,77.5366,76.3875
+395,395,Beneficial ownership documentation was updated twice within a short period with no supporting narrative.,66.0,76.6896,74.9278,76.9925,76.4688
+396,396,A new vendor received multiple payments soon after contract activation with limited documentation on services delivered.,72.0,77.7295,71.8082,75.02,76.3875
+397,397,Customer’s transaction pattern changed abruptly from retail spending to frequent high-value card settlements.,78.0,75.7278,79.1236,74.7763,76.4688
+398,398,Wire instructions included vague references such as “consulting” with no invoices or statements attached.,88.0,70.6154,73.1403,68.251,76.4587
+399,399,Two accounts under the same controller were used to split payments for a single underlying obligation.,90.0,83.0136,79.6205,84.0881,76.3875
+400,400,Customer requested reimbursement to a different bank account than the original payer without clarification.,74.0,66.3617,68.3752,69.0118,76.4287
+401,401,Outgoing transfers matched inbound credits from the same remitter within the same business day.,30.0,78.5684,81.3408,82.1813,76.4587
+402,402,Customer could not identify the purpose of a large transfer during a call-back request.,68.0,71.8806,67.1672,66.9951,76.4287
+403,403,A charity-like entity conducted transactions inconsistent with its stated nonprofit activities.,82.0,78.5161,77.9555,76.9565,76.4688
+404,404,Cash withdrawals increased materially following deposits tied to third-party remitters.,85.0,86.6429,81.4379,88.1429,76.4287
+405,405,Transactions routed through an intermediary that could not be located in public business registries.,78.0,74.4068,76.5189,73.6109,76.4262
+406,406,Customer attempted to add a new payee using altered beneficiary details that were later corrected.,45.0,74.3321,73.8484,74.8376,76.4287
+407,407,A merchant showed rapid surges in card charge volume followed by reversal activity and dispute clustering.,82.0,73.3503,77.9909,73.1892,76.4262
+408,408,Customer used multiple prepaid instruments to fund a single settlement account with similar naming conventions.,78.0,80.1445,81.733,81.4745,76.3875
+409,409,Payments were made to overseas recipients shortly after the customer’s address was updated.,72.0,73.464,76.9561,72.0405,76.4688
+410,410,The declared business model did not align with the payment types received from several unrelated parties.,67.0,70.9082,75.6776,72.1294,76.4587
+411,411,A supplier payment was approved after the invoice description was revised to remove references to restricted goods.,88.0,80.0337,75.72,75.8642,76.4262
+412,412,Customer’s beneficial owner was listed as a holding entity with no transparency on downstream control.,78.0,76.8375,76.2493,73.2489,76.4587
+413,413,Incoming payments referenced “freight” but supporting bills of lading were absent or incomplete.,76.0,70.6422,69.5612,70.8303,76.4587
+414,414,Customer requested to change transaction currency after the funds were received and before release.,56.0,74.2289,74.5283,75.4648,76.4287
+415,415,A pattern of payments to shell-like entities occurred with matching dates and rounded amounts.,98.0,89.2579,88.6347,76.8872,76.4688
+416,416,"Customer’s KYC profile indicated low-risk activity, but transactions resembled high-risk trade flows.",72.0,79.1333,75.9743,78.8719,76.4587
+417,417,Outbound payments were followed by immediate inbound credits from the same network of counterparties.,85.0,74.9319,77.1704,74.5677,76.4262
+418,418,A request to conduct a large transfer relied on unofficial documentation and informal confirmation messages.,90.0,76.6241,76.6091,80.2495,76.4287
+419,419,"Beneficiary bank details were repeatedly corrected, suggesting prior mismatch or attempt to obfuscate routing.",78.0,78.3417,66.086,74.655,76.4688
+420,420,Customer declined to provide contract terms while requesting release of funds to a third party.,74.0,68.0769,76.5604,70.5681,76.4688
+421,421,A series of ATM cash deposits were made by different persons using the same device identifiers.,82.0,87.847,84.3705,82.9022,76.4587
+422,422,Payments included instructions to deliver funds in “cash equivalent” forms without documented rationale.,78.0,81.5246,81.5946,77.1948,76.4262
+423,423,Customer’s stated income source did not support the level of recurring transfers to personal accounts.,72.0,65.2077,73.8648,66.1361,76.4262
+424,424,A corporate customer’s signatory lacked evidence of authority for added payment beneficiaries.,64.0,77.232,71.2066,76.3633,76.4688
+425,425,"Transaction references suggested installment financing, yet loan documentation was not provided.",67.0,71.3369,72.8432,68.4607,76.4287
+426,426,A foreign purchase was funded through accounts that showed no prior purchase-related activity.,68.0,75.9463,81.2025,75.926,76.3875
+427,427,Customer requested waiver of standard documentation for cross-border transfers to multiple recipients.,88.0,74.1893,79.1792,73.9371,76.4587
+428,428,Several transfers were sent to a beneficiary that had previously been flagged for compliance issues.,90.0,84.7689,85.3686,85.2568,76.4262
+429,429,"Customer provided a business address that could not be verified, while activity continued at increasing volume.",75.0,58.4773,54.5883,66.144,76.4688
+430,430,Merchant processing spikes coincided with changes in customer demographic information on file.,78.0,75.1063,78.6627,73.9325,76.4287
+431,431,Beneficial owner verification failed due to conflicting identity details across documents.,78.0,76.348,71.7722,72.9598,76.4688
+432,432,A refund flow returned funds to the original customer wallet after transfers to unrelated parties.,84.0,70.6401,78.9098,73.9632,76.3875
+433,433,"Customer used multiple intermediaries with similar address text, indicating potential common control.",80.0,75.3958,77.604,75.7944,76.4688
+434,434,Outbound remittances matched invoices submitted with inconsistent formatting and identical language.,76.0,79.5517,82.1526,77.0829,76.4587
+435,435,KYC refresh failed to capture a known change in ownership timing despite declared continuity.,72.0,70.2103,77.9364,67.1077,76.4688
+436,436,Customer requested settlement to an offshore account shortly after a restructuring event.,80.0,78.7087,76.3204,76.4267,76.4688
+437,437,Transactions to a high-risk category merchant were supported by invoices that lacked quantity and unit price details.,75.0,74.7227,79.7804,77.5737,76.4262
+438,438,A pattern of payments ended when the recipient requested additional fees outside the documented agreement.,50.0,74.9409,72.8416,76.7055,76.4587
+439,439,Customer attempted to split a single large payment into several transfers across different accounts.,85.0,86.3589,86.5762,84.5403,76.3875
+440,440,"Incoming funds were described as “loan repayments,” but no corresponding loan agreement was found.",78.0,73.0387,72.0713,72.6028,76.3875
+441,441,A beneficial owner held additional entities that had prior links to politically exposed persons.,82.0,87.9269,85.9433,85.2234,76.4587
+442,442,Customer’s responses to source-of-funds questions became shorter and less specific over successive reviews.,76.0,78.3302,81.6414,75.8302,76.4262
+443,443,"A series of transfers used new payees immediately after onboarding, with no evidence of prior relationships.",78.0,76.162,78.5313,76.8738,76.4688
+444,444,A corporate account conducted frequent small international transfers inconsistent with its stated trade activity.,86.0,81.166,76.0166,81.4501,76.4262
+445,445,Customer requested to route payments through a country with no apparent commercial purpose.,83.0,79.8728,79.096,72.1706,76.4688
+446,446,"Chargeback activity increased while merchant turnover decreased, suggesting potential payment manipulation.",75.0,70.665,73.7278,72.8374,76.4287
+447,447,A recurring payment pattern continued despite the customer providing updated information that conflicted with prior filings.,80.0,66.7973,73.0812,65.5034,76.3875
+448,448,Customer requested removal of transaction history references from supporting documents before payment release.,78.0,78.9941,70.2882,77.8397,76.4262
+449,449,Multiple accounts received credits from the same remitter using slightly varied descriptors.,88.0,80.6044,77.0413,79.9007,76.4587
+450,450,A funds transfer included vague beneficiary country details that differed from the bank record.,60.0,83.6765,69.3704,84.9944,76.4262
+451,451,"Customer used third-party cards to fund payments, with no explanation of relationship to the cardholder.",70.0,69.8554,73.6654,75.2706,76.4688
+452,452,Customer conducted rapid inbound and outbound transfers with no clear trade documentation.,82.0,77.8254,87.1258,74.8596,76.3875
+453,453,Beneficial owner details in the onboarding file were updated after the first funding activity.,86.0,76.8579,73.8289,77.2062,76.4587
+454,454,Customer provided an address that could not be verified during routine KYC checks.,45.0,61.6326,61.2405,55.3683,76.3875
+455,455,Payments were routed through multiple intermediaries before reaching a common beneficiary.,88.0,85.0888,88.863,82.5326,76.3875
+456,456,Several transactions were structured to remain just under an internal reporting limit.,95.0,86.7694,91.7865,84.5193,76.4587
+457,457,Customer declined to state the purpose of funds and provided vague descriptions instead.,78.0,72.6619,72.9549,75.1227,76.4262
+458,458,A business customer requested payment to a new payee immediately after contract execution.,68.0,69.652,73.8875,70.0462,76.4587
+459,459,Transaction counterparties showed a pattern of match against sanctions-related keywords.,90.0,90.1242,79.3641,86.5865,76.4287
+460,460,Customer used third-party cards to fund accounts that were otherwise held in their name.,82.0,78.4801,77.0181,75.8476,76.4587
+461,461,Large cash deposits were followed by same-day outward transfers to unrelated jurisdictions.,86.0,90.2061,93.4692,89.9128,76.3875
+462,462,Customer attempted to add a beneficiary profile without completing supporting source-of-funds review.,72.0,70.9503,74.7703,69.7583,76.4688
+463,463,Payments described as consulting were sent to entities with no online business footprint.,77.0,68.8215,78.088,74.1966,76.4688
+464,464,Funds were sent to a beneficiary that repeatedly received money then dispersed quickly.,88.0,89.1656,85.132,90.3914,76.3875
+465,465,The customer’s profile indicates low activity while transaction volumes increased materially.,66.0,72.696,68.7387,71.7545,76.4587
+466,466,Two payment methods were used to distribute amounts that align to a single invoice pattern.,70.0,78.3869,82.4357,79.1061,76.4688
+467,467,Customer submitted documents that appeared to be altered during verification screening.,88.0,77.9887,86.3981,75.1332,76.3875
+468,468,A wire request included beneficiary details that differ from the payee naming conventions.,80.0,78.5429,70.7851,80.6646,76.4262
+469,469,Customer sought to reverse settled transfers shortly after funds cleared.,75.0,78.0248,75.5497,77.6591,76.3875
+470,470,Multiple transactions referenced the same destination address despite different payees.,82.0,76.3025,69.0989,76.4638,76.4287
+471,471,Customer onboarding included a nominee shareholder structure with limited explanation.,65.0,79.4206,75.7286,78.6055,76.4688
+472,472,Beneficial owner is closely linked to a politically exposed relationship in screening results.,82.0,85.8319,81.3936,81.7955,76.4262
+473,473,Correspondent bank messages flagged the transaction as potentially related to embargoed goods.,97.0,81.6573,75.5194,80.3989,76.4587
+474,474,Payments were made for “freight” despite no corresponding shipping references being provided.,74.0,71.5691,75.0729,78.4447,76.3875
+475,475,Customer insisted on using a sanctioned-adjacent jurisdiction for routing without rationale.,86.0,81.1142,79.8789,78.4933,76.4587
+476,476,A pattern of refunds was observed after disputed card activity with unclear legitimacy.,65.0,72.1338,73.3496,80.4964,76.4688
+477,477,Customer provided a recent incorporation date inconsistent with claimed years of operations.,60.0,62.3306,68.5077,71.8646,76.4587
+478,478,Transfer narratives referenced “family support” while amounts increased and recipients changed frequently.,80.0,73.6181,71.3554,70.7031,76.4287
+479,479,There was no evidence of a business website or operating history at the declared location.,50.0,66.5908,68.0444,73.1949,76.4587
+480,480,Customer requested beneficiary changes multiple times within a short window.,75.0,73.0904,79.1594,79.8146,76.3875
+481,481,Payments were issued to a vendor that previously appeared as a shell in open-source checks.,90.0,84.8497,82.0379,86.4087,76.3875
+482,482,Transactions coincided with the release of goods identifiers that did not match the invoices.,75.0,79.3178,78.0917,79.6432,76.4262
+483,483,Customer attempted to move funds to a high-risk region and then back to domestic accounts.,85.0,80.9723,91.7439,81.9041,76.4587
+484,484,A corporate account received funds from entities with common address indicators and then withdrew cash.,82.0,83.6032,80.1299,83.4166,76.4287
+485,485,Customer’s occupation and income claims were inconsistent with the level of payments.,66.0,62.0178,69.2817,71.3186,76.3875
+486,486,The compliance review was bypassed due to missing fields in the payment instruction.,55.0,76.3885,70.0952,81.2856,76.4262
+487,487,A large outward transfer followed a refusal to provide source-of-funds documentation.,88.0,84.9327,79.0525,82.2751,76.4688
+488,488,Payments included atypical beneficiary bank details that could not be validated.,70.0,75.3149,70.5057,75.8719,76.4262
+489,489,Customer supplied a bank statement with mismatched dates relative to declared transaction history.,82.0,70.8941,76.6537,65.778,76.4287
+490,490,Multiple transfers were sent to the same beneficiary from different account holders within the group.,76.0,82.8735,77.413,86.4867,76.4262
+491,491,Customer requested splitting a single invoice into multiple payments across separate days.,50.0,72.3088,76.1463,69.0568,76.3875
+492,492,Beneficiary ownership information remained unknown despite repeated requests for clarification.,82.0,70.3425,78.4233,76.1077,76.3875
+493,493,A trade-related payment lacked an underlying contract or purchase order reference.,78.0,72.0803,75.6301,75.3833,76.4587
+494,494,Customer requested settlement in cash equivalents despite a stated preference for bank transfer.,70.0,70.3004,68.4165,73.3917,76.3875
+495,495,Inbound funds were immediately transferred to a foreign account with no business rationale.,92.0,81.4296,80.0096,83.0637,76.4262
+496,496,Customer’s spending pattern shifted from routine payments to irregular high-value transfers.,82.0,79.7784,81.7662,80.8165,76.4587
+497,497,There were multiple failed attempts to verify the controlling party’s identity documents.,84.0,83.3501,78.9837,79.2555,76.3875
+498,498,A付款 beneficiary requested “urgent processing” and provided minimal contract details.,72.0,70.1758,72.8974,79.0913,76.4688
+499,499,Transactions referenced a charity name but lacked supporting registration or donation documentation.,78.0,76.4402,73.8894,64.888,76.4262
+500,500,Customer used a personal account for business receipts without explanation.,50.0,68.1189,62.384,67.1343,76.4587
+501,501,Outgoing payments were sent to related parties with vague descriptions and no invoices.,72.0,73.0105,76.3435,70.2659,76.3875
+502,502,Screening results indicated potential adverse media association for a key counterparty.,65.0,80.0518,74.796,78.5441,76.3875
+503,503,Beneficiary bank selection differed from prior transactions without a stated reason.,58.0,73.6361,69.6962,72.8942,76.3875
+504,504,Customer attempted to add a sanctioned-risk country beneficiary despite policy controls.,98.0,84.9475,78.8131,85.3849,76.4262
+505,505,Refunds were issued to a different cardholder than the original payer with limited substantiation.,80.0,70.5944,78.636,68.4638,76.4287
+506,506,Corporate customer paid for “services” where the vendor could not be contacted for confirmation.,55.0,64.2086,63.0665,62.8573,76.3875
+507,507,Funds were received from multiple jurisdictions followed by consolidated transfers to one recipient.,88.0,84.3159,86.2278,87.3637,76.4688
+508,508,Customer provided inconsistent information about the signatory authority across submissions.,68.0,70.6772,72.0288,64.9091,76.4287
+509,509,A pattern of payments to logistics entities did not align with declared shipment timelines.,72.0,78.8861,77.1319,71.0457,76.4688
+510,510,Customer requested payment instructions that would obscure the true counterparty identity.,92.0,70.9343,71.4391,77.4333,76.4287
+511,511,The beneficial owner’s role was revised after questions were raised about source-of-funds.,78.0,79.6311,80.3858,76.0928,76.4587
+512,512,Customer requested multiple cash withdrawals with no stated business purpose over one week.,72.0,76.1148,73.7248,73.8433,76.4587
+513,513,Outgoing transfers were routed through a series of intermediaries before reaching a higher-risk country.,92.0,92.7323,88.0703,88.1485,76.4688
+514,514,Beneficial owner details were inconsistent between onboarding forms and later documents.,80.0,72.4418,71.0473,68.4298,76.3875
+515,515,Transaction narratives referenced invoices that could not be matched to provided documentation.,86.0,73.6123,67.8432,70.4941,76.4287
+516,516,A customer used a personal account to settle recurring vendor payments with no written contract.,58.0,69.1325,72.7269,67.4268,76.4287
+517,517,Payments increased immediately after account opening without a clear explanation.,74.0,72.6242,71.88,74.2457,76.4262
+518,518,Customer provided a temporary address during KYC and requested rapid account activation.,72.0,68.3579,62.8932,67.4681,76.4287
+519,519,Card purchase activity showed frequent low-value transactions at locations linked to prohibited goods categories.,88.0,82.943,82.0654,79.1788,76.4262
+520,520,Customer declined to provide source-of-funds evidence despite repeated requests.,79.0,74.2997,72.0242,77.3376,76.4688
+521,521,"One beneficiary changed bank details twice within a month, with payments continuing uninterrupted.",74.0,76.6977,68.4921,73.4217,76.4688
+522,522,A trade finance application listed an unusual shipping route not aligned with the declared goods origin.,80.0,77.3948,74.0977,75.2346,76.4688
+523,523,"Transfers were sent to unrelated parties described only as “consulting,” with no supporting agreements.",72.0,73.3692,81.213,74.834,76.4688
+524,524,Customer submitted a government ID with visible inconsistencies in issue dates and document series.,86.0,68.0514,79.7991,68.3801,76.3875
+525,525,Large cash deposits were made in round amounts that coincided with upcoming outgoing transfers.,92.0,86.328,88.012,88.3265,76.4287
+526,526,"Counterparty was flagged in prior reviews for potential sanctions exposure, but screening status remained unresolved.",85.0,82.7692,84.4292,85.3284,76.4287
+527,527,"The same device profile was used for multiple accounts, with payments then consolidating to one destination.",80.0,81.0894,80.8705,77.938,76.4587
+528,528,Customer used newly created e-wallets to receive funds and promptly forward them abroad.,88.0,76.965,82.8902,80.035,76.4262
+529,529,"Wire instructions included shared phrases across several unrelated customers, suggesting possible orchestration.",92.0,74.0616,81.2749,78.2056,76.3875
+530,530,Beneficiary confirmation requests were answered with vague statements and no supporting documentation.,75.0,63.6698,70.9363,65.8,76.3875
+531,531,A series of payments went out late at night with transaction patterns inconsistent with typical customer behavior.,70.0,78.2567,73.9122,75.8331,76.4688
+532,532,Customer refused to provide corporate documents beyond a minimal checklist during onboarding.,75.0,75.7915,73.2168,72.5938,76.4587
+533,533,Inward transfers originated from accounts held in different names than the stated customer group.,85.0,83.8825,76.9744,80.1548,76.4688
+534,534,Funds were used to purchase high-value gift cards followed by immediate redemptions abroad.,92.0,83.6012,87.8509,82.3761,76.4587
+535,535,Transfer amounts clustered tightly around a reporting threshold for multiple months.,95.0,86.5178,76.5204,86.3521,76.4688
+536,536,Customer requested fees to be netted against principal despite no fee schedule on file.,42.0,66.6113,72.5142,64.0192,76.4688
+537,537,Trade payments were approved while supporting bills of lading contained mismatched consignee names.,83.0,80.2826,80.6849,79.7236,76.4587
+538,538,Customer’s declared business activity did not align with the goods described in payment memos.,66.0,69.2792,72.7023,72.4685,76.4287
+539,539,Payments were split across multiple beneficiaries who share common mailing addresses.,77.0,79.9083,81.8897,83.2745,76.4688
+540,540,A third party requested adding a beneficiary and provided instructions to avoid compliance checks.,92.0,74.1323,82.7279,74.4449,76.4688
+541,541,"Incoming transfers referenced “family support,” but amounts and cadence resembled commercial settlement.",60.0,76.031,75.5922,77.9596,76.4587
+542,542,"Customer requested a reversal after funds were received, citing “duplicate payment” without evidence.",50.0,69.9768,72.2084,75.7444,76.4262
+543,543,Account activity became concentrated in a single counterparty shortly after the relationship began.,75.0,73.3426,72.9169,79.37,76.4262
+544,544,"The sanctioned party screening produced a match, but the provided exemption rationale lacked documentation.",95.0,80.5268,80.5056,79.4415,76.3875
+545,545,Customer submitted proof of address that appeared newly issued without supporting utility history.,65.0,64.85,72.3351,67.3906,76.4688
+546,546,Cash deposits were followed by same-day outbound transfers to multiple overseas accounts.,96.0,89.554,93.5076,90.3445,76.4587
+547,547,A supplier invoice showed identical line items across several months with differing totals.,74.0,75.7385,80.134,71.1712,76.3875
+548,548,Customer requested outbound payments in a currency not consistent with prior trading history.,62.0,74.3331,70.635,73.8789,76.3875
+549,549,Beneficial ownership disclosures omitted an entity listed in corporate registry documents.,90.0,77.6886,86.2131,80.0933,76.4287
+550,550,The customer’s controller position changed shortly before major outgoing transfers to a known affiliate.,82.0,77.1113,84.228,77.8381,76.4287
+551,551,Payment instructions repeatedly used informal descriptions rather than invoice or contract references.,58.0,77.6912,74.4642,77.8419,76.4688
+552,552,Funds were routed to a charity-like beneficiary with limited public documentation and unclear purpose.,78.0,87.4784,89.8761,83.9319,76.4287
+553,553,A customer requested expedited beneficiary additions after providing incomplete corporate signatures.,72.0,76.1461,69.8156,79.859,76.4688
+554,554,"Incoming funds were withdrawn in cash soon after receipt, with no corroborating ledger entries.",88.0,82.8429,77.8515,81.493,76.3875
+555,555,Customer’s stated employment income did not support the observed account turnover.,66.0,61.4301,68.2345,66.3963,76.4688
+556,556,Transactions with a new correspondent bank resumed after an earlier blocked screening attempt.,80.0,76.613,77.4626,75.392,76.4287
+557,557,"Multiple incoming transfers were sent from accounts with similar transaction chains, suggesting layering.",88.0,86.7731,89.0081,86.5184,76.4587
+558,558,Trade documents showed inconsistent dates between invoice issuance and shipment records.,72.0,72.5352,78.5397,74.0889,76.3875
+559,559,Customer attempted to use a nominee account to receive funds before onward transfer.,88.0,79.0984,83.8537,80.7206,76.4287
+560,560,"A pattern of refunds and chargebacks followed outbound wires, raising potential misuse concerns.",74.0,76.2473,77.6832,76.189,76.4262
+561,561,Payment memos referenced “equipment” while no prior purchases or leases were on file.,75.0,70.623,67.741,72.2354,76.4587
+562,562,Customer’s emails provided alternative payment routes that bypass standard documentation checks.,88.0,82.6264,75.6147,77.9765,76.4688
+563,563,Cash handling increased on days corresponding to third-party agent activity statements.,72.0,79.8125,79.6486,77.8993,76.4587
+564,564,Beneficiary address updates were made immediately after receiving first payment.,85.0,70.3978,75.4976,70.7867,76.4262
+565,565,A customer requested to change the payment beneficiary name after funds were already dispatched.,80.0,79.8662,75.9488,73.2828,76.4262
+566,566,Inward transfers were received from high-risk regions with no corresponding business mandate.,92.0,85.5645,80.4514,86.9331,76.3875
+567,567,Customer provided a purchase order that did not correspond to the payment amount or product description.,78.0,64.5838,72.888,71.5736,76.4587
+568,568,"A correspondent bank requested additional information, but the customer response omitted key details.",74.0,68.5732,71.8507,68.8221,76.4587
+569,569,Several transactions referenced legal proceedings without providing court documentation.,71.0,78.8041,69.5671,75.797,76.4587
+570,570,Account showed regular settlement with counterparties that could not be found in public procurement records.,80.0,76.6255,75.2795,76.108,76.4287
+571,571,Customer requested rapid account closure after receiving a final inbound transfer.,72.0,72.6558,75.2273,78.1248,76.3875
+572,572,Incoming funds were used for subsequent transfers to jurisdictions with limited transparency indicators.,85.0,88.434,85.0539,91.1964,76.4287
+573,573,Customer’s declared trading counterparties did not match the names used in payment references.,75.0,76.8336,74.9916,74.7783,76.4688
+574,574,A customer made multiple cash deposits on consecutive days that aligned with common structuring patterns.,88.0,80.0637,80.1285,80.3925,76.4688
+575,575,Funds were wired to several third parties while the stated purpose remained unchanged and overly generic.,78.0,86.4139,74.7305,83.4592,76.3875
+576,576,The beneficial ownership attestation did not match the corporate registry records for the submitting entity.,85.0,74.4443,81.5873,73.8033,76.4287
+577,577,A shipment payment referenced goods that were inconsistent with the declared industry and product codes.,71.0,78.2071,71.9366,77.7354,76.4287
+578,578,The counterparty was located in a jurisdiction subject to sanctions screening matches without a clear resolution.,96.0,88.0042,84.3216,86.8396,76.4587
+579,579,Transaction descriptions included vague terms like “consulting” while invoices showed materially different services.,68.0,69.7554,66.5438,70.3509,76.4587
+580,580,A PEP customer’s source of wealth explanation relied on informal income statements with limited documentation.,80.0,76.1861,73.2203,74.0555,76.3875
+581,581,A new customer conducted immediate large transfers shortly after account opening before completing KYC reviews.,82.0,76.8994,74.5765,81.2387,76.3875
+582,582,Card refunds were issued to the original payer while the associated purchase activity showed abnormal patterns.,70.0,78.0557,74.291,75.9616,76.4688
+583,583,Wire transfers were repeatedly routed through intermediary accounts with no apparent commercial rationale.,90.0,80.8833,89.367,81.7502,76.3875
+584,584,Customer provided a utility bill with a mismatched address against the profile used for onboarding.,50.0,65.8004,66.5697,67.536,76.4688
+585,585,Incoming payments were split and sent out shortly after receipt with similar beneficiary names and bank routing.,88.0,83.141,87.7362,84.6739,76.4262
+586,586,A trade finance application used shipping documents that contained inconsistent dates and vessel identifiers.,72.0,78.7501,83.771,76.9501,76.4587
+587,587,The same representative signed contracts for multiple shell-like entities with similar business addresses.,78.0,83.8876,81.6249,81.6517,76.3875
+588,588,A customer used a nominee director arrangement without providing an acceptable beneficial ownership breakdown.,82.0,78.3065,72.874,76.0899,76.4587
+589,589,Customer could not describe the relationship with the counterparties despite frequent transaction activity.,67.0,69.7119,70.998,66.9314,76.4688
+590,590,Funds were sent to an entity whose name closely resembled a sanctioned party but with altered characters.,98.0,91.8581,87.3524,87.7705,76.4287
+591,591,Overlapping ownership indicators suggested the customers were effectively controlling multiple accounts under different profiles.,80.0,86.4911,80.0666,84.0841,76.4262
+592,592,"A beneficiary claimed to be a manufacturer, but the provided website and business registration details were disconnected.",70.0,65.857,70.7851,71.5713,76.4262
+593,593,Customer requested a change of beneficiary immediately after funds were received with no supporting contract updates.,78.0,68.7613,70.1042,70.0031,76.4587
+594,594,Payments were made in a manner that avoided correspondence with the stated supplier and instead favored related entities.,74.0,82.4193,80.5903,75.8678,76.4688
+595,595,Large outbound transfers occurred alongside minimal account balances and no consistent income flow.,92.0,81.8956,81.0285,81.6133,76.4287
+596,596,A manual override was applied to customer identification verification without adequate rationale documented.,82.0,72.3449,73.8546,74.3659,76.4287
+597,597,Multiple payments referenced “software licensing” while supporting documents lacked license agreements.,70.0,76.2527,76.6765,67.6149,76.4287
+598,598,Cash withdrawals followed inbound transfers with timing that suggested rapid money movement rather than normal banking.,88.0,87.2314,82.9884,83.6265,76.4587
+599,599,A charity account began receiving funds from unrelated sources inconsistent with the stated mission and geography.,90.0,77.1716,76.2508,76.7456,76.3875
+600,600,Transaction monitoring flagged repeated round-dollar transfers that did not align with typical customer behavior.,68.0,85.9567,79.4811,85.0045,76.3875
+601,601,A beneficial owner was identified through public records but was omitted from the onboarding forms.,78.0,76.5815,76.844,80.4629,76.3875
+602,602,The customer’s declared business activity did not match the type of merchants that received payments from the account.,70.0,68.1523,67.2215,69.6813,76.4587
+603,603,A series of cross-border payments used cover descriptions that differed from invoice line items.,88.0,76.3166,68.4435,75.8394,76.4688
+604,604,The customer provided corporate documents stamped after the onboarding date with unclear authenticity.,82.0,67.7651,71.9067,73.2853,76.4688
+605,605,An agent collected payments on behalf of third parties without evidence of a contractual agency relationship.,72.0,76.3784,62.1072,72.1623,76.4287
+606,606,A refund was processed after a dispute where the customer could not provide supporting delivery evidence.,30.0,64.7578,59.4978,68.5731,76.4688
+607,607,Outgoing payments were directed to an entity with no discernible web presence or verifiable operational footprint.,68.0,75.9999,74.9363,79.5152,76.3875
+608,608,A trade transaction referenced dual-use goods while end-user details were vague and not independently confirmed.,85.0,76.9954,78.2302,79.6509,76.4262
+609,609,A corporate account holder requested payments to be released before receiving final shipping confirmation.,55.0,74.9289,78.9422,82.4408,76.4688
+610,610,Customer used prepaid cards to fund transfers to multiple beneficiaries with overlapping contact details.,80.0,75.3152,80.5121,74.8587,76.3875
+611,611,Multiple accounts under the same contact phone number showed inconsistent onboarding information.,55.0,69.7949,76.8763,71.299,76.4688
+612,612,The customer’s address verification failed repeatedly and the account proceeded after second-hand document submission.,60.0,63.4476,68.1153,69.173,76.4262
+613,613,Invoices provided were identical across different transactions with minor edits suggesting reuse.,75.0,74.3904,79.229,74.9505,76.3875
+614,614,A sanctions screening hit was cleared based on customer statements without collecting corroborating documents.,95.0,86.1274,81.9034,85.0706,76.4688
+615,615,"Beneficial ownership declarations changed after transactions began, indicating possible concealment of control.",80.0,90.9805,81.056,85.7252,76.3875
+616,616,Customer instructed transfers to jurisdictions commonly linked to trade-based evasion with no supporting trade rationale.,88.0,82.684,85.2175,84.9568,76.4688
+617,617,Cash transactions were conducted through a series of deposits and withdrawals that obscured the net source of funds.,86.0,88.4159,84.3238,88.02,76.4287
+618,618,A counterparty requested payment to a different bank than the one listed on the contract with no explanation.,72.0,67.5043,68.3405,78.0452,76.4587
+619,619,The account showed a pattern of “payment then reversal” with no clear business services being rendered.,75.0,73.3449,72.2907,76.1672,76.4587
+620,620,A PEP-related entity’s transactions increased after ownership structure updates were submitted to onboarding.,90.0,85.9876,80.274,81.3142,76.4688
+621,621,A customer maintained multiple accounts with similar transaction patterns that suggested coordination across profiles.,82.0,77.4812,75.7089,76.5466,76.3875
+622,622,The customer provided a letter of employment as source of funds but employment details could not be verified.,55.0,65.4166,64.7291,58.5372,76.4287
+623,623,Third-party funds were deposited with payer names that did not match the declared customer relationship.,80.0,80.2703,81.0469,72.2815,76.4688
+624,624,Trade documents showed discrepancies in consignee names that did not align with the contract and invoice.,82.0,77.5787,74.8698,76.6956,76.4688
+625,625,A customer attempted to liquidate a large position through rapid withdrawals immediately after receiving inbound funds.,92.0,83.8406,87.5398,83.4747,76.4262
+626,626,Payments were made to multiple offshore consultants with overlapping email domains but inconsistent contract terms.,80.0,78.4218,76.7657,74.9451,76.4262
+627,627,The customer’s explanation for large transfers changed between conversations and documentation submissions.,82.0,81.5076,75.054,71.8174,76.4262
+628,628,An account transfer referenced “settlement” despite the absence of any contractual dispute or settlement agreement.,78.0,72.282,67.0333,75.3305,76.4287
+629,629,A suspicious cash deposit was followed by an immediate international transfer to a high-risk corridor.,95.0,91.5824,88.5706,88.0251,76.4587
+630,630,A corporate customer used a billing address that repeatedly appeared across unrelated entities.,75.0,72.4261,71.14,76.7371,76.4587
+631,631,Customer requested beneficiary “batch payments” without providing a list tied to invoices or delivery.,52.0,72.226,66.932,68.6607,76.4287
+632,632,KYC refresh attempts failed because documents were repeatedly provided in a format that prevented verification.,82.0,63.0197,72.9071,66.1999,76.4262
+633,633,A chargeback pattern emerged where claims were inconsistent with merchant activity and refund routing.,78.0,69.5377,69.8339,70.0229,76.3875
+634,634,A customer provided a beneficial owner photo that did not match the onboarding ID image.,74.0,76.2476,76.971,72.8848,76.4587
+635,635,Funds were received from accounts with similar names and shared characteristics suggesting layering activity.,96.0,87.5074,82.9234,83.2568,76.3875
+636,636,A transfer was executed to a newly formed entity shortly after incorporation with no business history.,80.0,77.2689,75.4927,81.4754,76.3875
+637,637,The customer provided an originator statement that did not correspond to the actual payer bank records.,95.0,69.3726,68.9934,69.9992,76.3875
+638,638,A discrepancy in currency conversion details suggested the customer attempted to mask the true payment amount.,88.0,68.2911,66.4937,71.0018,76.4587
+639,639,Multiple transactions were routed through a correspondence account in a jurisdiction not supported by the customer’s profile.,85.0,72.7375,79.5739,68.3453,76.4688
+640,640,Customer provided conflicting statements about source of funds across onboarding and subsequent reviews.,82.0,69.3807,70.1973,64.3457,76.4688
+641,641,Beneficial owner details were changed after multiple payments were already processed.,80.0,79.0725,76.8678,85.3253,76.4587
+642,642,Transactions reference invoices that do not match amounts charged to the underlying purchase orders.,85.0,72.2243,74.7632,71.3492,76.4287
+643,643,A customer requested to route transfers through a third party not reflected in the contract.,75.0,75.6946,76.1647,73.03,76.4287
+644,644,Multiple cash deposits were made just under internal monitoring thresholds over a short period.,95.0,92.3309,90.035,89.205,76.3875
+645,645,"Customer claimed payments were salary, but supporting documents showed no payroll records.",85.0,65.4252,74.4669,71.2877,76.4688
+646,646,Cross-border transfers were sent to jurisdictions with limited trade activity and unclear business rationale.,78.0,85.0132,84.1827,83.3508,76.4287
+647,647,Person-to-person transfers increased after a change in occupation listed on the account.,55.0,72.0553,75.9994,75.2274,76.3875
+648,648,Outgoing payments were structured to mirror incoming payments from the same intermediary bank.,88.0,79.5289,84.2754,78.1852,76.4262
+649,649,Customer declined to provide tax documentation for a large recurring payment request.,65.0,65.4848,78.6141,68.379,76.3875
+650,650,Payments were directed to a beneficiary whose address in records differs from the bank-provided address.,58.0,76.9201,68.3764,77.3375,76.4262
+651,651,There were repeated attempts to update payment beneficiaries to newly created entities within days.,88.0,78.046,79.0202,78.4737,76.4587
+652,652,A refund was processed back to a different card than the one used for the original purchase.,70.0,62.1444,66.8374,62.5144,76.4262
+653,653,Customer reported lost card and requested immediate balance withdrawal to an unverified external account.,85.0,72.9915,73.3403,67.349,76.4287
+654,654,An entity declared inactive operations yet received frequent inbound payments from multiple counterparties.,88.0,79.2007,78.6059,82.3155,76.4587
+655,655,"Beneficiary bank details were frequently corrected, suggesting possible reliance on error-driven changes.",68.0,75.4756,73.4924,75.0121,76.4287
+656,656,Funds moved through an account with no apparent economic purpose and then distributed to unrelated recipients.,93.0,82.4172,83.3646,86.204,76.4688
+657,657,The customer’s stated business activities did not align with the value and pattern of received remittances.,82.0,62.6278,70.2829,64.5779,76.4688
+658,658,"Incoming payments were described as donations, but the counterparties lacked verifiable nonprofit documentation.",80.0,80.3494,75.3859,79.9711,76.4262
+659,659,"A payment referenced a procurement topic, while contract language indicated consultancy services instead.",65.0,71.614,69.3207,76.4392,76.3875
+660,660,The customer asked to omit transaction purpose fields and used generic descriptions on multiple transfers.,87.0,76.43,73.0571,78.1725,76.4587
+661,661,Debits from a merchant account showed settlement delays inconsistent with the merchant’s stated acquirer.,55.0,67.0487,71.1899,70.6013,76.3875
+662,662,A customer used a business address that appears residential based on public records.,50.0,59.9398,72.026,60.0031,76.3875
+663,663,Transfers were sent to sanctioned-related countries despite screening flags being returned as possible matches.,98.0,93.9672,90.1767,90.3819,76.3875
+664,664,A name match to a watchlisted individual was assessed as false positive without updated corroboration.,80.0,78.8689,76.0751,84.0271,76.4262
+665,665,Ownership documents were provided with mismatched issuance dates and inconsistent company seals.,92.0,80.731,81.2226,76.4517,76.4262
+666,666,A beneficial owner’s identity documents were replaced shortly after a compliance review triggered.,88.0,84.1759,82.967,80.5918,76.3875
+667,667,Payments increased after the account was added to a new corporate group structure.,65.0,80.5094,78.4681,76.4351,76.3875
+668,668,Customer requested liquidation of funds via multiple small transfers to the same beneficiary set.,82.0,85.4164,76.5015,81.1558,76.4688
+669,669,Inconsistent tax residency declarations were observed between onboarding and annual updates.,50.0,67.5639,72.1132,67.7936,76.4287
+670,670,A customer attempted to purchase high-value instruments using funds that had recently arrived from offshore.,85.0,83.2688,78.8839,82.2511,76.4287
+671,671,Beneficiaries were added using different spelling variations to avoid prior screening outcomes.,95.0,74.358,83.6551,72.7773,76.4587
+672,672,Cash withdrawals exceeded the stated monthly income for several consecutive cycles.,80.0,75.7387,81.2661,79.0207,76.4587
+673,673,Trade finance documents showed unusually broad description of goods with limited supporting evidence.,78.0,80.9961,76.9444,81.463,76.4287
+674,674,Several payment instructions originated from the same IP pathway but different customer identifiers were used.,85.0,79.8251,75.383,84.2676,76.4287
+675,675,"The customer stated funds were for equipment lease payments, but counterparties did not appear equipment lessors.",82.0,72.8566,74.1238,70.427,76.4587
+676,676,Outgoing wire details were provided by the customer rather than sourced from contract documentation.,48.0,70.9045,72.7446,75.2359,76.4262
+677,677,A third-party intermediary requested payments to a new bank account after prior account details were used.,82.0,75.7737,75.4676,76.5061,76.4587
+678,678,"The customer’s profile indicated retail activity, yet transfer sizes were consistent with wholesale trade.",66.0,74.5927,79.0471,72.8495,76.4287
+679,679,Multiple payments referenced similar invoice numbers that did not correspond to the customer’s order history.,79.0,76.5363,71.2325,74.1641,76.4688
+680,680,A charity-related account received transfers from unrelated entities with no supporting donation statements.,86.0,80.4591,78.6748,80.9055,76.4287
+681,681,Customer attempted to reverse transfers after beneficiary confirmation was received by the bank.,45.0,74.2463,76.3616,80.0541,76.4688
+682,682,Inward funds were quickly moved abroad with no matching outbound trade records.,88.0,85.5965,87.7097,83.9703,76.4262
+683,683,"A supplier relationship was declared, but communications and invoices referenced different legal entities.",78.0,70.4561,73.3708,72.7348,76.4688
+684,684,Payment purpose changed from “marketing” to “consulting” multiple times without documented rationale.,72.0,70.7005,71.5178,67.3744,76.4262
+685,685,The customer requested payment to a personal account despite providing a corporate beneficiary agreement.,81.0,65.5386,66.0876,72.0123,76.3875
+686,686,KYC review found prior address history lacked continuity with the stated location for business operations.,55.0,61.3789,68.538,66.9746,76.4587
+687,687,A corporate customer used layered payments through multiple accounts before remitting proceeds externally.,82.0,87.9678,79.7131,78.8993,76.4587
+688,688,Funds originated from a high-risk payment facilitator and were redistributed to several beneficiaries.,88.0,89.2243,87.9028,89.2482,76.3875
+689,689,The customer could not explain the relationship between the beneficiary and the invoicing entity.,74.0,62.2143,66.7612,65.4808,76.4688
+690,690,A repeated pattern of incoming payments followed by immediate outbound transfers suggested cash-through activity.,79.0,83.7683,89.0642,84.8771,76.3875
+691,691,The customer requested to increase daily transfer limits soon after providing incomplete supporting documents.,72.0,68.4551,71.5153,66.0276,76.4287
+692,692,"Sanctions screening flagged partial matches on a corporate name, but actions proceeded without enhanced due diligence.",92.0,100.0,89.0557,95.0442,76.3875
+693,693,Beneficiary addresses were inconsistent with the declared operating country across multiple payment cycles.,67.0,73.3848,75.6209,70.0632,76.4587
+694,694,"A customer used multiple proxies for identification documents, including blurred scans with altered metadata.",88.0,85.4062,81.9038,82.4872,76.4587
+695,695,Payments were made for “services” despite no service agreement being provided or updated.,64.0,67.2508,73.5243,76.6786,76.4688
+696,696,A politically exposed related party was declared at onboarding as “not applicable” but later corrected.,72.0,71.9504,71.1515,67.0713,76.3875
+697,697,A refund request included instructions to send funds to a third party rather than the original payer.,88.0,64.6795,78.0705,72.9795,76.3875
+698,698,Incoming remittances included references to “loan” without any supporting loan agreement or schedule.,62.0,71.8392,74.3841,66.7524,76.4688
+699,699,"A customer requested settlement of invoices using funds received after the invoice date, without explanation.",50.0,72.2852,65.9772,69.1867,76.4688
+700,700,The account displayed frequent beneficiary changes and payment descriptions resembling automated systems.,86.0,80.5435,76.7477,80.4902,76.3875
+701,701,A merchant profile showed a sudden shift in acquiring volume alongside a new line of business claim.,69.0,75.2066,65.9723,76.6294,76.4688
+702,702,"Customer’s declared business had no website or registration details, yet payments were substantial.",76.0,67.1482,70.4715,72.8208,76.3875
+703,703,A cross-border payment was processed despite missing correspondence address in the beneficial ownership file.,72.0,78.5308,77.333,74.9815,76.4688
+704,704,Beneficial owner verification could not be completed due to document inconsistencies in identity fields.,79.0,73.4062,65.9076,72.8947,76.4688
+705,705,A small business account received large cash equivalents and then converted funds via transfers to offshore banks.,96.0,86.1102,84.1837,83.9048,76.4262
+706,706,A supplier dispute led to multiple partial payments with rapidly changing beneficiaries and incomplete documentation.,78.0,81.4514,82.2168,77.7758,76.3875
+707,707,"The customer provided a signed contract, but the counterparties listed were not the same as payment recipients.",72.0,68.424,70.0472,71.854,76.4262
+708,708,Recurring payments were routed through a correspondent bank that lacked sufficient transparency on intermediary roles.,85.0,77.4363,79.9473,78.8063,76.4688
+709,709,A beneficiary instructed to return funds used a different jurisdiction than indicated in earlier documentation.,77.0,77.0529,81.7004,82.2175,76.4287
+710,710,"An account showed normal activity initially, then shifted to irregular transfers without updated KYC data.",66.0,77.1179,72.1406,77.6727,76.4587
+711,711,Customer structured cash deposits across several branches to keep daily totals just under internal review limits.,93.0,90.862,95.1813,88.1842,76.4262
+712,712,Wire payments repeatedly named a third-party beneficiary not related to the customer’s declared business.,82.0,75.2136,70.7351,73.7517,76.4688
+713,713,Beneficial owner could not be verified through available records despite repeated documentation requests.,80.0,73.1129,66.2161,73.1473,76.4688
+714,714,Customer provided inconsistent addresses across onboarding forms and subsequent statements.,61.0,67.5885,74.6217,74.0739,76.4587
+715,715,Transactions show frequent round-figure transfers followed by immediate withdrawals in cash.,84.0,85.5497,89.3395,81.282,76.4688
+716,716,Funds moved through multiple intermediary accounts in jurisdictions unrelated to the customer’s trade flow.,95.0,83.3548,86.5037,84.3903,76.4688
+717,717,A company invoice description changed across amendments without a corresponding contract revision.,70.0,74.4848,72.3691,76.071,76.4287
+718,718,Customer refused to disclose source of funds for a large incoming transfer.,85.0,79.1865,81.5303,78.0283,76.4262
+719,719,"Merchant account activity increased sharply after onboarding, with no clear change in business profile.",78.0,71.3256,71.0027,72.1532,76.3875
+720,720,Incoming payments were split into small amounts then consolidated at another account the same day.,92.0,78.6012,81.9413,81.1275,76.4262
+721,721,Customer’s stated purpose of payment did not match the narrative on supporting invoices.,55.0,71.909,67.2333,70.7446,76.3875
+722,722,Two payments were processed with identical references but different beneficiary details.,75.0,76.3969,76.0962,78.3015,76.4587
+723,723,"Sanctions screening flagged a close match on a director name, but the customer’s explanation was unsupported.",95.0,85.7471,90.3998,93.0793,76.4287
+724,724,Customer presented documents with overlapping dates but differing company registration numbers.,80.0,76.3104,75.3068,77.449,76.4262
+725,725,Chargeback activity rose after customers began receiving goods through a newly formed supplier.,70.0,71.0854,81.3839,73.215,76.4587
+726,726,Transactions routed to a high-risk country coincided with requests to waive transaction purpose checks.,98.0,92.2699,88.1705,87.4889,76.4262
+727,727,Customer used a personal account to receive funds labeled as consulting fees from a corporate counterparty.,76.0,70.6316,70.6042,72.0083,76.4587
+728,728,A loan repayment was funded by a third party whose relationship to the borrower was unclear.,64.0,73.9808,76.7916,73.0759,76.4262
+729,729,Card transactions showed sudden spikes in online purchases inconsistent with prior patterns.,52.0,82.4154,74.9901,77.6252,76.4262
+730,730,Customer submitted a lease agreement with signatures that appeared copied across two versions.,87.0,81.7048,80.9887,72.9027,76.3875
+731,731,Transfer instructions requested beneficiary details be changed after funds were released.,85.0,77.5156,72.2913,78.0943,76.4262
+732,732,A correspondent payment included vague descriptions like “services” without any itemization.,62.0,74.3723,70.4544,78.5426,76.4262
+733,733,Customer disclosed a foreign bank account but could not provide statements or transfer confirmations.,50.0,69.3528,60.0026,68.9023,76.4287
+734,734,Payments to a freight vendor were not supported by shipping documents or tracking references.,68.0,70.6383,80.5432,73.1456,76.4262
+735,735,Multiple failed KYC attempts occurred due to unreadable identity documents submitted repeatedly.,58.0,76.3721,75.4689,74.8466,76.4287
+736,736,Beneficial ownership indicated a nominee arrangement with limited disclosure of control terms.,82.0,82.8,81.458,80.7541,76.4262
+737,737,"Transaction timing aligned with payroll cycles, yet payment descriptions indicated unrelated vendor services.",74.0,75.078,73.9963,72.2865,76.4262
+738,738,Customer requested frequent amendments to beneficial ownership after initial onboarding approvals.,88.0,78.1844,78.8773,80.3473,76.4287
+739,739,Cash withdrawals exceeded cash deposits over several weeks without a clear funding source.,89.0,82.4709,82.4835,82.6883,76.4587
+740,740,A dormant account became active after receiving incoming transfers from unrelated counterparties.,86.0,77.9267,78.5554,79.8898,76.4688
+741,741,Customer used a holding company structure while operations were conducted by an unregistered individual.,72.0,77.3818,73.275,74.7576,76.3875
+742,742,Cross-border transfers referenced “education” but supporting documents referenced different program names.,82.0,73.384,77.1985,78.3196,76.3875
+743,743,Payments were sent to vendors in a sanctioned-adjacent jurisdiction without additional diligence evidence.,88.0,80.6283,82.3384,82.3988,76.4688
+744,744,Customer provided a business registration document that did not match the tax identifier provided earlier.,78.0,62.1523,63.6731,59.3833,76.4688
+745,745,Incoming funds were followed by quick outward transfers to accounts in the same set of countries.,90.0,91.4528,86.4218,90.6602,76.4287
+746,746,Merchant processed high-volume low-value transactions with no coherent sales documentation.,85.0,83.676,78.5184,78.3319,76.4587
+747,747,A trade finance request cited import activity that did not align with prior customer trade history.,75.0,75.2649,77.9107,77.4014,76.3875
+748,748,Customer attempted to convert funds into cash through multiple ATM withdrawals in different regions.,86.0,85.9434,82.9131,85.9002,76.4587
+749,749,A series of small remittances were sent to the same beneficiary despite stated low-income status.,68.0,77.1171,78.1605,75.1228,76.4262
+750,750,"Customer’s occupation changed during onboarding, shifting from salaried employment to self-employment without explanation.",48.0,69.5362,63.4773,72.6334,76.4287
+751,751,Wire transfers included inconsistent currency conversions compared with market rates.,68.0,72.1573,77.3266,76.8544,76.3875
+752,752,A supplier’s invoices showed repeated billing for identical quantities over multiple months.,61.0,71.9399,75.0533,73.1298,76.4587
+753,753,Customer requested payment be returned to an intermediary rather than the original remitter.,75.0,66.4344,68.752,73.8252,76.3875
+754,754,An account displayed unusually high refunds processed back to the same customer via external cards.,78.0,72.4636,74.1193,72.4044,76.4287
+755,755,"Sanctions screening produced a match on a company name fragment, and review notes were incomplete.",92.0,89.5806,90.2126,87.6728,76.4262
+756,756,Customer’s declared business activities did not correspond to the nature of receivables received.,68.0,64.4595,74.1097,66.2501,76.4587
+757,757,Funds were received from a source described as “family support” but documentation was vague.,55.0,74.4168,69.8097,74.4734,76.3875
+758,758,A beneficial owner added signatory authority to a new person shortly after the account began receiving funds.,86.0,87.9231,78.6172,83.1409,76.4688
+759,759,The customer used multiple aliases across payment narratives and profile fields.,82.0,77.5226,73.5283,77.7558,76.4287
+760,760,A customer repeatedly cited “loan settlement” without any supporting loan agreement.,73.0,66.2775,65.2069,70.1272,76.3875
+761,761,Inbound payments were routed through an entity with no operational footprint documented.,78.0,74.1517,83.3603,83.0626,76.3875
+762,762,Merchant transactions included unusual international gaming payments inconsistent with the stated business model.,72.0,73.6603,72.4563,73.8469,76.3875
+763,763,Cash deposits were followed by card funding and then rapid card-to-cash behavior.,92.0,86.8312,88.7096,86.9295,76.3875
+764,764,A trade payment referenced goods that could not be linked to the submitted customs declarations.,85.0,79.0589,74.4593,73.2287,76.4688
+765,765,Customer’s ownership documentation was issued by an entity that could not be validated independently.,70.0,68.3823,75.4664,66.4513,76.4287
+766,766,Multiple transfers were sent to a beneficiary that later appeared in negative media reports.,82.0,83.4846,82.0145,78.9532,76.3875
+767,767,Account activity included transactions with blurred beneficiary names and incomplete address fields.,85.0,75.4182,72.9712,78.6431,76.4688
+768,768,Customer requested changes to beneficial ownership details after a screening hit was identified.,92.0,79.5973,81.444,80.0326,76.4587
+769,769,A customer’s statement showed a mismatch between bank fees and transaction descriptions provided.,52.0,66.265,69.0141,71.4183,76.4262
+770,770,Large outgoing transfers occurred immediately after salary credits without documented expenses.,78.0,76.8993,78.3808,77.873,76.4587
+771,771,Beneficiary bank details were corrected multiple times after initial instruction submissions.,70.0,68.7075,69.6467,70.9422,76.4587
+772,772,Customer’s supporting documents lacked consistent dates and showed signs of manual alteration.,88.0,71.0234,80.9814,76.7501,76.4587
+773,773,Transactions were routed through a charity-labeled payment purpose despite no charitable registration evidence.,84.0,86.8347,77.4475,84.8295,76.4262
+774,774,"A correspondent requested information be omitted from payment fields, limiting auditability.",86.0,78.9149,71.6904,80.7913,76.4262
+775,775,Customer submitted altered documentation for identity verification during account onboarding.,92.0,72.1174,76.9159,74.4982,76.4287
+776,776,Multiple cash deposits were made in uneven amounts with no clear employment or income source.,80.0,77.0403,83.1687,82.4464,76.4688
+777,777,A wire transfer was routed through several intermediary banks not typical for the stated beneficiary country.,85.0,83.2648,80.6582,83.8265,76.4287
+778,778,Beneficial ownership details were revised after onboarding without a documented explanation.,75.0,78.721,78.9734,79.8215,76.4688
+779,779,Customer requested expedited processing for payments tied to a politically exposed persons-related context.,95.0,69.4562,77.5705,69.0183,76.3875
+780,780,Incoming funds were quickly withdrawn and converted to cash within the same business day.,90.0,84.0119,74.9069,88.9589,76.3875
+781,781,Transactions referenced generic invoices with vague descriptions and no supporting purchase orders.,55.0,77.0805,76.651,74.8259,76.4262
+782,782,Customer declined to provide the purpose of payment and cited confidentiality for all requested details.,65.0,68.814,72.0963,72.5403,76.4287
+783,783,A series of outbound transfers targeted jurisdictions associated with sanctions exposure.,95.0,96.0478,87.3112,90.2629,76.4688
+784,784,Debit activity continued after the customer’s source-of-funds statement became inconsistent with observed behavior.,85.0,68.9064,72.658,70.2821,76.3875
+785,785,Customer provided a residential address that could not be verified and remained unchanged despite requests.,50.0,61.0841,64.1113,65.7458,76.4287
+786,786,Payments were structured to remain just under internal reporting limits across multiple accounts.,95.0,88.9467,91.1488,87.4335,76.4587
+787,787,Beneficiary was added shortly before settlement and lacked prior transaction history with the customer.,85.0,70.0225,76.404,69.3338,76.4587
+788,788,Funds transfers were sent to a related party address listed as a correspondence address only.,70.0,72.5999,77.3419,74.9901,76.4688
+789,789,Customer claimed funds were for family support but payment amounts fluctuated with unrelated business cycles.,75.0,69.4938,69.6138,73.0924,76.4287
+790,790,Repeated attempts were made to change the remittance beneficiary after initial compliance checks.,90.0,81.1519,75.825,83.6973,76.4587
+791,791,A trade-related payment lacked consistent vessel or shipment documentation matching the declared goods.,72.0,77.0171,75.5448,77.1223,76.4587
+792,792,Customer used multiple payment methods to the same destination while changing narrative text each time.,85.0,72.5149,73.4606,75.1526,76.4587
+793,793,Card transactions showed patterns consistent with possible account takeover due to sudden spend shifts.,74.0,83.4461,66.409,84.9216,76.4587
+794,794,A check deposit was followed by an immediate transfer to a third party with overlapping descriptors.,88.0,87.2337,86.29,87.366,76.3875
+795,795,Customer provided conflicting employment dates across forms and later corrected them without evidence.,50.0,68.2059,59.9902,65.5629,76.4587
+796,796,A charity-themed transfer involved counterparties in a jurisdiction with documented diversion concerns.,82.0,88.8387,78.6394,88.326,76.3875
+797,797,Cross-border payments were conducted through a newly created entity with limited online presence.,71.0,75.1145,76.5721,77.3642,76.4688
+798,798,Beneficiary statements were requested but were not provided despite repeated follow-ups.,56.0,69.1004,72.3377,73.3976,76.4287
+799,799,Customer frequently paid from a business account for personal expenses without clear bookkeeping support.,50.0,66.2606,69.554,66.5017,76.4688
+800,800,Incoming transfers were followed by rapid onward payments to parties not linked to the customer profile.,90.0,78.2012,81.8138,81.0782,76.4688
+801,801,A merchant account received funds then requested a withdrawal to a personal wallet shortly after setup.,82.0,77.9579,78.5919,82.5629,76.4287
+802,802,Customer’s transactions aligned with known mule typologies including small-to-medium bursts.,89.0,81.2984,84.6364,74.3009,76.4287
+803,803,KYC review was bypassed by relying on outdated documents that did not match current records.,84.0,74.7317,75.1905,74.0438,76.4688
+804,804,Sanctions screening flagged potential matches that were dismissed without additional customer corroboration.,97.0,89.3547,86.559,89.5828,76.4688
+805,805,Customer insisted on using a correspondent bank in a higher-risk region without rationale.,76.0,73.0455,73.4782,75.3094,76.4287
+806,806,Wire instructions included a sequence of fields that did not match standard beneficiary details.,80.0,75.8905,76.5444,72.5324,76.4688
+807,807,A consultant invoice was repeatedly used across months with no scope changes or supporting deliverables.,85.0,68.2104,70.1594,72.7438,76.4688
+808,808,Customer requested payment in an alternative currency despite providing pricing inconsistent with market rates.,65.0,62.7344,66.0034,70.8728,76.3875
+809,809,Large inbound payments were made immediately after account activation with minimal prior activity.,88.0,85.2104,82.072,82.4591,76.4587
+810,810,The declared industry for the customer did not align with the transaction counterparties and payment narratives.,70.0,71.1977,73.7599,63.1309,76.3875
+811,811,Customer provided a tax ID that did not validate against the claimed country of incorporation.,55.0,68.6466,63.9277,68.8105,76.3875
+812,812,Transfers were sent to an offshore entity with vague ownership structure and no governance documentation.,82.0,89.1444,84.0058,82.8516,76.4262
+813,813,A pattern of chargebacks emerged after customer directed settlements to a related party.,68.0,73.6182,75.9789,75.3007,76.4587
+814,814,Customer attempted to pay a public-sector styled vendor using intermediaries and shell-like invoicing.,92.0,75.8647,78.3371,72.5961,76.3875
+815,815,Multiple transactions were made from an account with no prior activity soon after receiving a single transfer.,78.0,76.0669,76.6204,79.5736,76.4688
+816,816,Beneficial owner was indicated as “same as applicant” but supporting evidence was missing or incomplete.,65.0,72.0325,72.9063,77.1584,76.4287
+817,817,Customer requested removal of transaction references from remittance data to reduce traceability.,88.0,84.0308,72.8421,77.0122,76.4262
+818,818,A third-party payment was made from outside the customer’s stated funding source without documentation.,80.0,74.2395,68.2299,68.8164,76.4587
+819,819,Customer’s answers to source-of-funds questions were inconsistent across the onboarding call and form.,75.0,67.1361,73.7437,68.808,76.3875
+820,820,"Incoming funds were fragmented across several counterparties, then consolidated for outward transfers.",90.0,86.7394,87.8263,88.2235,76.4262
+821,821,Outbound payments referenced “consulting” while no consulting agreement was provided.,55.0,71.8771,72.5435,70.1027,76.4287
+822,822,A customer attempted to link two unrelated payment threads under one invoice number for reconciliation.,72.0,73.7871,72.9546,72.9383,76.4287
+823,823,A high-risk jurisdiction supplier was paid repeatedly despite prior refusal to disclose procurement details.,84.0,77.4975,77.5635,79.7657,76.4262
+824,824,Card payments included unusual geographic dispersion within short time windows.,68.0,75.7154,74.6052,82.1358,76.3875
+825,825,A bank-to-bank transfer included beneficiary and origin addresses that were inconsistent with provided documents.,76.0,72.7521,72.6858,72.5149,76.4688
+826,826,Customer provided a statement of assets that did not reflect observed account balances and transaction volumes.,70.0,68.4771,69.1829,69.8275,76.4262
+827,827,Payments were made to a vendor with matching address components but not supported by contractual records.,75.0,72.0883,79.6822,71.3288,76.4262
+828,828,Customer requested settlement before delivery completion with no evidence of performance milestones.,60.0,71.3032,63.1432,73.1732,76.4262
+829,829,A cash withdrawal pattern contrasted with declared low liquidity needs and persisted over multiple cycles.,80.0,79.5823,82.8955,79.6862,76.4587
+830,830,Customer attempted to restructure payments after compliance requested additional documentation.,90.0,73.8279,72.1948,74.4905,76.4688
+831,831,A suspicious discrepancy was noted between declared currency preference and actual transfer instructions.,60.0,80.0099,77.3799,79.9275,76.4262
+832,832,Trade documentation showed inconsistent ports and dates relative to the stated transaction timeline.,82.0,73.6615,79.1158,68.9192,76.3875
+833,833,A contract payment was split across separate remittances to different recipients with similar identifiers.,86.0,84.7665,80.0272,82.0924,76.4262
+834,834,Customer claimed payments were for software licenses but refused to provide license keys or scope details.,74.0,74.1972,70.4623,77.1215,76.4587
+835,835,Beneficiary name variations were used across payments to avoid matching to an existing risk flag.,90.0,88.2385,89.532,85.8096,76.4587
+836,836,Outgoing transfers were made to intermediaries described as “agents” without contracts or authority letters.,82.0,82.6611,79.4577,82.3128,76.4587
+837,837,Customer requested that funds be returned to a different legal entity than the payer on record.,68.0,70.8138,75.0913,76.0801,76.4688
+838,838,Multiple payments were initiated from the same device and IP pattern while using different beneficiary names.,78.0,80.6693,81.2652,83.805,76.4262
+839,839,Cash deposits were made in amounts that repeatedly cluster around common reporting thresholds.,90.0,88.8695,88.4893,93.5816,76.3875
+840,840,A customer submitted supporting documents that appeared to be scans of older certificates with mismatched issue dates.,92.0,73.539,80.8844,76.3552,76.4287
+841,841,Outgoing transfers were sent to multiple newly added beneficiaries within a single week.,80.0,82.4465,84.7323,83.8439,76.4587
+842,842,Payment descriptions repeatedly cited vague terms such as “services” without corresponding invoices.,72.0,75.9816,73.3624,72.4522,76.4262
+843,843,A remittance pattern showed frequent small outbound payments followed by cash withdrawals at separate ATMs.,90.0,86.782,84.3811,80.6552,76.4262
+844,844,The beneficial owner information in KYC was inconsistent across onboarding forms and subsequent reviews.,78.0,69.1437,74.8171,67.6083,76.3875
+845,845,Transactions with a counterpart in a sanctioned region continued after the customer affirmed they had no business links there.,98.0,71.29,80.2717,74.5667,76.4688
+846,846,A trade finance request included invoices with unusually rounded quantities and repeated unit pricing.,75.0,72.3707,79.4616,76.5456,76.3875
+847,847,Card transactions were split across consecutive days at similar merchant categories not aligned with the stated profile.,72.0,72.7703,75.8632,65.5462,76.4287
+848,848,Funds were received from a third party and then rapidly redistributed to unrelated accounts without clear business rationale.,92.0,86.778,81.6028,83.5737,76.4262
+849,849,A corporate customer’s address differed from the registered place of business and could not be reconciled.,55.0,59.1642,60.4029,62.5028,76.3875
+850,850,A customer attempted to change the receiving bank details immediately after an initial transfer was rejected.,52.0,74.3313,80.0335,75.3257,76.4688
+851,851,Wire payments referenced “consulting” while the provided contract scope was limited and time-bound.,60.0,77.8094,72.7962,73.9822,76.4287
+852,852,Beneficial ownership screening flagged a potential PEP relationship through an indirect family link with incomplete documentation.,85.0,84.3986,90.8375,80.1456,76.3875
+853,853,"Cash withdrawals increased shortly after incoming transfers, with no supporting explanation in transaction notes.",78.0,75.349,78.9933,78.7844,76.4688
+854,854,The customer provided a utility bill that did not match the service period shown on the account opening record.,52.0,66.0811,67.3668,66.6126,76.4287
+855,855,Multiple inbound transfers originated from accounts titled with generic placeholders rather than identifiable entities.,85.0,87.1293,81.3309,92.0992,76.4287
+856,856,A dispute record showed repeated chargeback attempts tied to the same merchant descriptor across different cards.,78.0,72.4524,69.7412,79.9456,76.4262
+857,857,Trade documentation contained shipping routes that did not match the declared origin country.,86.0,78.7594,77.9306,76.6765,76.4587
+858,858,A customer’s declared occupation did not align with the account activity volume and counterpart types.,65.0,63.0546,65.6431,67.1053,76.4262
+859,859,Salary deposits were accompanied by unusual weekend transfers that lacked payroll-related narratives.,80.0,76.8826,81.1737,77.9396,76.4587
+860,860,A supplier payment was routed through an intermediary account despite contract terms indicating direct settlement.,73.0,83.4651,78.6464,83.0289,76.4688
+861,861,A business requested a sudden limit increase for outward transfers without providing updated financial statements.,75.0,73.695,67.5464,77.4625,76.4262
+862,862,Outbound payments coincided with changes in signatory authority and were executed shortly after re-authorization.,82.0,83.8826,81.2408,83.6754,76.4587
+863,863,Sanctions screening generated a partial match that the customer declined to clarify using additional identifiers.,90.0,88.9933,87.1641,86.4547,76.4688
+864,864,Payments for “marketing” were directed to an entity with no verifiable web presence or prior transaction history.,65.0,81.5284,77.2104,79.3978,76.4262
+865,865,A series of incoming payments from the same source ended after the customer’s expected revenue cycle should have continued.,55.0,72.6566,76.8547,73.0099,76.4262
+866,866,A customer used nested transfers through two layers of accounts before funds returned to the originator.,85.0,89.1235,79.3345,87.3446,76.4262
+867,867,An attempt to complete onboarding used inconsistent residence information across two separate months.,58.0,69.8694,77.8605,60.6909,76.3875
+868,868,A customer paid an invoice using funds traced to a different legal entity than the contracting party.,70.0,75.6886,74.8494,76.8878,76.4287
+869,869,Transactions were conducted with a high-risk merchant sector while the customer profile listed retail activity.,75.0,77.8473,78.6372,80.4286,76.4287
+870,870,"A beneficial owner declared no control over a company, but corporate filings indicated managerial decision authority.",80.0,75.6267,74.6662,74.3789,76.4688
+871,871,Cash deposit timing corresponded with end-of-month business dates without matching documented sales records.,82.0,77.5621,78.5409,79.7839,76.4587
+872,872,"A beneficiary was added after a check was received, and the first transfer to that beneficiary followed within days.",76.0,80.6361,79.4278,86.5188,76.4688
+873,873,Inward transfers were split to avoid documentation requirements during standard processing.,90.0,84.3247,86.7776,79.5824,76.4587
+874,874,A customer’s stated business purpose did not match the goods described in trade-related payment narratives.,74.0,73.1553,75.7287,68.2259,76.4262
+875,875,A recurring pattern of payments to the same consultant occurred without contract renewal or updated rates.,58.0,65.6157,73.3769,71.6338,76.4262
+876,876,An account showed multiple incoming payments from jurisdictions inconsistent with the company’s stated operations.,82.0,71.7822,71.1272,78.4954,76.4688
+877,877,"A domestic transfer referenced international shipment details, with no supporting import declaration provided.",72.0,75.9985,71.6405,77.6198,76.4287
+878,878,The customer requested reversal of transfers but retained control of the funds through subsequent payouts.,86.0,76.8397,70.5687,72.2214,76.4287
+879,879,A corporate customer’s board meeting minutes were provided in a format inconsistent with prior governance documents.,90.0,69.6035,70.3517,74.3231,76.3875
+880,880,A person-to-person transfer volume increased after the customer changed contact details and phone numbers.,68.0,71.161,73.6894,68.0784,76.3875
+881,881,Incoming funds were supported by receipts that lacked vendor identifiers and contained inconsistent dates.,80.0,80.4495,78.6816,79.6204,76.4688
+882,882,A customer attempted to withdraw funds immediately after compliance documentation was requested for the same transaction.,88.0,78.1785,77.6779,82.8043,76.3875
+883,883,A beneficiary account was in a country not listed in the customer’s approved transaction regions.,72.0,74.8647,72.8574,80.9586,76.4587
+884,884,A pattern of payments labeled as “loan repayment” did not match the declared lending arrangements in KYC.,85.0,70.9361,74.6492,70.8377,76.4587
+885,885,"A customer provided a PO box address, but the declared business operations required physical site verification.",56.0,61.9102,62.9255,67.8637,76.4587
+886,886,"Sanctions screening indicated a close match for a party name variant, but the customer’s explanation was generic.",78.0,85.8659,86.063,87.0131,76.4287
+887,887,A trade payment included an unusually high number of amendments that reduced clarity of final shipment terms.,68.0,88.3347,78.6391,82.4508,76.4688
+888,888,A series of outward transfers were made to accounts with similar tax identifiers but differing names.,82.0,87.6834,85.2132,87.5659,76.4287
+889,889,An account received funds from a charity-like entity and then transferred most proceeds to personal accounts.,90.0,86.7983,84.2993,87.3443,76.4262
+890,890,"A merchant settlement showed repetitive refunds shortly after deposits, consistent with potential laundering concealment.",81.0,76.2902,76.2992,73.7264,76.4688
+891,891,A corporate client requested payment by “agent” despite contract clauses requiring direct payment to suppliers.,72.0,74.1511,72.0362,76.7596,76.3875
+892,892,Customer-provided invoices listed inconsistent currencies compared with the actual transfer currency.,78.0,70.2888,63.3305,68.6665,76.4287
+893,893,A beneficiary displayed frequent turnover and new account creation shortly before receiving transfers.,88.0,77.5065,80.1332,81.5283,76.3875
+894,894,"Cash activity spiked after a change in account ownership, with limited supporting documentation for the source.",89.0,82.3412,76.783,83.157,76.4287
+895,895,"A customer’s financial profile indicated low risk tolerance, yet they requested frequent cross-border transfers to volatile regions.",74.0,81.4479,79.997,80.1676,76.4287
+896,896,A recurring inbound transfer reference contained a sequence number pattern tied to payroll-like strings but not to employment records.,80.0,75.5807,73.4679,75.769,76.4287
+897,897,A compliance review noted that enhanced due diligence triggers were not updated after corporate structure changes.,60.0,77.997,76.604,69.916,76.3875
+898,898,"A customer stated funds were for equipment purchases, but transactions were recorded as services with no asset documents.",78.0,72.081,75.9417,63.3412,76.4587
+899,899,Multiple payments were routed through a correspondent bank chain that differed from previously used channels without explanation.,82.0,81.2494,73.2535,80.3044,76.4287
+900,900,A customer attempted to suppress identity checks by requesting manual processing and alternative channels for a transfer.,92.0,79.4669,84.6216,81.8944,76.4587
+901,901,A seller payment was made to an entity sharing similar wording to a known sanctioned party name without additional checks.,95.0,82.7672,86.5326,77.8191,76.4587
+902,902,A customer’s KYC photos appeared to be taken at different times with mismatched background features compared to prior submission.,80.0,74.3715,81.1916,70.5988,76.4688
+903,903,Customer onboarding documents show inconsistent address history across submitted forms.,65.0,68.3567,72.0326,71.9187,76.4587
+904,904,A wire transfer pattern mirrors expected payroll timing but lacks supporting payroll documentation.,58.0,81.2796,74.8804,85.0064,76.4688
+905,905,Beneficial owner information is missing for a nominee structure used to send funds to multiple jurisdictions.,88.0,82.1862,83.0731,83.7687,76.4688
+906,906,Transaction descriptions repeatedly reference generic “services” without any invoice or contract attached.,62.0,72.0381,62.2972,74.0879,76.4688
+907,907,Cash deposits are made in amounts that cluster just below internal monitoring thresholds.,95.0,88.5817,87.6806,85.77,76.4262
+908,908,Customer requested routing through an intermediary country with no apparent trade or business rationale.,78.0,80.8073,76.1344,76.7635,76.4287
+909,909,Payment purpose statements change after the transaction is initiated during the case review.,72.0,75.1897,68.9224,77.6077,76.4587
+910,910,An otherwise inactive account receives frequent incoming transfers from unrelated counterparties.,68.0,79.7014,84.2469,84.3187,76.4587
+911,911,Outgoing payments are directed to a personal account rather than a registered business account.,65.0,69.9698,72.0754,68.0102,76.4287
+912,912,Card cash advances are used in short cycles followed by transfers to offshore beneficiaries.,88.0,85.833,83.7149,87.6183,76.4287
+913,913,Customer provided a phone number that cannot be verified during standard KYC checks.,40.0,60.6795,62.3477,65.4638,76.4262
+914,914,Funds are moved through several layers of accounts with no clear commercial justification.,80.0,84.9732,88.9014,85.9307,76.4587
+915,915,A customer refuses to provide documents supporting source of funds despite repeated requests.,75.0,73.7246,72.6888,73.9781,76.4688
+916,916,Transfers include counterparties located in jurisdictions associated with heightened sanctions risk.,90.0,87.6603,90.6428,89.0275,76.4262
+917,917,A direct debit request is established shortly after account opening with no prior mandate record.,65.0,72.9017,71.1124,78.5091,76.4587
+918,918,Multiple refunds are processed back to the original funding cards with mismatched transaction dates.,70.0,73.1897,76.5475,72.5489,76.4287
+919,919,Incoming receipts originate from entities with similar ownership indicators but different legal names.,80.0,81.2276,80.1126,80.4111,76.4287
+920,920,"Customer claims a new business activity, yet no licensing or tax registration evidence is provided.",50.0,59.3227,55.0675,68.1605,76.4688
+921,921,A high volume of small remittances is sent to the same beneficiary under varying reference codes.,84.0,80.5627,77.5564,76.5871,76.4688
+922,922,Payments are structured to avoid appearing on a known internal list of regulated vendors.,92.0,85.3464,85.3978,81.0023,76.4688
+923,923,Corporate customer’s signatory authority appears to change without documented board resolutions.,76.0,79.753,69.2657,75.0188,76.4587
+924,924,Beneficial ownership declarations are updated after negative media screening hits are identified.,89.0,88.1926,83.0709,86.0417,76.4688
+925,925,A trade finance deal references commodities that cannot be matched to customs or shipping records.,87.0,75.2575,75.1182,74.0628,76.4262
+926,926,Transactions show circular movement: funds leave and return through a different account holder within days.,85.0,78.8612,79.8122,81.9618,76.4262
+927,927,Customer’s occupation and expected monthly activity are materially lower than observed transaction flows.,78.0,65.3776,63.1151,68.8911,76.4262
+928,928,A request to change beneficiary details is submitted soon after funds are received.,80.0,77.1573,70.6045,76.5587,76.4262
+929,929,Payments are sent to a counterpart that repeatedly returns funds back with altered narration.,82.0,79.0912,85.4259,79.6823,76.4262
+930,930,Customer’s watchlist screening result was treated as cleared without updated identification documents.,92.0,75.5131,75.0862,72.587,76.3875
+931,931,A check withdrawal is followed immediately by electronic transfers to multiple external accounts.,88.0,86.1959,89.5531,84.6885,76.4587
+932,932,Several payments are made to entities sharing the same mailing address but different business names.,72.0,74.7565,74.8969,77.9649,76.4287
+933,933,The customer’s declared business does not align with the geographic locations of payments received.,65.0,67.6219,71.2039,65.3538,76.4287
+934,934,An account is used to receive funds from abroad and then settle invoices for unrelated domestic parties.,90.0,80.0824,77.688,82.4911,76.4688
+935,935,A large purchase is financed through incoming transfers from a series of accounts with no stated link.,89.0,81.7574,75.6828,82.6543,76.4688
+936,936,Customer provided a document with inconsistent issue dates compared to the registration record.,58.0,67.2483,73.2193,68.4507,76.3875
+937,937,An agent collects funds from multiple customers and pays out in a pattern inconsistent with fees.,85.0,76.4981,72.3309,77.2195,76.4287
+938,938,A customer requests to receive funds in a different currency than the declared operating currency.,52.0,77.5183,75.3046,79.1776,76.4262
+939,939,Payments reference “consulting” while contract terms and deliverables are not produced.,70.0,64.1622,72.2594,68.1165,76.3875
+940,940,A supplier onboarding includes a missing tax ID followed by immediate payments after manual override.,88.0,73.3458,72.9406,73.7252,76.4262
+941,941,A beneficiary is added and used only for one transaction before removal from profile.,55.0,80.3321,74.0343,79.0219,76.4587
+942,942,Multiple chargebacks occur with explanations that do not match the original merchant descriptors.,78.0,72.0753,74.1823,69.503,76.3875
+943,943,Cash deposits are followed by rapid outbound transfers to jurisdictions with limited transaction history.,95.0,88.7048,89.7785,87.9282,76.4262
+944,944,Customer attempts to conduct transactions through a high-risk country despite being able to use domestic rails.,82.0,88.7515,89.6912,78.5564,76.3875
+945,945,Incoming funds are described as “refund” but correspond to no previously recorded purchase.,72.0,69.9073,79.8374,73.4508,76.4587
+946,946,"A senior management change triggers no updated compliance attestation, though transactions increase soon after.",65.0,77.0417,73.1727,75.743,76.4262
+947,947,"Customer’s stated purpose is consistent with retail activity, but settlement volumes resemble wholesale flows.",75.0,72.0284,69.0435,77.7984,76.3875
+948,948,Beneficial ownership is claimed as “family trust” without trustee documentation or identifiable controls.,80.0,76.7267,73.1143,77.1896,76.4262
+949,949,A request for documentation is declined and replaced with verbal explanations during onboarding.,78.0,68.7841,74.3003,65.5643,76.4587
+950,950,Two accounts under different ownership receive mirrored transfers at the same times of day.,88.0,77.948,79.8193,77.7686,76.4262
+951,951,A customer uses a newly created company name matching the beneficiary’s prior legal entity.,80.0,75.4888,78.4391,75.1484,76.4262
+952,952,Transfers include amounts that match typical debt repayment schedules without supporting loan agreements.,78.0,80.4918,76.328,82.4323,76.4262
+953,953,Payments are routed to accounts that later show frequent reversals and unexplained narration changes.,87.0,81.9171,84.6976,82.5908,76.4587
+954,954,A customer provides an incomplete address that only matches a mail-forwarding service.,79.0,62.8206,62.9703,63.0738,76.4587
+955,955,Outgoing transactions target entities that appear to have no public business footprint.,83.0,74.4948,75.2783,76.8679,76.3875
+956,956,A sequence of wire transfers is used to settle multiple invoices with identical amounts and close timestamps.,82.0,82.814,73.2456,79.5224,76.4688
+957,957,The customer’s transaction pattern does not match declared business model but aligns with known fraud typologies.,86.0,69.7057,71.9352,70.1264,76.4262
+958,958,An individual customer uses a corporate payment channel and cannot explain the relationship to the company.,70.0,69.7065,71.3966,71.4006,76.3875
+959,959,A compliance review notes duplicate documentation reuse across separate onboarding attempts.,72.0,74.95,71.6737,76.6515,76.4287
+960,960,A beneficiary’s bank details were modified to a different institution shortly before processing.,88.0,78.9086,77.3641,76.9835,76.4688
+961,961,Customer requests settlement directly to a third party who is not involved in the described contract.,62.0,70.3946,72.7119,70.1468,76.3875
+962,962,A trade payment is made without corresponding bill of lading or shipping confirmation records.,86.0,71.7742,67.6066,73.0494,76.4287
+963,963,"Account activity increases after negative screening results are returned, without documented remediation steps.",50.0,82.3332,74.9624,78.3667,76.4688
+964,964,A customer refuses to disclose the end user for funds despite providing intermediary invoices.,76.0,72.5726,78.6832,70.4804,76.4287
+965,965,Funds are transferred to a charity-like entity that lacks verifiable registration details.,92.0,85.6273,81.5605,85.5926,76.4688
+966,966,A return transfer is processed to an account that is not the original sending account.,55.0,69.0317,72.7485,76.4992,76.3875
+967,967,Customer’s declared source of funds is “salary” but deposits do not reflect payroll evidence.,45.0,68.9917,74.5121,71.0456,76.4587
+968,968,An ongoing payment is maintained after a counterparty relationship is terminated in system records.,40.0,76.9451,75.7578,72.6444,76.4587
+969,969,A series of remittances is sent for “family support” with changing beneficiaries and minimal explanations.,80.0,75.7086,72.1075,73.4738,76.4688
+970,970,A customer made frequent cash deposits followed by immediate outbound transfers to unrelated merchants.,90.0,84.1585,88.0233,82.2652,76.4587
+971,971,Transaction descriptions were vague and did not match the stated account purpose in multiple instances.,65.0,75.396,77.1448,76.9944,76.4287
+972,972,Beneficial owner information could not be verified during onboarding and was provided only after follow-up.,75.0,74.5295,60.3453,72.5294,76.4688
+973,973,A series of payments used intermediary entities in a higher-risk region without a clear commercial rationale.,88.0,86.478,81.6006,85.0769,76.4287
+974,974,The customer requested modification of transaction references to align with prior submissions.,78.0,75.6835,73.5696,77.6388,76.3875
+975,975,"Funds were received from multiple accounts with similar amounts and timing, then consolidated into a single outgoing transfer.",91.0,82.8387,86.0714,85.1204,76.4287
+976,976,A trade finance facility was used to support shipments that appeared inconsistent with declared goods and weights.,78.0,78.5944,81.2614,76.7574,76.4287
+977,977,The counterparties were newly established and had no prior transaction history despite repeat activity.,80.0,73.9114,76.9322,75.1866,76.4287
+978,978,Large withdrawals occurred shortly after incoming salary-like credits that did not match expected pay patterns.,72.0,79.5174,81.3012,81.6772,76.4287
+979,979,A customer declined to provide source-of-funds details and instead offered general statements about business revenues.,60.0,67.6426,74.2878,73.8654,76.4262
+980,980,Payments were structured to remain just under internal screening limits across several days.,95.0,90.4172,93.3605,85.045,76.4688
+981,981,A beneficial owner claimed no involvement in activity while another party controlled documentation and signatory authority.,80.0,76.2356,80.379,74.6802,76.3875
+982,982,The same device and contact details were used across multiple customer profiles with different identities.,85.0,67.0316,74.7556,67.1615,76.3875
+983,983,A cross-border payment was routed through several jurisdictions without an obvious path of performance.,88.0,82.5944,80.0922,78.7597,76.4688
+984,984,The customer used personal funds to settle invoices billed to a corporate entity with no documented relationship.,65.0,72.6747,74.2481,73.9243,76.4287
+985,985,A supplier changed bank details multiple times within a short window and requested payments to new beneficiary accounts.,82.0,80.3544,74.8708,79.6228,76.4688
+986,986,Multiple refunds were issued to original funding sources that differed from the initial payment origin.,60.0,76.9897,75.8969,78.5879,76.4287
+987,987,A customer requested rapid release of funds before completion of supporting documentation checks.,82.0,79.4387,74.5718,81.7272,76.4688
+988,988,The customer’s stated business address could not be corroborated and was not consistent with available records.,58.0,56.7603,63.6277,59.6864,76.4262
+989,989,Unusual load-and-remit activity occurred via a payment platform with transactions lacking consistent business purpose.,86.0,79.1945,72.1713,79.1299,76.3875
+990,990,A correspondent relationship showed recurring inbound credits from entities tied to sanctions-exposure products.,96.0,81.2059,77.1195,84.846,76.4262
+991,991,A merchant attempted to split a single high-value purchase into smaller card payments to reduce scrutiny.,93.0,81.9335,78.0775,82.1476,76.4287
+992,992,The company’s compliance documentation referenced outdated ownership structures after a corporate update.,60.0,83.4155,79.3238,78.9222,76.3875
+993,993,"Outgoing transfers included attachments that appeared altered, with inconsistent dates and signatures.",90.0,80.7604,82.4621,78.6341,76.4262
+994,994,A customer provided invoices containing generic descriptions that did not align with the declared transaction narratives.,72.0,74.472,71.0523,74.8482,76.4262
+995,995,A counterparty requested payments to a third-party wallet rather than the invoiced beneficiary.,84.0,73.0633,73.7566,71.596,76.4287
+996,996,Cash movement increased around month-end while trade activity indicators remained low and stable.,65.0,81.5569,82.6861,76.678,76.3875
+997,997,A customer used cryptocurrency conversions paired with immediate fiat withdrawals to obscure fund trails.,88.0,82.9486,81.1495,81.327,76.4287
+998,998,The beneficial owner was identified as a politically exposed person but the transaction file lacked enhanced due diligence notes.,75.0,79.7406,74.2143,77.5762,76.4587
+999,999,An account showed repeat payments to a consultancy with unclear deliverables and no supporting contracts.,72.0,70.7872,79.6676,71.3815,76.4262
+1000,1000,A customer requested to bypass standard KYC refresh timing by citing urgent operational constraints.,68.0,68.8486,72.374,72.7959,76.4262

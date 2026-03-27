@@ -1,0 +1,21 @@
+issue_id,row_number,issue_description,actual_score,predicted_score,absolute_error
+86,86,"Customer requested suppression of certain transaction fields, citing privacy concerns related to business partners.",30.0,84.1547,54.1547
+401,401,Outgoing transfers matched inbound credits from the same remitter within the same business day.,30.0,81.9124,51.9124
+366,366,Correspondent bank requested additional documentation due to insufficient transaction narrative clarity.,25.0,71.8512,46.8512
+176,176,A correspondent request was denied due to incomplete compliance fields that were later corrected.,25.0,71.7665,46.7665
+968,968,An ongoing payment is maintained after a counterparty relationship is terminated in system records.,40.0,78.5098,38.5098
+606,606,A refund was processed after a dispute where the customer could not provide supporting delivery evidence.,30.0,64.6911,34.6911
+681,681,Customer attempted to reverse transfers after beneficiary confirmation was received by the bank.,45.0,77.2851,32.2851
+831,831,A suspicious discrepancy was noted between declared currency preference and actual transfer instructions.,60.0,91.8908,31.8908
+66,66,Customer provided an expired identification document during onboarding and requested it be re-dated without resubmission.,45.0,75.0312,30.0312
+963,963,"Account activity increases after negative screening results are returned, without documented remediation steps.",50.0,77.7802,27.7802
+967,967,Customer’s declared source of funds is “salary” but deposits do not reflect payroll evidence.,45.0,72.4989,27.4989
+52,52,Cross-border payments included fees and taxes that were inconsistent across otherwise similar invoices.,50.0,77.2593,27.2593
+536,536,Customer requested fees to be netted against principal despite no fee schedule on file.,42.0,69.0345,27.0345
+406,406,Customer attempted to add a new payee using altered beneficiary details that were later corrected.,45.0,72.019,27.019
+850,850,A customer attempted to change the receiving bank details immediately after an initial transfer was rejected.,52.0,78.0658,26.0658
+637,637,The customer provided an originator statement that did not correspond to the actual payer bank records.,95.0,69.5515,25.4485
+491,491,Customer requested splitting a single invoice into multiple payments across separate days.,50.0,75.2504,25.2504
+486,486,The compliance review was bypassed due to missing fields in the payment instruction.,55.0,79.6957,24.6957
+294,294,Customer submitted altered invoices with inconsistent dates compared to underlying orders.,92.0,67.4807,24.5193
+58,58,The account received funds from a payer that had recently changed its own business registration details.,52.0,76.2813,24.2813

@@ -1,0 +1,25 @@
+Generate short, realistic synthetic issue descriptions that are primarily minimal-risk or clearly benign, in the style of internal support notes, routine review comments, or low-concern investigator remarks.
+
+Requirements:
+- Return issue descriptions only, with no labels, categories, scores, explanations, bullets, or extra fields.
+- Each issue must be one concise sentence.
+- Target cases that should usually score in the 0-9 range after rating.
+- Favor informational, routine, benign, or low-concern operational scenarios with no meaningful fraud, AML, sanctions, KYC, or misuse signal.
+- Maximize variety across account servicing, card operations, login support, payment clarification, onboarding maintenance, merchant servicing, and ordinary customer behavior.
+- Strongly vary wording and sentence structure.
+- Avoid strong suspicious indicators such as structuring, sanctions exposure, forged documents, mule behavior, rapid fund movement, concealment, or unexplained high-risk counterparties.
+- Use realistic but synthetic narratives only.
+
+Example styles:
+- Customer requested a replacement debit card after the previous card was damaged during travel.
+- Address details were updated after the customer provided valid proof of a recent relocation.
+- A small domestic transfer matched the account's usual monthly household payment pattern.
+- Merchant settlement timing changed because of a weekend processing delay already explained to the client.
+- Customer asked why a routine direct debit appeared under an unfamiliar merchant descriptor.
+- Login access was restored after the customer completed normal device verification steps.
+- An onboarding review noted that one supporting document was missing a page and was later resubmitted correctly.
+- A payment inquiry related to a delayed refund that was already in progress through standard processing.
+- Seasonal business turnover increased in line with prior years and documented sales records.
+- Customer asked for a statement copy to support a mortgage application with no unusual account activity.
+
+Now generate the requested issue descriptions with maximum case diversity and maximum wording diversity while staying in the minimal-risk range.
