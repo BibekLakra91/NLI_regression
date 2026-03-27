@@ -1,0 +1,22 @@
+{
+  "name": "issue_text_array",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "issues": {
+        "type": "array",
+        "description": "A flat array containing issue descriptions as text.",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A non-empty text string describing a single issue."
+        }
+      }
+    },
+    "required": [
+      "issues"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,29 @@
+reason_for_suspicion,risk_label,category,urgency_score
+Address update due to relocation; provided valid proof.,low,low_risk,5
+Customer refuses to provide updated KYC documentation.,medium,kyc_issue,57
+Vendor selected despite higher cost and weak due diligence.,medium,corruption,53
+Single small wire consistent with historical activity.,low,low_risk,26
+Transactions routed through multiple intermediaries with no commercial rationale.,high,money_laundering,85
+Seasonal increase in sales consistent with business cycle.,low,low_risk,30
+Customer refuses to explain relationship to recipients in Country X.,high,terrorist_financing,74
+Multiple accounts opened with similar device fingerprints.,medium,fraud,61
+Invoices appear duplicated with slight modifications.,medium,fraud,46
+Repeated transfers between related accounts to obscure origin of funds.,high,money_laundering,87
+Vendor selected despite higher cost and weak due diligence.,medium,corruption,61
+Regular vendor payments matching invoices.,low,low_risk,23
+Customer refuses to explain relationship to recipients in Country Z.,high,terrorist_financing,86
+Unexplained consulting fees routed to politically exposed person.,medium,corruption,44
+Multiple accounts opened with minimal documentation.,medium,kyc_issue,54
+Repeated transfers between related accounts to obscure origin of funds.,high,money_laundering,90
+Vendor selected despite higher cost and weak due diligence.,medium,corruption,67
+Multiple payments referencing alternate spellings of a blocked party.,high,sanctions_evasion,83
+Use of third-country routing to mask ultimate beneficiary in Country X.,high,sanctions_evasion,86
+Customer attempts to bypass security controls repeatedly.,medium,fraud,49
+Funds sent to newly created entity with ties to sanctions list.,high,sanctions_evasion,74
+Customer resists enhanced due diligence questions.,medium,kyc_issue,53
+Merchant shows abnormal refund rates and mismatched shipping.,medium,fraud,53
+Address and phone records mismatch across filings.,medium,kyc_issue,47
+Counterparty shares address with known sanctioned entity.,high,sanctions_evasion,88
+Transfers to conflict zones without legitimate explanation.,high,terrorist_financing,79
+Multiple payments referencing alternate spellings of a blocked party.,high,sanctions_evasion,87
+Rapid movement of funds to multiple individuals in high-risk areas.,high,terrorist_financing,90

@@ -1,0 +1,21 @@
+Generate 100 short, realistic compliance/risk issue descriptions in the style of internal alert or investigator notes.
+
+Requirements:
+- Return the output as a JSON array of 100 strings.
+- Each string must contain exactly one issue description.
+- Do not include labels, categories, scores, explanations, or extra fields.
+- Each issue should be one short sentence.
+- Keep the wording concise, concrete, and professional.
+- Make them look like realistic banking / payments / AML / fraud / sanctions / KYC / corruption alert narratives.
+- Include a mix of clearly suspicious, ambiguous, and benign-looking cases.
+- Vary the wording and scenarios so they do not feel repetitive or templated.
+- Do not use real names, real companies, or real account numbers.
+- Do not mention urgency, severity, or priority explicitly.
+
+Example output format:
+[
+  "Multiple wire transfers were sent just below the reporting threshold over three consecutive days.",
+  "Customer refused to explain the purpose of payments to a counterparty in a high-risk jurisdiction."
+]
+
+Now generate the 100 issue descriptions.

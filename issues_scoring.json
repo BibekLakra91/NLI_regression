@@ -1,0 +1,35 @@
+{
+  "name": "batch_score_object",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "scores": {
+        "type": "array",
+        "description": "Batch of scores aligned to the submitted batch-local issue indexes.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "issue_index": {
+              "type": "integer",
+              "description": "Zero-based position of the issue inside the submitted scoring batch."
+            },
+            "score": {
+              "type": "integer",
+              "description": "Priority score for the issue as an integer from 0 to 100."
+            }
+          },
+          "required": [
+            "issue_index",
+            "score"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "scores"
+    ],
+    "additionalProperties": false
+  }
+}

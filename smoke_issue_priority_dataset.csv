@@ -1,0 +1,11 @@
+issue_id,issue_description,priority_score
+1,Customer provided inconsistent business addresses across onboarding documents.,45
+2,Outgoing transfers were structured to avoid a commonly referenced reporting threshold across multiple days.,92
+3,"A payment referenced vague terms like ""consulting services"" without supporting invoices or contracts.",78
+4,Beneficial ownership disclosures were incomplete and later corrected after follow-up requests.,82
+5,Funds were rapidly moved through several accounts with no clear economic purpose.,88
+6,Counterparty originated from a jurisdiction associated with sanctions concerns and no screening rationale was documented.,92
+7,Customer declined to provide source-of-funds details for cash deposits followed by immediate wire outflows.,80
+8,Transactions show frequent use of third parties that do not align with the declared customer profile.,75
+9,A merchant account received refunds immediately after chargebacks with minimal documentation.,72
+10,Customer requested changing payment instructions to different recipients after funds were already initiated.,74

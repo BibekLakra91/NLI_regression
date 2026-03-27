@@ -1,0 +1,113 @@
+reason_for_suspicion,risk_label,category,urgency_score
+Use of third-country routing to mask ultimate beneficiary in Country X.,high,sanctions_evasion,82
+Trade documents appear altered to conceal true destination.,high,sanctions_evasion,78
+Chargebacks and disputes spike after new device login.,medium,fraud,51
+Customer resists enhanced due diligence questions.,medium,kyc_issue,65
+Chargebacks and disputes spike after new device login.,medium,fraud,49
+"Multiple small transfers to avoid detection of $468,341 aggregate.",high,terrorist_financing,81
+Payments referencing coded language commonly used in illicit fundraising.,high,terrorist_financing,73
+Unusual commission rates for a high-risk country deal.,medium,corruption,70
+Trade documents appear altered to conceal true destination.,high,sanctions_evasion,77
+Beneficial owners not disclosed despite legal requirement.,medium,kyc_issue,57
+Transactions routed through multiple intermediaries with no commercial rationale.,high,money_laundering,82
+Funds sent to newly created entity with ties to sanctions list.,high,sanctions_evasion,85
+"Source of funds inconsistent with stated income; large inflows of $232,163.",high,money_laundering,83
+Regular vendor payments matching invoices.,low,low_risk,18
+Customer attempts to bypass security controls repeatedly.,medium,fraud,56
+Request to split invoice to avoid internal review.,medium,corruption,46
+Multiple payments referencing alternate spellings of a blocked party.,high,sanctions_evasion,82
+Screening hits for sanctioned vessel and related parties.,high,sanctions_evasion,81
+Large gifts and hospitality expenses without approvals.,medium,corruption,57
+Shipping routes inconsistent with declared goods and destination.,high,sanctions_evasion,91
+Customer avoids providing end-user certificates for controlled goods.,high,sanctions_evasion,90
+"Customer insists on third-party payments with no clear business purpose; $61,692 involved.",high,money_laundering,91
+Beneficial owners not disclosed despite legal requirement.,medium,kyc_issue,67
+Unusual velocity: rapid in-and-out transfers across unrelated entities.,high,money_laundering,88
+Charity donations tied to procurement decision makers.,medium,corruption,54
+Single small wire consistent with historical activity.,low,low_risk,16
+Account activity linked to extremist forums and fundraising campaigns.,high,terrorist_financing,86
+Customer attempts to bypass security controls repeatedly.,medium,fraud,65
+Customer resists enhanced due diligence questions.,medium,kyc_issue,67
+Customer refuses to explain relationship to recipients in Country Z.,high,terrorist_financing,78
+Beneficial owners not disclosed despite legal requirement.,medium,kyc_issue,66
+Repeated transfers between related accounts to obscure origin of funds.,high,money_laundering,83
+Transactions routed through multiple intermediaries with no commercial rationale.,high,money_laundering,84
+Customer requested account statement reissue.,low,low_risk,23
+"Payments linked to sanctioned region via intermediaries; $380,467 exposure.",high,sanctions_evasion,86
+Address and phone records mismatch across filings.,medium,kyc_issue,52
+Balance transfer between own accounts.,low,low_risk,23
+Regular vendor payments matching invoices.,low,low_risk,29
+Charity donations tied to procurement decision makers.,medium,corruption,52
+Invoices appear duplicated with slight modifications.,medium,fraud,48
+Card-not-present transactions spike after sudden address change.,medium,fraud,58
+Card-not-present transactions spike after sudden address change.,medium,fraud,54
+Customer refuses to provide updated KYC documentation.,medium,kyc_issue,50
+Transactions routed through multiple intermediaries with no commercial rationale.,high,money_laundering,88
+Card-not-present transactions spike after sudden address change.,medium,fraud,67
+Customer reports account takeover and unauthorized transfers.,medium,fraud,56
+"Use of money mules to move funds via small transfers adding to $188,377.",high,money_laundering,92
+"Source of funds inconsistent with stated income; large inflows of $336,557.",high,money_laundering,88
+"Small, frequent donations to entities with unclear charitable activities.",high,terrorist_financing,84
+Balance transfer between own accounts.,low,low_risk,25
+Card replacement requested after expiry.,low,low_risk,20
+Account activity linked to extremist forums and fundraising campaigns.,high,terrorist_financing,87
+Standard ACH settlement for utility payments.,low,low_risk,23
+Customer inquiry about fee schedule; no transaction concerns.,low,low_risk,20
+Merchant shows abnormal refund rates and mismatched shipping.,medium,fraud,46
+Standard ACH settlement for utility payments.,low,low_risk,9
+Large gifts and hospitality expenses without approvals.,medium,corruption,56
+Funds sent to newly created entity with ties to sanctions list.,high,sanctions_evasion,86
+Multiple accounts opened with minimal documentation.,medium,kyc_issue,63
+Identity documents appear altered; selfie mismatch flagged.,medium,fraud,50
+Ownership structure incomplete after repeated requests.,medium,kyc_issue,59
+Transfers to conflict zones without legitimate explanation.,high,terrorist_financing,86
+"Multiple cash deposit transactions just under reporting threshold totaling $350,197.",high,money_laundering,75
+Charity donations tied to procurement decision makers.,medium,corruption,47
+Beneficial owners not disclosed despite legal requirement.,medium,kyc_issue,61
+Payments routed through family members of officials.,medium,corruption,49
+"Customer uses PO boxes only, no verifiable premises.",medium,kyc_issue,52
+Multiple accounts opened with similar device fingerprints.,medium,fraud,56
+Invoices appear duplicated with slight modifications.,medium,fraud,50
+Address and phone records mismatch across filings.,medium,kyc_issue,67
+"Third-party intermediary requests off-book payment of $158,615.",medium,corruption,60
+Unexplained consulting fees routed to politically exposed person.,medium,corruption,58
+Unusual velocity: rapid in-and-out transfers across unrelated entities.,high,money_laundering,78
+Unusual velocity: rapid in-and-out transfers across unrelated entities.,high,money_laundering,79
+Beneficial owners not disclosed despite legal requirement.,medium,kyc_issue,67
+Request to split invoice to avoid internal review.,medium,corruption,51
+Unusual crypto transfers to wallets flagged by external intelligence.,high,terrorist_financing,91
+Card replacement requested after expiry.,low,low_risk,21
+Seasonal increase in sales consistent with business cycle.,low,low_risk,10
+"Multiple small transfers to avoid detection of $169,126 aggregate.",high,terrorist_financing,80
+Identity documents appear altered; selfie mismatch flagged.,medium,fraud,58
+Charity donations tied to procurement decision makers.,medium,corruption,57
+Use of third-country routing to mask ultimate beneficiary in Country Y.,high,sanctions_evasion,94
+Customer requested account statement reissue.,low,low_risk,11
+Large gifts and hospitality expenses without approvals.,medium,corruption,62
+Rapid movement of funds to multiple individuals in high-risk areas.,high,terrorist_financing,91
+Account activity linked to extremist forums and fundraising campaigns.,high,terrorist_financing,86
+Screening hits for sanctioned vessel and related parties.,high,sanctions_evasion,82
+Beneficial owner previously flagged for sanctions risk.,high,sanctions_evasion,88
+Repeated transfers between related accounts to obscure origin of funds.,high,money_laundering,86
+Customer refuses to provide updated KYC documentation.,medium,kyc_issue,53
+Transactions routed through multiple intermediaries with no commercial rationale.,high,money_laundering,83
+Transfers to conflict zones without legitimate explanation.,high,terrorist_financing,87
+Routine payroll deposits consistent with stated income.,low,low_risk,21
+Card replacement requested after expiry.,low,low_risk,25
+Address update due to relocation; provided valid proof.,low,low_risk,21
+Significant change in activity without updated source of funds.,medium,kyc_issue,52
+Customer refuses to explain relationship to recipients in Country X.,high,terrorist_financing,80
+Charity donations tied to procurement decision makers.,medium,corruption,74
+Beneficial owner previously flagged for sanctions risk.,high,sanctions_evasion,88
+Merchant shows abnormal refund rates and mismatched shipping.,medium,fraud,40
+"Use of money mules to move funds via small transfers adding to $373,657.",high,money_laundering,81
+"Multiple crypto transfer transactions just under reporting threshold totaling $388,108.",high,money_laundering,90
+Address and phone records mismatch across filings.,medium,kyc_issue,52
+Customer refuses to explain relationship to recipients in Country Y.,high,terrorist_financing,84
+Unusual commission rates for a high-risk country deal.,medium,corruption,56
+Customer refuses to explain relationship to recipients in Country X.,high,terrorist_financing,86
+Shipping routes inconsistent with declared goods and destination.,high,sanctions_evasion,74
+Use of high-risk jurisdictions with complex ownership structures.,high,money_laundering,88
+Multiple accounts opened with similar device fingerprints.,medium,fraud,64
+Account activity linked to extremist forums and fundraising campaigns.,high,terrorist_financing,75
+Request to split invoice to avoid internal review.,medium,corruption,56
