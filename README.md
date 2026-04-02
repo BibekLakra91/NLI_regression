@@ -69,7 +69,6 @@ This repo now includes a Vercel-compatible Flask entrypoint in `app.py`.
 - `templates/index.html`
 - `issue_priority_inference.py`
 - `requirements.txt`
-- `vercel.json`
 - `.vercelignore`
 - `.python-version`
 
@@ -90,7 +89,7 @@ The default `.gitignore` now allows that specific model file to be committed.
    - `artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json`
 2. Commit and push the repo to GitHub.
 3. Import the repo into Vercel.
-4. Leave the framework detection on auto. Vercel will detect `app.py` as a Flask app.
+4. Leave the framework detection on auto. Vercel will detect the root `app.py` as a Flask app.
 5. Deploy.
 
 Optional environment variables:
@@ -99,6 +98,8 @@ Optional environment variables:
 - `SUMMARY_PATH`
 
 If you do not set them, the deployed app uses the default artifact paths above.
+
+No `vercel.json` is required for this setup. Recent Vercel Python support detects the root Flask entrypoint automatically.
 
 ### Vercel routes
 
