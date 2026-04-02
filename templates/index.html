@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Issue Priority Scorer</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --panel: rgba(255, 252, 245, 0.86);
+        --panel-strong: #fffaf0;
+        --ink: #172121;
+        --muted: #5d675f;
+        --line: rgba(23, 33, 33, 0.12);
+        --accent: #b64d1c;
+        --accent-dark: #8f3612;
+        --accent-soft: rgba(182, 77, 28, 0.12);
+        --success: #1f6a4f;
+        --shadow: 0 24px 60px rgba(43, 31, 16, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(182, 77, 28, 0.16), transparent 30%),
+          radial-gradient(circle at top right, rgba(56, 105, 90, 0.12), transparent 28%),
+          linear-gradient(180deg, #f7f1e8 0%, #efe6da 100%);
+      }
+
+      .shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4vw, 4.4rem);
+        line-height: 0.98;
+        max-width: 10ch;
+      }
+
+      .lede {
+        max-width: 66ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .banner {
+        border: 1px solid rgba(182, 77, 28, 0.25);
+        background: rgba(182, 77, 28, 0.08);
+        color: var(--accent-dark);
+        padding: 14px 16px;
+        border-radius: 18px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.9fr);
+        gap: 20px;
+      }
+
+      .panel {
+        background: var(--panel);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .panel-body {
+        padding: 22px;
+      }
+
+      .stack {
+        display: grid;
+        gap: 20px;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+
+      .section-head p,
+      .meta p,
+      .mini-card p,
+      .hint,
+      .status {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .split {
+        display: grid;
+        gap: 14px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+
+      textarea,
+      input[type="file"] {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--ink);
+        padding: 14px 16px;
+        font: inherit;
+      }
+
+      textarea {
+        min-height: 180px;
+        resize: vertical;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      button,
+      .download-link {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font: inherit;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 140ms ease, background 140ms ease;
+      }
+
+      button:hover,
+      .download-link:hover {
+        transform: translateY(-1px);
+      }
+
+      .primary {
+        background: var(--accent);
+        color: #fffaf2;
+      }
+
+      .secondary {
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+      }
+
+      .download-link {
+        background: #e6efe9;
+        color: var(--success);
+        display: none;
+      }
+
+      .download-link.visible {
+        display: inline-flex;
+      }
+
+      .result {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.66);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .metric-card,
+      .mini-card {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .metric-card strong,
+      .mini-card strong,
+      .score-value {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 6px;
+      }
+
+      .bucket-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .bucket-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: var(--panel-strong);
+        border: 1px solid var(--line);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .empty {
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      @media (max-width: 920px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="eyebrow">Issue triage</div>
+        <h1>Score messy issue reports without opening a notebook.</h1>
+        <p class="lede">
+          This Vercel-friendly build keeps the trained regression model behind a plain Flask app so you can deploy it
+          as a regular web project instead of a long-lived Streamlit server.
+        </p>
+        {% if not model_ready %}
+        <div class="banner">
+          The model bundle is missing at <code>{{ model_bundle_path }}</code>. Commit that file before deploying.
+        </div>
+        {% endif %}
+      </section>
+
+      <section class="grid">
+        <div class="stack">
+          <article class="panel">
+            <div class="panel-body">
+              <div class="section-head">
+                <h2>Single issue</h2>
+                <p>Paste one issue description and get a score and bucket immediately.</p>
+              </div>
+              <form id="single-form" class="split">
+                <div>
+                  <label for="single-issue">Issue description</label>
+                  <textarea id="single-issue" name="issue" placeholder="Paste one issue narrative here..."></textarea>
+                </div>
+                <div class="actions">
+                  <button class="primary" type="submit" {% if not model_ready %}disabled{% endif %}>Predict score</button>
+                  <span id="single-status" class="status"></span>
+                </div>
+              </form>
+              <div id="single-result" class="result" hidden></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-body">
+              <div class="section-head">
+                <h2>Batch scoring</h2>
+                <p>Paste one issue per line or upload a CSV with an <code>issue</code> or <code>issue_description</code> column.</p>
+              </div>
+              <form id="batch-form" class="split">
+                <div>
+                  <label for="batch-text">Batch input</label>
+                  <textarea id="batch-text" name="batch_text" placeholder="One issue per line..."></textarea>
+                </div>
+                <div>
+                  <label for="batch-file">Upload CSV</label>
+                  <input id="batch-file" type="file" name="file" accept=".csv">
+                </div>
+                <div class="actions">
+                  <button class="primary" type="submit" {% if not model_ready %}disabled{% endif %}>Run batch scoring</button>
+                  <a id="download-link" class="download-link" download="issue_priority_predictions.csv">Download predictions CSV</a>
+                  <span id="batch-status" class="status"></span>
+                </div>
+              </form>
+              <div id="batch-result" class="result" hidden></div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="stack">
+          <article class="panel">
+            <div class="panel-body">
+              <div class="section-head">
+                <h2>Model</h2>
+                <p>Current summary pulled from the checked-in training artifact.</p>
+              </div>
+              {% if summary %}
+              <div class="metrics">
+                <div class="metric-card">
+                  <span>Validation MAE</span>
+                  <strong>{{ metrics.get("mae", "n/a") }}</strong>
+                </div>
+                <div class="metric-card">
+                  <span>Validation RMSE</span>
+                  <strong>{{ metrics.get("rmse", "n/a") }}</strong>
+                </div>
+                <div class="metric-card">
+                  <span>Validation Spearman</span>
+                  <strong>{{ metrics.get("spearman", "n/a") }}</strong>
+                </div>
+              </div>
+              <div class="mini-card" style="margin-top: 14px;">
+                <span>Embedding model</span>
+                <strong style="font-size: 1rem; line-height: 1.5;">{{ summary.get("embedding_model", "unknown") }}</strong>
+                <p>Rows: {{ summary.get("row_count", "unknown") }}</p>
+              </div>
+              {% else %}
+              <p class="empty">No training summary found.</p>
+              {% endif %}
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-body">
+              <div class="section-head">
+                <h2>Bucket ranges</h2>
+                <p>Same thresholds used by the local app.</p>
+              </div>
+              <div class="bucket-list">
+                {% for label, lower, upper in bucket_ranges %}
+                <div class="bucket-row">
+                  <strong>{{ label }}</strong>
+                  <span>{{ lower }} to {{ upper }}</span>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const singleForm = document.getElementById("single-form");
+      const singleResult = document.getElementById("single-result");
+      const singleStatus = document.getElementById("single-status");
+      const batchForm = document.getElementById("batch-form");
+      const batchResult = document.getElementById("batch-result");
+      const batchStatus = document.getElementById("batch-status");
+      const downloadLink = document.getElementById("download-link");
+
+      function escapeHtml(value) {
+        return value
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll("\"", "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function toCsv(rows) {
+        const headers = ["issue", "predicted_score", "predicted_bucket"];
+        const escapedRows = rows.map((row) => headers.map((header) => {
+          const value = String(row[header] ?? "");
+          return `"${value.replaceAll("\"", "\"\"")}"`;
+        }).join(","));
+        return [headers.join(","), ...escapedRows].join("\n");
+      }
+
+      function showError(target, message) {
+        target.hidden = false;
+        target.innerHTML = `<p style="color:#8f3612; margin:0;">${escapeHtml(message)}</p>`;
+      }
+
+      function renderSingle(row) {
+        singleResult.hidden = false;
+        singleResult.innerHTML = `
+          <div class="metrics">
+            <div class="metric-card">
+              <span>Predicted score</span>
+              <strong class="score-value">${escapeHtml(String(row.predicted_score))}</strong>
+            </div>
+            <div class="metric-card">
+              <span>Predicted bucket</span>
+              <strong class="score-value">${escapeHtml(row.predicted_bucket)}</strong>
+            </div>
+            <div class="metric-card">
+              <span>Normalized input</span>
+              <strong style="font-size:1rem; line-height:1.5;">${escapeHtml(row.issue)}</strong>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderBatch(rows) {
+        batchResult.hidden = false;
+        if (!rows.length) {
+          batchResult.innerHTML = '<p class="empty">No predictions were returned.</p>';
+          return;
+        }
+
+        const tableRows = rows.map((row) => `
+          <tr>
+            <td>${escapeHtml(row.issue)}</td>
+            <td>${escapeHtml(String(row.predicted_score))}</td>
+            <td>${escapeHtml(row.predicted_bucket)}</td>
+          </tr>
+        `).join("");
+
+        batchResult.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>Issue</th>
+                <th>Score</th>
+                <th>Bucket</th>
+              </tr>
+            </thead>
+            <tbody>${tableRows}</tbody>
+          </table>
+        `;
+      }
+
+      singleForm?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        singleStatus.textContent = "Scoring...";
+        singleResult.hidden = true;
+
+        const issue = document.getElementById("single-issue").value;
+        const response = await fetch("/api/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ issue })
+        });
+        const payload = await response.json();
+
+        singleStatus.textContent = "";
+        if (!response.ok) {
+          showError(singleResult, payload.error || "Prediction failed.");
+          return;
+        }
+        renderSingle(payload);
+      });
+
+      batchForm?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        batchStatus.textContent = "Scoring batch...";
+        batchResult.hidden = true;
+        downloadLink.classList.remove("visible");
+        downloadLink.removeAttribute("href");
+
+        const formData = new FormData(batchForm);
+        const response = await fetch("/api/batch", {
+          method: "POST",
+          body: formData
+        });
+        const payload = await response.json();
+
+        batchStatus.textContent = "";
+        if (!response.ok) {
+          showError(batchResult, payload.error || "Batch scoring failed.");
+          return;
+        }
+
+        renderBatch(payload.predictions);
+        const csv = toCsv(payload.predictions);
+        const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.classList.add("visible");
+      });
+    </script>
+  </body>
+</html>

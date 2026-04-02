@@ -1,14 +1,13 @@
 from __future__ import annotations
 
 import argparse
-import json
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 import streamlit as st
 
-from train_issue_priority_stratified import BUCKET_RANGES, PriorityModel, bucket_label
+from issue_priority_inference import BUCKET_RANGES, PriorityModel, bucket_label, load_summary as read_summary
 
 
 DEFAULT_MODEL_BUNDLE = Path("artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl")
@@ -29,10 +28,7 @@ def load_model(model_bundle_path: str) -> PriorityModel:
 
 @st.cache_data(show_spinner=False)
 def load_summary(summary_path: str) -> dict[str, Any] | None:
-    path = Path(summary_path)
-    if not path.exists():
-        return None
-    return json.loads(path.read_text(encoding="utf-8"))
+    return read_summary(Path(summary_path))
 
 
 def predicted_bucket(score: float) -> str:

@@ -7,13 +7,16 @@ This project scores free-form issue descriptions on a `0-100` priority scale and
 - `61-80`
 - `81-100`
 
-The easiest way for a reviewer or team lead to validate the model is to run the Streamlit web app, paste issue text, and compare the predicted score with their own judgment.
+The project now supports two ways to use the scorer:
+
+- local Streamlit app for the current Windows workflow
+- Vercel-ready Flask app for deployment
 
 ## What your lead can do
 
-Once the app is running, you can:
+Once either app is running, you can:
 
-- open the website locally in a browser
+- open the website in a browser
 - paste any issue description into the text box
 - click `Predict score`
 - see the predicted numeric score and bucket immediately
@@ -35,7 +38,7 @@ The app expects these files:
 - `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
 - `artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json`
 
-## Fastest way to run the website
+## Fastest way to run locally
 
 Use PowerShell from the project root:
 
@@ -56,9 +59,60 @@ This launcher will:
 3. train a model if needed
 4. start the Streamlit website
 
-## Important note 
+## Vercel deployment
 
-The trained model file `final_model.pkl` is intentionally ignored by Git, so you clones this repo on another machine, the website will only start immediately if one of these is true:
+This repo now includes a Vercel-compatible Flask entrypoint in `app.py`.
+
+### Files used by Vercel
+
+- `app.py`
+- `templates/index.html`
+- `issue_priority_inference.py`
+- `requirements.txt`
+- `vercel.json`
+- `.python-version`
+
+### Before you deploy
+
+Vercel deploys from Git, so the trained model file must be committed to the repo.
+
+Required artifact:
+
+- `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
+
+The default `.gitignore` now allows that specific model file to be committed.
+
+### Deploy steps
+
+1. Make sure these files exist locally:
+   - `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
+   - `artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json`
+2. Commit and push the repo to GitHub.
+3. Import the repo into Vercel.
+4. Leave the framework detection on auto. Vercel will detect `app.py` as a Flask app.
+5. Deploy.
+
+Optional environment variables:
+
+- `MODEL_BUNDLE_PATH`
+- `SUMMARY_PATH`
+
+If you do not set them, the deployed app uses the default artifact paths above.
+
+### Vercel routes
+
+- `/`: web UI
+- `/health`: health check
+- `/api/predict`: JSON prediction endpoint
+- `/api/batch`: JSON batch endpoint
+
+### Important runtime note
+
+The deployment shape is now compatible with Vercel, but inference still depends on the `sentence-transformers` model. That means cold starts can be slow, and the first request may need internet access to fetch the embedding model weights unless they are already cached in the deployment environment.
+
+## Important note
+
+On another machine, the website will only start immediately if one of these is true:
 
 1. you also give them the trained artifact folder
 2. they run the app with retraining enabled so a new model is created locally
@@ -147,7 +201,9 @@ Artifacts written by training:
 
 ## Key project files
 
-- `issue_priority_streamlit_app.py`: Streamlit website for interactive scoring
+- `app.py`: Flask website and API for Vercel deployment
+- `issue_priority_inference.py`: shared inference loader for Flask and Streamlit
+- `issue_priority_streamlit_app.py`: local Streamlit website for interactive scoring
 - `run_issue_priority_app.ps1`: PowerShell launcher for install, optional retrain, and app startup
 - `train_issue_priority_stratified.py`: training and CLI prediction pipeline
 - `issue_priority_dataset.csv`: labeled training dataset
