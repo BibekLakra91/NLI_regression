@@ -2,10 +2,12 @@ import argparse
 import csv
 import json
 import os
+import shutil
 import ssl
 import sys
 import threading
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
@@ -13,12 +15,32 @@ from urllib import error, request
 
 
 API_URL = "https://api.openai.com/v1/responses"
+BUCKET_ORDER = ["0-9", "10-39", "40-69", "70-89", "90-100"]
 DEFAULT_MODEL = "gpt-5.4-nano"
 DEFAULT_REASONING_EFFORT = "high"
-DEFAULT_GENERATION_BATCH_SIZE = 100
+DEFAULT_GENERATION_BATCH_SIZE = 50
 DEFAULT_SCORING_BATCH_SIZE = 5
 DEFAULT_MAX_CONCURRENCY = 5
 DEFAULT_RETRY_LIMIT = 5
+DEFAULT_DATASET_PATH = "issue_priority_dataset.csv"
+DEFAULT_BACKUP_DIR = "backups"
+DEFAULT_BOOTSTRAP_COUNT = 1000
+
+PROMPT_FILES = {
+    "general": "generate_issues_prompt.txt",
+    "minimal": "generate_minimal_severity_issues_prompt.txt",
+    "low": "generate_low_severity_issues_prompt.txt",
+    "medium": "generate_medium_severity_issues_prompt.txt",
+    "critical": "generate_critical_severity_issues_prompt.txt",
+}
+
+PROFILE_BY_BUCKET = {
+    "0-9": "minimal",
+    "10-39": "low",
+    "40-69": "medium",
+    "70-89": "general",
+    "90-100": "critical",
+}
 
 
 class DatasetGenerationError(Exception):
@@ -27,14 +49,34 @@ class DatasetGenerationError(Exception):
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate synthetic investigation issues and batch-score them with the OpenAI Responses API."
+        description="Append synthetic issues to a dataset while balancing score buckets with OpenAI Responses API calls."
     )
-    parser.add_argument("--count", type=int, default=1000, help="Number of unique issues to generate.")
+    parser.add_argument(
+        "--dataset-path",
+        default=DEFAULT_DATASET_PATH,
+        help="CSV dataset path. Existing files are backed up and appended to, never rewritten.",
+    )
+    parser.add_argument(
+        "--backup-dir",
+        default=DEFAULT_BACKUP_DIR,
+        help="Directory for timestamped full-copy backups created before each append.",
+    )
+    parser.add_argument(
+        "--target-bucket-count",
+        type=int,
+        help="Target count for each score bucket. Defaults to the current largest bucket in the dataset.",
+    )
+    parser.add_argument(
+        "--bootstrap-count",
+        type=int,
+        default=DEFAULT_BOOTSTRAP_COUNT,
+        help="Fallback row count when creating a new dataset from scratch.",
+    )
     parser.add_argument(
         "--generation-batch-size",
         type=int,
         default=DEFAULT_GENERATION_BATCH_SIZE,
-        help="Number of issues to request per generation call.",
+        help="Maximum number of issues to request per generation call.",
     )
     parser.add_argument(
         "--scoring-batch-size",
@@ -60,11 +102,6 @@ def parse_args() -> argparse.Namespace:
         help="Reasoning effort sent to the Responses API.",
     )
     parser.add_argument(
-        "--out",
-        default="issue_priority_dataset.csv",
-        help="Output CSV path.",
-    )
-    parser.add_argument(
         "--retry-limit",
         type=int,
         default=DEFAULT_RETRY_LIMIT,
@@ -82,9 +119,7 @@ def load_dotenv(path: Path) -> None:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        key = key.strip()
-        value = value.strip().strip('"').strip("'")
-        os.environ.setdefault(key, value)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -107,6 +142,54 @@ def chunked(items: list[str], size: int) -> list[list[str]]:
     return [items[index : index + size] for index in range(0, len(items), size)]
 
 
+def bucket_for_score(score: int) -> str:
+    if 0 <= score <= 9:
+        return "0-9"
+    if 10 <= score <= 39:
+        return "10-39"
+    if 40 <= score <= 69:
+        return "40-69"
+    if 70 <= score <= 89:
+        return "70-89"
+    if 90 <= score <= 100:
+        return "90-100"
+    raise DatasetGenerationError(f"Score out of range: {score}")
+
+
+def empty_bucket_counter() -> Counter[str]:
+    return Counter({bucket: 0 for bucket in BUCKET_ORDER})
+
+
+def choose_bucket_to_fill(counts: Counter[str], target_bucket_count: int) -> str | None:
+    best_bucket = None
+    best_deficit = 0
+    for bucket in BUCKET_ORDER:
+        deficit = target_bucket_count - counts[bucket]
+        if deficit > best_deficit:
+            best_deficit = deficit
+            best_bucket = bucket
+    return best_bucket
+
+
+def timestamp_for_filename() -> str:
+    return time.strftime("%Y%m%d_%H%M%S")
+
+
+def validate_args(args: argparse.Namespace) -> None:
+    if args.target_bucket_count is not None and args.target_bucket_count <= 0:
+        raise DatasetGenerationError("--target-bucket-count must be greater than 0.")
+    if args.bootstrap_count <= 0:
+        raise DatasetGenerationError("--bootstrap-count must be greater than 0.")
+    if args.generation_batch_size <= 0:
+        raise DatasetGenerationError("--generation-batch-size must be greater than 0.")
+    if args.scoring_batch_size <= 0:
+        raise DatasetGenerationError("--scoring-batch-size must be greater than 0.")
+    if args.max_concurrency <= 0:
+        raise DatasetGenerationError("--max-concurrency must be greater than 0.")
+    if args.retry_limit <= 0:
+        raise DatasetGenerationError("--retry-limit must be greater than 0.")
+
+
 class OpenAIResponsesClient:
     def __init__(self, api_key: str, model: str, reasoning_effort: str, retry_limit: int) -> None:
         self.api_key = api_key
@@ -121,26 +204,14 @@ class OpenAIResponsesClient:
             "input": [
                 {
                     "role": "system",
-                    "content": [
-                        {
-                            "type": "input_text",
-                            "text": system_prompt,
-                        }
-                    ],
+                    "content": [{"type": "input_text", "text": system_prompt}],
                 },
                 {
                     "role": "user",
-                    "content": [
-                        {
-                            "type": "input_text",
-                            "text": user_prompt,
-                        }
-                    ],
+                    "content": [{"type": "input_text", "text": user_prompt}],
                 },
             ],
-            "reasoning": {
-                "effort": self.reasoning_effort,
-            },
+            "reasoning": {"effort": self.reasoning_effort},
             "text": {
                 "format": {
                     "type": "json_schema",
@@ -150,8 +221,7 @@ class OpenAIResponsesClient:
                 }
             },
         }
-        response = self._post_json(payload)
-        return self._extract_structured_output(response)
+        return self._extract_structured_output(self._post_json(payload))
 
     def _post_json(self, payload: dict[str, Any]) -> dict[str, Any]:
         body = json.dumps(payload).encode("utf-8")
@@ -197,11 +267,9 @@ class OpenAIResponsesClient:
             ssl.get_default_verify_paths().cafile,
             r"C:\msys64\usr\ssl\cert.pem",
         ]
-
         for candidate in candidate_paths:
             if candidate and Path(candidate).exists():
                 return ssl.create_default_context(cafile=candidate)
-
         return ssl.create_default_context()
 
     @staticmethod
@@ -231,11 +299,58 @@ class OpenAIResponsesClient:
         raise DatasetGenerationError("No structured JSON content found in Responses API reply.")
 
 
+class DatasetStore:
+    def __init__(self, dataset_path: Path) -> None:
+        self.dataset_path = dataset_path
+
+    def exists(self) -> bool:
+        return self.dataset_path.exists()
+
+    def load_state(self) -> tuple[int, Counter[str]]:
+        counts = empty_bucket_counter()
+        max_issue_id = 0
+        if not self.exists():
+            return max_issue_id, counts
+
+        with self.dataset_path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            expected = {"issue_id", "issue_description", "priority_score"}
+            if set(reader.fieldnames or []) != expected:
+                raise DatasetGenerationError(
+                    f"Dataset columns must be {sorted(expected)}, got {reader.fieldnames}"
+                )
+            for row in reader:
+                issue_id = int(row["issue_id"])
+                score = int(row["priority_score"])
+                max_issue_id = max(max_issue_id, issue_id)
+                counts[bucket_for_score(score)] += 1
+        return max_issue_id, counts
+
+    def create_backup(self, backup_dir: Path) -> Path | None:
+        if not self.exists():
+            return None
+        backup_dir.mkdir(parents=True, exist_ok=True)
+        backup_path = backup_dir / f"{self.dataset_path.stem}.{timestamp_for_filename()}{self.dataset_path.suffix}"
+        shutil.copy2(self.dataset_path, backup_path)
+        return backup_path
+
+    def append_rows(self, rows: list[dict[str, Any]]) -> None:
+        if not rows:
+            return
+        self.dataset_path.parent.mkdir(parents=True, exist_ok=True)
+        write_header = not self.exists()
+        with self.dataset_path.open("a", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=["issue_id", "issue_description", "priority_score"])
+            if write_header:
+                writer.writeheader()
+            writer.writerows(rows)
+
+
 class IssueDatasetBuilder:
     def __init__(
         self,
         client: OpenAIResponsesClient,
-        generation_prompt: str,
+        prompts: dict[str, str],
         scoring_prompt: str,
         generation_schema: dict[str, Any],
         scoring_schema: dict[str, Any],
@@ -245,7 +360,7 @@ class IssueDatasetBuilder:
         retry_limit: int,
     ) -> None:
         self.client = client
-        self.generation_prompt = generation_prompt
+        self.prompts = prompts
         self.scoring_prompt = scoring_prompt
         self.generation_schema = generation_schema
         self.scoring_schema = scoring_schema
@@ -255,61 +370,78 @@ class IssueDatasetBuilder:
         self.retry_limit = retry_limit
         self._print_lock = threading.Lock()
 
-    def generate_dataset(self, count: int) -> list[dict[str, Any]]:
-        issues = self._generate_issues(count)
-        scores = self._score_issues(issues)
-        return [
-            {
-                "issue_id": issue_index + 1,
-                "issue_description": issue_text,
-                "priority_score": scores[issue_index],
-            }
-            for issue_index, issue_text in enumerate(issues)
-        ]
-
-    def _generate_issues(self, count: int) -> list[str]:
-        unique_issues: list[str] = []
-        seen: set[str] = set()
-        batch_number = 0
-
-        while len(unique_issues) < count:
-            remaining = count - len(unique_issues)
-            requested = min(self.generation_batch_size, remaining)
-            batch_number += 1
-            self._log(f"Generating issue batch {batch_number} for {requested} items.")
-            response_data = self.client.create_structured_response(
-                system_prompt=self._generation_system_prompt(requested),
-                user_prompt=f"Generate {requested} issue descriptions.",
-                schema=self.generation_schema,
+    def bootstrap_rows(self, count: int, next_issue_id: int) -> list[dict[str, Any]]:
+        generated = self._generate_issues("general", count)
+        scores = self._score_issues(generated)
+        rows = []
+        for issue_text, score in zip(generated, scores):
+            rows.append(
+                {
+                    "issue_id": next_issue_id,
+                    "issue_description": issue_text,
+                    "priority_score": score,
+                }
             )
-            batch_issues = self._validate_generated_issues(response_data)
+            next_issue_id += 1
+        return rows
 
-            added = 0
-            for issue in batch_issues:
-                if issue not in seen:
-                    seen.add(issue)
-                    unique_issues.append(issue)
-                    added += 1
-                    if len(unique_issues) == count:
-                        break
+    def build_rows_for_balance(
+        self,
+        current_counts: Counter[str],
+        target_bucket_count: int,
+        next_issue_id: int,
+    ) -> tuple[list[dict[str, Any]], Counter[str]]:
+        accepted_rows: list[dict[str, Any]] = []
+        updated_counts = Counter(current_counts)
+        stalled_attempts = Counter()
 
-            if added == 0:
-                raise DatasetGenerationError(
-                    "Generation batch produced no new unique issues. Stop to avoid an infinite retry loop."
+        while True:
+            bucket = choose_bucket_to_fill(updated_counts, target_bucket_count)
+            if bucket is None:
+                return accepted_rows, updated_counts
+
+            deficit = target_bucket_count - updated_counts[bucket]
+            profile = PROFILE_BY_BUCKET[bucket]
+            request_count = min(self.generation_batch_size, max(deficit, self.scoring_batch_size))
+            self._log(
+                f"Targeting bucket {bucket} with profile {profile}; "
+                f"current={updated_counts[bucket]} target={target_bucket_count} request={request_count}."
+            )
+
+            issues = self._generate_issues(profile, request_count)
+            scores = self._score_issues(issues)
+
+            useful_rows = 0
+            for issue_text, score in zip(issues, scores):
+                scored_bucket = bucket_for_score(score)
+                if updated_counts[scored_bucket] >= target_bucket_count:
+                    continue
+                accepted_rows.append(
+                    {
+                        "issue_id": next_issue_id,
+                        "issue_description": issue_text,
+                        "priority_score": score,
+                    }
                 )
+                updated_counts[scored_bucket] += 1
+                next_issue_id += 1
+                useful_rows += 1
 
-        return unique_issues
+            if useful_rows == 0:
+                stalled_attempts[bucket] += 1
+                if stalled_attempts[bucket] >= self.retry_limit:
+                    raise DatasetGenerationError(
+                        f"No usable rows were produced for bucket {bucket} after {self.retry_limit} attempts."
+                    )
+            else:
+                stalled_attempts[bucket] = 0
 
-    def _generation_system_prompt(self, batch_size: int) -> str:
-        return (
-            f"{self.generation_prompt}\n\n"
-            "Output contract:\n"
-            "Return a single JSON object matching the provided schema.\n"
-            'The object must have an "issues" key whose value is an array of strings.\n'
-            f"Generate exactly {batch_size} issue descriptions in that array."
+    def _generate_issues(self, profile: str, count: int) -> list[str]:
+        response_data = self.client.create_structured_response(
+            system_prompt=self._generation_system_prompt(profile, count),
+            user_prompt=f"Generate {count} issue descriptions.",
+            schema=self.generation_schema,
         )
-
-    def _validate_generated_issues(self, response_data: dict[str, Any]) -> list[str]:
         issues = response_data.get("issues")
         if not isinstance(issues, list):
             raise DatasetGenerationError("Generation response is missing an 'issues' array.")
@@ -324,36 +456,44 @@ class IssueDatasetBuilder:
 
         if not cleaned:
             raise DatasetGenerationError("Generation response contained no usable issues.")
-        return cleaned
+        return cleaned[:count]
+
+    def _generation_system_prompt(self, profile: str, count: int) -> str:
+        prompt = self.prompts[profile]
+        return (
+            f"{prompt}\n\n"
+            "Output contract:\n"
+            "Return a single JSON object matching the provided schema.\n"
+            'The object must have an "issues" key whose value is an array of strings.\n'
+            f"Generate exactly {count} issue descriptions in that array."
+        )
 
     def _score_issues(self, issues: list[str]) -> list[int]:
-        score_batches = chunked(issues, self.scoring_batch_size)
+        batches = chunked(issues, self.scoring_batch_size)
         final_scores: list[int | None] = [None] * len(issues)
 
         with ThreadPoolExecutor(max_workers=self.max_concurrency) as executor:
             futures = {}
-            for batch_number, issue_batch in enumerate(score_batches, start=1):
+            for batch_number, issue_batch in enumerate(batches, start=1):
                 start_index = (batch_number - 1) * self.scoring_batch_size
-                future = executor.submit(self._score_single_batch, batch_number, start_index, issue_batch)
-                futures[future] = (batch_number, start_index, len(issue_batch))
+                future = executor.submit(self._score_single_batch, batch_number, issue_batch)
+                futures[future] = (start_index, len(issue_batch))
 
             for future in as_completed(futures):
-                batch_number, start_index, batch_len = futures[future]
+                start_index, batch_len = futures[future]
                 batch_scores = future.result()
                 if len(batch_scores) != batch_len:
                     raise DatasetGenerationError(
-                        f"Scoring batch {batch_number} returned {len(batch_scores)} scores for {batch_len} issues."
+                        f"Scoring batch returned {len(batch_scores)} scores for {batch_len} issues."
                     )
                 for offset, score in enumerate(batch_scores):
                     final_scores[start_index + offset] = score
 
-        unresolved = [index for index, score in enumerate(final_scores) if score is None]
-        if unresolved:
-            raise DatasetGenerationError(f"Missing final scores for indexes: {unresolved}")
-
+        if any(score is None for score in final_scores):
+            raise DatasetGenerationError("Missing scores after scoring completed.")
         return [int(score) for score in final_scores]
 
-    def _score_single_batch(self, batch_number: int, start_index: int, issues: list[str]) -> list[int]:
+    def _score_single_batch(self, batch_number: int, issues: list[str]) -> list[int]:
         for attempt in range(1, self.retry_limit + 1):
             self._log(
                 f"Scoring batch {batch_number} with {len(issues)} issues "
@@ -364,14 +504,8 @@ class IssueDatasetBuilder:
                 user_prompt=self._scoring_user_prompt(issues),
                 schema=self.scoring_schema,
             )
-
             try:
-                batch_scores = self._validate_scoring_response(response_data, len(issues))
-                self._log(
-                    f"Scoring batch {batch_number} completed for global rows "
-                    f"{start_index + 1}-{start_index + len(issues)}."
-                )
-                return batch_scores
+                return self._validate_scoring_response(response_data, len(issues))
             except DatasetGenerationError:
                 if attempt >= self.retry_limit:
                     raise
@@ -426,7 +560,6 @@ class IssueDatasetBuilder:
         missing = [index for index in range(batch_size) if index not in indexed_scores]
         if missing:
             raise DatasetGenerationError(f"Scoring response omitted issue indexes: {missing}")
-
         return [indexed_scores[index] for index in range(batch_size)]
 
     def _log(self, message: str) -> None:
@@ -434,25 +567,11 @@ class IssueDatasetBuilder:
             print(message, file=sys.stderr)
 
 
-def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["issue_id", "issue_description", "priority_score"])
-        writer.writeheader()
-        writer.writerows(rows)
-
-
-def validate_args(args: argparse.Namespace) -> None:
-    if args.count <= 0:
-        raise DatasetGenerationError("--count must be greater than 0.")
-    if args.generation_batch_size <= 0:
-        raise DatasetGenerationError("--generation-batch-size must be greater than 0.")
-    if args.scoring_batch_size <= 0:
-        raise DatasetGenerationError("--scoring-batch-size must be greater than 0.")
-    if args.max_concurrency <= 0:
-        raise DatasetGenerationError("--max-concurrency must be greater than 0.")
-    if args.retry_limit <= 0:
-        raise DatasetGenerationError("--retry-limit must be greater than 0.")
+def bucket_counts_for_rows(rows: list[dict[str, Any]]) -> Counter[str]:
+    counts = empty_bucket_counter()
+    for row in rows:
+        counts[bucket_for_score(int(row["priority_score"]))] += 1
+    return counts
 
 
 def main() -> int:
@@ -465,10 +584,21 @@ def main() -> int:
     if not api_key:
         raise DatasetGenerationError("OPENAI_API_KEY is not set. Add it to .env or the environment.")
 
-    generation_prompt = load_text(root / "generate_issues_prompt.txt")
+    prompts = {name: load_text(root / filename) for name, filename in PROMPT_FILES.items()}
     scoring_prompt = load_text(root / "rate_issues_prompt.txt")
     generation_schema = load_json(root / "issues_schema.json")
     scoring_schema = load_json(root / "issues_scoring.json")
+
+    dataset_path = Path(args.dataset_path)
+    if not dataset_path.is_absolute():
+        dataset_path = root / dataset_path
+    backup_dir = Path(args.backup_dir)
+    if not backup_dir.is_absolute():
+        backup_dir = root / backup_dir
+
+    store = DatasetStore(dataset_path)
+    max_issue_id, current_counts = store.load_state()
+    next_issue_id = max_issue_id + 1
 
     client = OpenAIResponsesClient(
         api_key=api_key,
@@ -478,7 +608,7 @@ def main() -> int:
     )
     builder = IssueDatasetBuilder(
         client=client,
-        generation_prompt=generation_prompt,
+        prompts=prompts,
         scoring_prompt=scoring_prompt,
         generation_schema=generation_schema,
         scoring_schema=scoring_schema,
@@ -488,12 +618,36 @@ def main() -> int:
         retry_limit=args.retry_limit,
     )
 
-    rows = builder.generate_dataset(args.count)
-    output_path = Path(args.out)
-    if not output_path.is_absolute():
-        output_path = root / output_path
-    write_csv(output_path, rows)
-    print(f"Wrote {len(rows)} rows to {output_path}")
+    if store.exists():
+        current_max_bucket = max(current_counts.values()) if current_counts else 0
+        target_bucket_count = args.target_bucket_count or current_max_bucket
+        if target_bucket_count < current_max_bucket:
+            raise DatasetGenerationError(
+                "--target-bucket-count cannot be less than the current largest bucket count."
+            )
+        rows_to_append, final_counts = builder.build_rows_for_balance(
+            current_counts=current_counts,
+            target_bucket_count=target_bucket_count,
+            next_issue_id=next_issue_id,
+        )
+    else:
+        target_bucket_count = args.target_bucket_count
+        rows_to_append = builder.bootstrap_rows(args.bootstrap_count, next_issue_id)
+        final_counts = bucket_counts_for_rows(rows_to_append)
+
+    if not rows_to_append:
+        print("No rows needed; dataset already satisfies the target.")
+        return 0
+
+    backup_path = store.create_backup(backup_dir)
+    store.append_rows(rows_to_append)
+
+    print(f"Appended {len(rows_to_append)} rows to {dataset_path}")
+    if backup_path:
+        print(f"Backup created at {backup_path}")
+    if target_bucket_count is not None:
+        for bucket in BUCKET_ORDER:
+            print(f"{bucket}: {final_counts[bucket]}")
     return 0
 
 
