@@ -2,8 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "app.py": {
-      "maxDuration": 60,
-      "excludeFiles": "{.git/**,.venv/**,.tmp/**,__pycache__/**,backups/**,generate_*_prompt.txt,generate_issue_priority_dataset.py,issue_priority_dataset.csv,requirements-issue-priority-*.txt,run_issue_priority_app.ps1,smoke_issue_priority_dataset.csv,suspicion_*.csv,suspicion_train_test.xlsx,train_issue_priority_stratified.py,artifacts/run_*/**,artifacts/stratified_*/full_predictions.csv,artifacts/stratified_*/validation_predictions.csv}"
+      "maxDuration": 60
     }
   }
 }

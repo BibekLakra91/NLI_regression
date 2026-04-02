@@ -70,6 +70,7 @@ This repo now includes a Vercel-compatible Flask entrypoint in `app.py`.
 - `issue_priority_inference.py`
 - `requirements.txt`
 - `vercel.json`
+- `.vercelignore`
 - `.python-version`
 
 ### Before you deploy
