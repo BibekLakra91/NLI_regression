@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import os
 import pickle
+import threading
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Sequence
@@ -32,7 +34,9 @@ class SentenceEmbedder:
         self.model_name = model_name
         self.device = resolve_device(device)
         self.batch_size = batch_size
+        self.cache_dir = resolve_cache_dir()
         self._model: Any | None = None
+        self._model_lock = threading.Lock()
 
     def embed(self, texts: Sequence[str]) -> np.ndarray:
         prepared = [normalize_text(text) for text in texts]
@@ -47,9 +51,16 @@ class SentenceEmbedder:
 
     def _get_model(self) -> Any:
         if self._model is None:
-            from sentence_transformers import SentenceTransformer
+            with self._model_lock:
+                if self._model is None:
+                    from sentence_transformers import SentenceTransformer
 
-            self._model = SentenceTransformer(self.model_name, device=self.device)
+                    self.cache_dir.mkdir(parents=True, exist_ok=True)
+                    self._model = SentenceTransformer(
+                        self.model_name,
+                        device=self.device,
+                        cache_folder=str(self.cache_dir),
+                    )
         return self._model
 
 
@@ -58,6 +69,7 @@ class PriorityModel:
         self.estimator = estimator
         self.metadata = metadata
         self._embedder: SentenceEmbedder | None = None
+        self._embedder_lock = threading.Lock()
 
     def predict_priority(self, texts: Sequence[str]) -> np.ndarray:
         features = self._get_embedder().embed(texts)
@@ -79,8 +91,14 @@ class PriorityModel:
 
     def _get_embedder(self) -> SentenceEmbedder:
         if self._embedder is None:
-            self._embedder = SentenceEmbedder(self.metadata.embedding_model, device=self.metadata.device)
+            with self._embedder_lock:
+                if self._embedder is None:
+                    self._embedder = SentenceEmbedder(self.metadata.embedding_model, device=self.metadata.device)
         return self._embedder
+
+    def warmup(self) -> None:
+        # Force the sentence-transformer weights to load before the first request.
+        self._get_embedder()._get_model()
 
 
 def normalize_text(text: str) -> str:
@@ -104,6 +122,19 @@ def load_summary(path: Path | str) -> dict[str, Any] | None:
     if not summary_path.exists():
         return None
     return json.loads(summary_path.read_text(encoding="utf-8"))
+
+
+def resolve_cache_dir() -> Path:
+    raw = (
+        os.environ.get("MODEL_CACHE_DIR")
+        or os.environ.get("SENTENCE_TRANSFORMERS_HOME")
+        or os.environ.get("HF_HOME")
+        or ".cache/sentence-transformers"
+    )
+    candidate = Path(raw)
+    if candidate.is_absolute():
+        return candidate
+    return Path.cwd() / candidate
 
 
 def resolve_device(requested_device: str) -> str:

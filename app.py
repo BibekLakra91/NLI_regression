@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import csv
 import io
+import logging
 import os
+import threading
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -28,6 +30,12 @@ MODEL_BUNDLE_PATH = resolve_project_path(os.environ.get("MODEL_BUNDLE_PATH", DEF
 SUMMARY_PATH = resolve_project_path(os.environ.get("SUMMARY_PATH", DEFAULT_SUMMARY_PATH))
 
 app = Flask(__name__, template_folder=str(BASE_DIR / "templates"))
+logger = logging.getLogger(__name__)
+runtime_state: dict[str, Any] = {
+    "warming": False,
+    "warmed": False,
+    "warm_error": None,
+}
 
 
 @lru_cache(maxsize=1)
@@ -40,6 +48,28 @@ def get_model() -> PriorityModel:
 @lru_cache(maxsize=1)
 def get_summary() -> dict[str, Any] | None:
     return load_summary(SUMMARY_PATH)
+
+
+def warm_runtime() -> None:
+    runtime_state["warming"] = True
+    runtime_state["warm_error"] = None
+    try:
+        get_model().warmup()
+    except Exception as exc:
+        runtime_state["warm_error"] = str(exc)
+        logger.exception("Model warm-up failed")
+    else:
+        runtime_state["warmed"] = True
+    finally:
+        runtime_state["warming"] = False
+
+
+def start_background_warmup() -> None:
+    if os.environ.get("WARM_MODEL_ON_STARTUP", "1") != "1":
+        return
+    if runtime_state["warming"] or runtime_state["warmed"]:
+        return
+    threading.Thread(target=warm_runtime, name="model-warmup", daemon=True).start()
 
 
 def score_texts(texts: list[str]) -> list[dict[str, Any]]:
@@ -108,6 +138,9 @@ def index() -> str:
         metrics=metrics,
         model_bundle_path=str(MODEL_BUNDLE_PATH.relative_to(BASE_DIR)) if MODEL_BUNDLE_PATH.is_relative_to(BASE_DIR) else str(MODEL_BUNDLE_PATH),
         model_ready=MODEL_BUNDLE_PATH.exists(),
+        model_warming=runtime_state["warming"],
+        model_warmed=runtime_state["warmed"],
+        model_warm_error=runtime_state["warm_error"],
     )
 
 
@@ -119,6 +152,9 @@ def health() -> Any:
             "model_ready": MODEL_BUNDLE_PATH.exists(),
             "model_bundle": str(MODEL_BUNDLE_PATH),
             "summary_path": str(SUMMARY_PATH),
+            "warming": runtime_state["warming"],
+            "warmed": runtime_state["warmed"],
+            "warm_error": runtime_state["warm_error"],
         }
     )
 
@@ -134,6 +170,9 @@ def predict() -> Any:
         prediction = score_texts([issue])[0]
     except FileNotFoundError as exc:
         return jsonify({"error": str(exc)}), 500
+    except Exception as exc:
+        logger.exception("Prediction failed")
+        return jsonify({"error": f"Prediction failed: {exc}"}), 500
 
     return jsonify(prediction)
 
@@ -152,8 +191,14 @@ def batch() -> Any:
         predictions = score_texts(rows)
     except FileNotFoundError as exc:
         return jsonify({"error": str(exc)}), 500
+    except Exception as exc:
+        logger.exception("Batch prediction failed")
+        return jsonify({"error": f"Batch scoring failed: {exc}"}), 500
 
     return jsonify({"count": len(predictions), "predictions": predictions})
+
+
+start_background_warmup()
 
 
 if __name__ == "__main__":
