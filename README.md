@@ -27,16 +27,16 @@ Once either app is running, you can:
 
 The app is currently configured to use:
 
-- embedding model: `Alibaba-NLP/gte-modernbert-base`
-- trained artifact folder: `artifacts/stratified_gte_modernbert_base_3200_gpu`
-- validation MAE: `8.4056`
-- validation RMSE: `11.0749`
-- validation Spearman: `0.9048`
+- embedding model: `sentence-transformers/all-MiniLM-L6-v2`
+- trained artifact folder: `artifacts/stratified_minilm_3200`
+- validation MAE: `10.0`
+- validation RMSE: `12.9545`
+- validation Spearman: `0.8859`
 
 The app expects these files:
 
-- `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
-- `artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json`
+- `artifacts/stratified_minilm_3200/final_model.pkl`
+- `artifacts/stratified_minilm_3200/training_summary.json`
 
 ## Fastest way to run locally
 
@@ -78,15 +78,15 @@ Vercel deploys from Git, so the trained model file must be committed to the repo
 
 Required artifact:
 
-- `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
+- `artifacts/stratified_minilm_3200/final_model.pkl`
 
-The default `.gitignore` now allows that specific model file to be committed.
+The default `.gitignore` now allows that specific model file to be committed while still ignoring `.env`.
 
 ### Deploy steps
 
 1. Make sure these files exist locally:
-   - `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl`
-   - `artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json`
+   - `artifacts/stratified_minilm_3200/final_model.pkl`
+   - `artifacts/stratified_minilm_3200/training_summary.json`
 2. Commit and push the repo to GitHub.
 3. Import the repo into Vercel.
 4. Leave the framework detection on auto. Vercel will detect the root `app.py` as a Flask app.
@@ -99,7 +99,9 @@ Optional environment variables:
 
 If you do not set them, the deployed app uses the default artifact paths above.
 
-No `vercel.json` is required for this setup. Recent Vercel Python support detects the root Flask entrypoint automatically.
+`.env` is not used by this Flask deploy path and should stay out of Git. If you ever need runtime secrets on Vercel, add them in the Vercel project settings instead.
+
+This repo now includes `vercel.json` only to keep the Python function bundle small and give the single Flask function more headroom.
 
 ### Vercel routes
 
@@ -143,12 +145,12 @@ python -m pip install -r requirements-issue-priority-app.txt
 
 ### 4. Start the app
 
-If `artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl` already exists:
+If `artifacts/stratified_minilm_3200/final_model.pkl` already exists:
 
 ```powershell
 python -m streamlit run issue_priority_streamlit_app.py -- `
-  --model-bundle artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl `
-  --summary artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json
+  --model-bundle artifacts/stratified_minilm_3200/final_model.pkl `
+  --summary artifacts/stratified_minilm_3200/training_summary.json
 ```
 
 If the model file does not exist, run:
@@ -189,8 +191,8 @@ If you want to rebuild the model from the dataset:
 ```powershell
 python train_issue_priority_stratified.py train `
   --dataset issue_priority_dataset.csv `
-  --output-dir artifacts/stratified_gte_modernbert_base_3200_gpu `
-  --embedding-model Alibaba-NLP/gte-modernbert-base `
+  --output-dir artifacts/stratified_minilm_3200 `
+  --embedding-model sentence-transformers/all-MiniLM-L6-v2 `
   --device auto
 ```
 
@@ -209,7 +211,7 @@ Artifacts written by training:
 - `run_issue_priority_app.ps1`: PowerShell launcher for install, optional retrain, and app startup
 - `train_issue_priority_stratified.py`: training and CLI prediction pipeline
 - `issue_priority_dataset.csv`: labeled training dataset
-- `artifacts/stratified_gte_modernbert_base_3200_gpu/`: current default trained artifacts
+- `artifacts/stratified_minilm_3200/`: current default trained artifacts
 
 ## Troubleshooting
 

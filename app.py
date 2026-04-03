@@ -13,8 +13,8 @@ from issue_priority_inference import BUCKET_RANGES, PriorityModel, bucket_label,
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_MODEL_BUNDLE = "artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl"
-DEFAULT_SUMMARY_PATH = "artifacts/stratified_gte_modernbert_base_3200_gpu/training_summary.json"
+DEFAULT_MODEL_BUNDLE = "artifacts/stratified_minilm_3200/final_model.pkl"
+DEFAULT_SUMMARY_PATH = "artifacts/stratified_minilm_3200/training_summary.json"
 
 
 def resolve_project_path(raw_path: str) -> Path:

@@ -5,6 +5,6 @@ backups/
 .venv/
 .tmp/
 artifacts/**/final_model.pkl
-!artifacts/stratified_gte_modernbert_base_3200_gpu/final_model.pkl
+!artifacts/stratified_minilm_3200/final_model.pkl
 artifacts/**/best_model.pkl
 artifacts/**/embedding_cache/
