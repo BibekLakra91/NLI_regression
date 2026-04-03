@@ -101,7 +101,7 @@ If you do not set them, the deployed app uses the default artifact paths above.
 
 `.env` is not used by this Flask deploy path and should stay out of Git. If you ever need runtime secrets on Vercel, add them in the Vercel project settings instead.
 
-This repo now includes `vercel.json` only to keep the Python function bundle small and give the single Flask function more headroom.
+No `vercel.json` is required for this setup. Recent Vercel Flask support detects the root `app.py` automatically.
 
 ### Vercel routes
 
