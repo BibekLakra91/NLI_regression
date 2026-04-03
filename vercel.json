@@ -2,9 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "app.py": {
-      "memory": 3009,
-      "maxDuration": 60,
-      "excludeFiles": "{.git/**,.venv/**,.tmp/**,__pycache__/**,backups/**,generate_*_prompt.txt,generate_issue_priority_dataset.py,issue_priority_dataset.csv,issues_schema.json,issues_scoring.json,requirements-issue-priority-*.txt,run_issue_priority_app.ps1,smoke_issue_priority_dataset.csv,suspicion_*.csv,suspicion_train_test.xlsx,train_issue_priority_stratified.py,artifacts/run_*/**,artifacts/**/embedding_cache/**,artifacts/**/full_predictions.csv,artifacts/**/validation_predictions.csv,artifacts/stratified_gte_modernbert_base_3200/**,artifacts/stratified_gte_modernbert_base_3200_gpu/**}"
+      "maxDuration": 60
     }
   }
 }
