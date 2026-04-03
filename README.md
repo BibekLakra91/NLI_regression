@@ -9,8 +9,8 @@ This project scores free-form issue descriptions on a `0-100` priority scale and
 
 The project now supports two ways to use the scorer:
 
-- local Streamlit app for the current Windows workflow
-- Vercel-ready Flask app for deployment
+- local Flask app for the simplest browser-based workflow
+- local Streamlit app for the older interactive workflow
 
 ## What your lead can do
 
@@ -40,24 +40,51 @@ The app expects these files:
 
 ## Fastest way to run locally
 
-Use PowerShell from the project root:
+Use a normal Windows Python installation from the project root. The simplest local path is the Flask app in `app.py`.
+
+### 1. Create a clean virtual environment
 
 ```powershell
-.\run_issue_priority_app.ps1
+py -3.13 -m venv .venv-win
+.\.venv-win\Scripts\Activate.ps1
+```
+
+If `py` is not available, replace it with the full path to your Python executable.
+
+Important:
+
+- use a standard Windows Python build from `python.org`
+- do not reuse an MSYS or Git Bash Python virtualenv for this app
+
+### 2. Install runtime dependencies
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### 3. Start the local web app
+
+```powershell
+python app.py
 ```
 
 Then open:
 
 ```text
-http://localhost:8501
+http://127.0.0.1:5000
 ```
 
-This launcher will:
+Useful routes:
 
-1. install app dependencies from `requirements-issue-priority-app.txt`
-2. check whether `final_model.pkl` already exists
-3. train a model if needed
-4. start the Streamlit website
+- `/`: web UI
+- `/health`: health check
+- `/api/predict`: single prediction API
+- `/api/batch`: batch prediction API
+
+### 4. Stop the app
+
+Press `Ctrl+C` in the terminal running `python app.py`.
 
 ## Vercel deployment
 
@@ -127,36 +154,48 @@ If your lead is using this same machine and the artifact already exists, the sim
 
 ### 1. Install Python
 
-Use Python `3.11+` or `3.12+`.
+Use a standard Windows Python install such as Python `3.12` or `3.13`.
 
 ### 2. Create and activate a virtual environment
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+py -3.13 -m venv .venv-win
+.\.venv-win\Scripts\Activate.ps1
 ```
+
+If you already created `.venv` from MSYS, Git Bash, or another non-standard Python build, create a fresh venv instead of reusing it.
 
 ### 3. Install dependencies
 
+For the Flask app:
+
 ```powershell
 python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Optional: if you specifically want the Streamlit workflow instead, install:
+
+```powershell
 python -m pip install -r requirements-issue-priority-app.txt
 ```
 
 ### 4. Start the app
 
-If `artifacts/stratified_minilm_3200/final_model.pkl` already exists:
+Recommended local path:
+
+```powershell
+python app.py
+```
+
+Then open `http://127.0.0.1:5000`.
+
+Optional Streamlit path:
 
 ```powershell
 python -m streamlit run issue_priority_streamlit_app.py -- `
   --model-bundle artifacts/stratified_minilm_3200/final_model.pkl `
   --summary artifacts/stratified_minilm_3200/training_summary.json
-```
-
-If the model file does not exist, run:
-
-```powershell
-.\run_issue_priority_app.ps1 -Retrain
 ```
 
 Then open `http://localhost:8501`.
@@ -208,7 +247,7 @@ Artifacts written by training:
 - `app.py`: Flask website and API for Vercel deployment
 - `issue_priority_inference.py`: shared inference loader for Flask and Streamlit
 - `issue_priority_streamlit_app.py`: local Streamlit website for interactive scoring
-- `run_issue_priority_app.ps1`: PowerShell launcher for install, optional retrain, and app startup
+- `run_issue_priority_app.ps1`: older PowerShell launcher for the Streamlit workflow
 - `train_issue_priority_stratified.py`: training and CLI prediction pipeline
 - `issue_priority_dataset.csv`: labeled training dataset
 - `artifacts/stratified_minilm_3200/`: current default trained artifacts
@@ -217,20 +256,32 @@ Artifacts written by training:
 
 ### `Python was not found`
 
-Your shell may not have Python on `PATH`. Either install Python properly or edit `run_issue_priority_app.ps1` so `$PythonExe` points to the correct interpreter.
+Your shell may not have Python on `PATH`. Use `py -3.13`, install Python properly, or call the interpreter by full path.
 
 ### `Model bundle not found`
 
-Run:
+Make sure this file exists:
 
 ```powershell
-.\run_issue_priority_app.ps1 -Retrain
+artifacts\stratified_minilm_3200\final_model.pkl
 ```
 
-### Streamlit opens but scoring fails
+If it is missing, retrain the model or copy the trained artifact folder into the project.
+
+### Local app starts but scoring fails
 
 Make sure:
 
 - dependencies installed successfully
 - internet access is available the first time the embedding model is downloaded
-- the artifact paths passed to the app are correct
+- the artifact files under `artifacts/stratified_minilm_3200/` are present
+
+### Existing `.venv` behaves strangely on Windows
+
+This project may fail to install correctly if the virtual environment was created from MSYS or another non-standard Python distribution. In that case, create a fresh Windows venv and install dependencies there:
+
+```powershell
+py -3.13 -m venv .venv-win
+.\.venv-win\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
